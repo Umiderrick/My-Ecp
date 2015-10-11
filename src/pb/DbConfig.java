@@ -9,7 +9,7 @@ public class DbConfig {
 	private static Properties config = null;
 	static {
 		config = new Properties();
-		try (InputStream in = new FileInputStream("D:/workspace/Pb_ECP/src/DBconfig.properties");) {
+		try (InputStream in = new FileInputStream("C:/Users/umiderrick/git/My-Ecp/src/DBconfig.properties")){
 			config.load(in);
 		} catch (IOException e) {
 			throw new RuntimeException(e);
