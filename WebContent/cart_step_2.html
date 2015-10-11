@@ -1,0 +1,619 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>订单提交</title>
+<link href="css/global.css" rel="stylesheet" type="text/css"/>
+<link href="css/cart.css" rel="stylesheet" type="text/css"/>
+<link href="css/user.css" rel="stylesheet" type="text/css"/>
+<link href="css/register.css" rel="stylesheet" type="text/css">
+<script type="text/javascript" src="js/jquery-1.7.2.js"></script>
+<script type="text/javascript" src="js/cart_step_2.js"></script>
+<script type="text/ecmascript" src="js/tabs.js"></script>
+<script type="text/javascript" src="js/openPop.js"></script>
+</head>
+<!--	
+标题：购物车文件
+作者：Hanxianwei
+创建日期：2013年11月26日  
+-->
+<body>
+<!--begin 购物车头部-->
+<div class="cart_header">
+	<div class="ui_header_top"><!--和公用头部-->
+		<div class="w990">
+			<div class="store"><i class="icon_store"></i><a href="index.html" onClick="window.external.addFavorite(this.href,this.title);return false" title='首页' rel="sidebar">加入收藏</a></div>
+			<div class="welcome"> <span>您好！欢迎来到广丝!</span> <a href="javascript:;" class="no_mag">[登录]</a> <a href="javascript:;" class="no_mag">[免费注册]</a> <a href="javascript:;">|</a> <a href="javascript:;">我的订单</a> <a href="javascript:;">|</a> <a href="javascript:;">客户服务</a> </div>
+		</div>
+	</div>
+	<div class="w990">
+		<!--begin logo-->
+		<div class="cart_header_logo fl"><a href="index.html"><img src="res/images/bg/logo.png"/></a></div>
+		<!--end logo-->
+		<!--begin 当前第几步提示-->
+		<div class="cart_step_tips fr">
+			<div class="cart_step_tips_txt clearfix">
+				<span>我的购物车</span>
+				<span class="dq">填写核对订单信息</span>
+				<span>成功提交订单</span>
+			</div>
+			<div class="cart_step_tips_bg step2"></div>
+		</div>
+		<!--end 当前第几步提示-->
+	</div>
+</div>
+<!--end 购物车头部-->
+<div class="w990">
+	<!--购物车标题-->
+	<h3 class="h3_mycart_tit"><i></i><span>我的购物车</span></h3>
+</div>
+<!--begin提交订单-->
+<!--各自页在此做各自页在此做各自页在此做各自页在此做-->
+<div class="w990">
+	<h3 class="h3_bort nobor"><span class="fl">填写并核对订单信息</span> <span class="fr"><a href="javascript:;" style="color:#B27168;font-weight:normal; font-family:'宋体'; font-size:12px;" class="openP">保存到我的收货地址</a></span></h3>
+</div>
+<!--收货人信息-->
+<div class="w990 order_step borb1px">
+	<h4>收货人信息<a href="javascript:;" class="xiugai_nav a1">[修改]</a></h4>
+	<div class="moren_info">
+		<p><span>王丽</span> <span>13800110101</span></p>
+		<p><span>北京 海淀区 四环到五环之间 学院路30号科大天工大厦A座11层</span></p>
+	</div>
+	<div class="modify_info hide">
+		<div class="address_list">
+			<p><input type="radio" name="radio" id="radio1-1" class="use_add_new_yy input_vertical" /><label for="radio1-1">王丽  北京 海淀区 四环到五环之间   学院路30号科大天工大厦A座11层   13800138000</label></p>
+			<p><input type="radio" name="radio" id="radio1-2" class="use_add_new_yy input_vertical" /><label for="radio1-2">王丽  北京 海淀区 四环到五环之间   学院路30号科大天工大厦A座11层   13800138000</label></p>
+			<p><input type="radio" name="radio" id="radio1-3" class="use_add_new_yy input_vertical" /><label for="radio1-3">王丽  北京 海淀区 四环到五环之间   学院路30号科大天工大厦A座11层   13800138000</label></p>
+			<p><input type="radio" name="radio" id="radio1-10" class="use_add_new input_vertical" /><label for="radio1-10">使用新地址</label></p>
+			<div class="add_new hide" style="padding-top:10px;">
+				<!--++++++++++++++++++++-->
+				<div class="add_con">
+					<dl class="add_con_list">
+						<dt><span>*</span>收货人：</dt>
+						<dd><input type="text" class="input_address_155"></dd>
+					</dl>
+					<dl class="add_con_list">
+						<dt><span>*</span>所在地区：</dt>
+						<dd><select name="select" id="select">
+							<option>请选择：</option>
+						</select>&nbsp;
+						<select name="select" id="select">
+							<option>请选择：</option>
+						</select>&nbsp;
+						<select name="select" id="select">
+							<option>请选择：</option>
+						</select></dd>
+					</dl> 
+					<dl class="add_con_list">
+						<dt><span>*</span>详细地址：</dt>
+						<dd><input type="text" class="input_address_155" style="width:315px;"></dd>
+					</dl>
+					<dl class="add_con_list">
+						<dt><span>*</span>手机号码：</dt>
+						<dd><input type="text" class="input_address_155"><span>或</span> &nbsp;&nbsp;&nbsp;&nbsp;固定电话：<input type="text" class="input_address_155"></dd>                
+					</dl>
+					<!--dl class="add_con_list">
+						<dt>邮箱：</dt>
+						<dd><input type="text" class="input_address_155"><span>用来接收订单提醒邮件，便于您及时了解订单状态</span></dd>
+					</dl-->
+				</div>
+				<!--++++++++++++++++++++-->
+			</div>
+		</div>
+		<button class="btn_address">保存收货人信息</button>
+	</div>
+</div>
+<!--支付及配送-->
+<div class="w990 order_step borb1px">
+	<h4>支付及配送方式<a href="javascript:;" class="xiugai_nav a2">[修改]</a></h4>
+	<div class="moren_info pay">
+		<p><span>在线支付</span></p>
+		<p><span>快递运输 由商家选择合作快递为您配</span></p>
+	</div>
+	<div class="modify_info hide">
+		<div class="address_list">
+			<!--++++++++++++++++++++-->
+			<div class="add_con">
+				<div><h3>支付方式</h3></div>
+				<dl class="add_con_list clearfix">
+					<dt class="dt_w260">
+							<input type="radio" name="radio" id="radio2-0" class="input_vertical add_bg hdfukuan_all"><label for="radio2-0" class="add_bg">货到付款</label>
+					</dt>
+					<dd>
+						<!--span>送货上门后再收款，支持现金、POS机刷卡、支票支付</span> &nbsp;&nbsp;<a href="javascript:;" class="font_brown">查看服务及配送范围</a-->
+					</dd>
+				</dl>
+				<dl class="add_con_list clearfix hdfukuan">
+					<dt class="dt_w260" style="padding-left:20px;">
+						<input type="radio" name="radio62" id="radio62-0" class="input_vertical add_bg hdfukuan_fz1"><label for="radio62-0" class="add_bg">现金</label>&nbsp;&nbsp;&nbsp;&nbsp;
+						<input type="radio" name="radio62" id="radio62-1" class="input_vertical add_bg hdfukuan_fz1"><label for="radio62-1" class="add_bg">POS刷卡</label>&nbsp;&nbsp;&nbsp;&nbsp;
+						<input type="radio" name="radio62" id="radio62-2" class="input_vertical add_bg hdfukuan_fz1"><label for="radio62-2" class="add_bg">支票</label>
+					</dt>
+					<dd><span>送货上门后再收款，支持现金、POS机刷卡、支票支付</span> &nbsp;&nbsp;<a href="javascript:;" class="font_brown">查看服务及配送范围</a></dd>
+				</dl>
+				<dl class="add_con_list">
+					<dt class="dt_w260"><input type="radio" name="radio" id="radio2-1" class="input_vertical add_bg qtfkfs"><label for="radio2-1" class="add_bg">在线支付</label></dt>
+					<dd><span>即时到帐，支持绝大数银行借记卡及部分银行信用卡</span> &nbsp;&nbsp;<a href="javascript:;" class="font_brown">查看银行及限额</a></dd>
+				</dl>
+				<dl class="add_con_list">
+					<dt class="dt_w260"><input type="radio" name="radio" id="radio2-2" class="input_vertical add_bg qtfkfs"><label for="radio2-2" class="add_bg">公司转账</label></dt>
+					<dd><span>通过快钱平台转账 转帐后1-3个工作日内到帐</span> &nbsp;&nbsp;<a href="javascript:;" class="font_brown">查看帐户信息</a></dd>
+				</dl>
+				<dl class="add_con_list">
+					<dt class="dt_w260"><input type="radio" name="radio" id="radio2-3" class="input_vertical add_bg qtfkfs"><label for="radio2-3" class="add_bg">邮局汇款</label></dt>
+					<dd><span>通过快钱平台收款 汇款后1-3个工作日到账</span> &nbsp;&nbsp;<a href="javascript:;" class="font_brown">查看帮助</a></dd>
+				</dl>
+				<h3>配送方式</h3>
+				<div>
+					<dl class="add_con_list">
+						<dt class="dt_w260"><input type="radio" name="radio4" id="radio4-4" class="input_vertical add_bg"><label for="radio4-4" class="add_bg">快递运输</label></dt>
+						<dd>由商家选择合作快递为您配送</dd>
+					</dl>
+				</div>
+			</div>
+			<!--++++++++++++++++++++-->
+		</div>
+		<button class="btn_address">保存支付及配送方式</button>
+	</div>
+</div>
+<!--发票-->
+<div class="w990 order_step">
+	<h4>发票信息<a href="javascript:;" class="xiugai_nav a3">[修改]</a></h4>
+	<div class="moren_info">
+		<p><span>普通发票 </span><span> 个人 </span> <span>明细</span></p>
+	</div>
+	<div class="modify_info hide">
+		<div class="address_list">
+			<p><input type="radio" name="radio3" id="radio3-1" class="use_add_new_yy input_vertical" /><label for="radio3-1">不需要发票</label></p>
+			<!--p><input type="radio" name="radio3" id="radio3-1" class="use_add_new_yy input_vertical" /><label for="radio3-1">北京南北天地科技股份有限公司</label></p-->
+			<p><input type="radio" name="radio3" id="radio3-10" class="use_add_new input_vertical" /><label for="radio3-10">使用的发票信息</label></p>
+			<!--++++++++++++++++++++-->
+			<div class="add_new hide">
+				<div class="add_con_list"><h3>类型和抬头</h3></div>
+				<dl class="add_con_list">
+					<dt class="dt_w100">发票类型：</dt>
+					<dd>
+						<input type="radio" name="radio11" id="radio11-21" class="input_vertical"><label class="span_ma_r20" for="radio11-21">普通发票</label>
+						<input type="radio" name="radio11" id="radio11-22" class="input_vertical"><label class="span_ma_r20" for="radio11-22">增值税发票</label>
+					</dd>
+				</dl>
+				<dl class="add_con_list">
+					<dt class="dt_w100">发票抬头：</dt>
+					<dd>
+						<input type="radio" name="radio12" id="radio3-22" class="input_vertical"><label class="span_ma_r20" for="radio3-22">个人</label>
+						<input type="radio" name="radio12" id="radio3-23"  class="input_vertical"><label class="span_ma_r20" for="radio3-23">单位</label>
+						<input type="text" class="input_address_155" style="width:225px;">
+					</dd>
+				</dl>
+				<div class="add_con_list"><h3>发票内容</h3></div>
+				<dl class="add_con_list">
+					<dt class="dt_w100">发票类型：</dt>
+					<dd>
+						<input type="radio" name="radio" id="radio3-24" class="input_vertical"><label class="span_ma_r20" for="radio3-24">明细</label>
+						<input type="radio" name="radio" id="radio3-25" class="input_vertical"><label class="span_ma_r20" for="radio3-25">办公用品</label>
+						<input type="radio" name="radio" id="radio3-26" class="input_vertical"><label class="span_ma_r20" for="radio3-26">电脑配件</label>
+						<input type="radio" name="radio" id="radio3-27" class="input_vertical"><label class="span_ma_r20" for="radio3-27">耗材</label>
+					</dd>
+				</dl>           
+			</div>
+			<!--++++++++++++++++++++-->
+		</div>
+		<button class="btn_address">保存发票信息</button>
+	</div>
+</div>
+<!--商品清单-->
+<div class="w990 posr">
+	<a href="javascript:;" class="backto_cart_step_1">返回修改购物车</a>
+	<h3 class="h3_bort marb15">商品清单</h3>
+	<div class="cart_list cart_order_list">
+		<!--表头-->
+		<div class="cart_thead clearfix">
+			<div class="row2"><span>商品</span></div>
+			<div class="row3 ac">价格</div>
+			<div class="row4 ac">赠送积分</div>
+			<div class="row6 ac"><span>数量</span></div>
+			<div class="row5 ac">库存</div>
+		</div>
+		<!--表体-->
+		<!--商家信息-->
+		<div class="cart_thead clearfix">
+			<div class="cart_sj"><span class="fl">商品由<a href="#">serigene/丝源</a>商家提供并负责发货</span><span class="fr">收取运费：￥10.00</span></div>
+		</div>
+		<!--end 商家信息-->
+		<div class="cart_tbody_con">
+			<div class="cart_tbody clearfix">
+				<div class="row2 padl20">
+					<!--商品信息-->
+					<div class="p_goods clearfix">
+						<a href="javascript:;" class="p_img fl"><img src="res/images/temp/account_show.jpg" alt=""></a>
+						<a href="javascript:;" class="p_txt fl">床品家纺 全棉缎纹印花双人加大1.8米全棉缎纹印花双人加大1.8米床四件套W-AD58-4虹</a>
+					</div>
+					<!--赠品-->
+					<div class="p_gift">
+						<p><a href="javascript:;">[赠品]超效清洁擦拭布/毛巾 3条装 40cm×40cm</a></p>
+						<p><a href="javascript:;">[赠品]超效清洁擦拭布/毛巾 3条装 40cm×40cm</a></p>
+					</div>
+				</div>
+				<div class="row3 ac"><span class="p_price">￥600.00</span></div>
+				<div class="row4 ac"><span class="p_line50">100</span></div>
+				<div class="row6">
+					<div class="p_quantity ac">					
+						<span>x 1</span>
+					</div>
+				</div>
+				<div class="row5 ac"><span class="p_line50">有货</span></div>
+			</div>
+			<!--表体-->
+			<div class="cart_tbody clearfix">
+				<div class="row2 padl20">
+					<!--商品信息-->
+					<div class="p_goods clearfix">
+						<a href="javascript:;" class="p_img fl"><img src="res/images/temp/account_show.jpg" alt=""></a>
+						<a href="javascript:;" class="p_txt fl">床品家纺 全棉缎纹印花双人加大1.8米全棉缎纹印花双人加大1.8米床四件套W-AD58-4虹</a>
+					</div>
+					<!--赠品-->
+					<div class="p_gift">
+					</div>
+				</div>
+				<div class="row3 ac"><span class="p_price">￥600.00</span></div>
+				<div class="row4 ac"><span class="p_line50">100</span></div>
+				<div class="row6">
+					<div class="p_quantity ac">
+						<span>x 1</span>
+					</div>
+				</div>
+				<div class="row5 ac"><span class="p_line50">有货</span></div>
+			</div>
+			<!--商家信息-->
+			<div class="cart_thead clearfix">
+				<div class="cart_sj"><span class="fl">商品由<a href="#">serigene/丝源</a>商家提供并负责发货</span><span class="fr">收取运费：	￥10.00</span></div>
+			</div>
+			<!--end 商家信息-->
+			<!--表体-->
+			<div class="cart_tbody clearfix">
+				<div class="row2 padl20">
+					<!--商品信息-->
+					<div class="p_goods clearfix">
+						<a href="javascript:;" class="p_img fl"><img src="res/images/temp/account_show.jpg" alt=""></a>
+						<a href="javascript:;" class="p_txt fl">床品家纺 全棉缎纹印花双人加大1.8米全棉缎纹印花双人加大1.8米床四件套W-AD58-4虹</a>
+					</div>
+					<!--赠品-->
+					<div class="p_gift">
+						<p><a href="javascript:;">[赠品]超效清洁擦拭布/毛巾 3条装 40cm×40cm</a></p>
+					</div>
+				</div>
+				<div class="row3 ac"><span class="p_price">￥600.00</span></div>
+				<div class="row4 ac"><span class="p_line50">100</span></div>
+				<div class="row6">
+					<div class="p_quantity ac">
+						<span>x 1</span>
+					</div>
+				</div>
+				<div class="row5 ac"><span class="p_line50">有货</span></div>
+			</div>
+			<!--商家信息-->
+			<div class="cart_thead clearfix">
+				<div class="cart_sj"><span class="fl">商品由<a href="#">serigene/丝源</a>商家提供并负责发货</span><span class="fr">收取运费：	￥10.00</span></div>
+			</div>
+			<!--end 商家信息-->
+			<!--套装-->
+			<div class="cart_tbody_tz">
+				<div class="cart_tbody clearfix">
+					<div class="row2 padl20">
+						<!--商品信息-->
+						<div class="p_goods clearfix">
+							<strong>[套装] 套装更优惠</strong>
+						</div>
+					</div>
+					<div class="row3 ac"><span class="p_price">￥5999.00</span></div>
+					<div class="row4 ac"><span>100</span></div>
+					<div class="row6">
+						<div class="p_quantity ac">
+							<span>x 3</span>
+						</div>
+					</div>
+					<div class="row5 ac"><span>&nbsp;</span></div>
+				</div>
+				<div class="cart_tbody borbf1 clearfix">
+					<div class="row2 padl20">
+						<!--商品信息-->
+						<div class="p_goods clearfix">
+							<a href="javascript:;" class="p_img fl"><img src="res/images/temp/account_show.jpg" alt=""></a>
+							<a href="javascript:;" class="p_txt fl">床品家纺 全棉缎纹印花双人加大1.8米全棉缎纹印花双人加大1.8米床四件套W-AD58-4虹</a>
+						</div>
+						<!--赠品-->
+						<div class="p_gift">
+							<p><a href="javascript:;">[赠品]超效清洁擦拭布/毛巾 3条装 40cm×40cm</a></p>
+						</div>
+					</div>
+					<div class="row3 ac"><span class="p_price p_line50">￥5999.00</span></div>
+					<div class="row4 ac"><span class="p_line50">100</span></div>
+					<div class="row6">
+						<div class="p_quantity ac p_line50">
+							<span>x 1</span>
+						</div>
+					</div>
+					<div class="row5 ac"><span class="p_line50">有货</span></div>
+				</div>
+				<div class="cart_tbody borbf1 clearfix">
+					<div class="row2 padl20">
+						<!--商品信息-->
+						<div class="p_goods clearfix">
+							<a href="javascript:;" class="p_img fl"><img src="res/images/temp/account_show.jpg" alt=""></a>
+							<a href="javascript:;" class="p_txt fl">床品家纺 全棉缎纹印花双人加大1.8米全棉缎纹印花双人加大1.8米床四件套W-AD58-4虹</a>
+						</div>
+						<!--赠品-->
+						<div class="p_gift">
+							<p><a href="javascript:;">[赠品]超效清洁擦拭布/毛巾 3条装 40cm×40cm</a></p>
+						</div>
+					</div>
+					<div class="row3 ac"><span class="p_price p_line50">￥5999.00</span></div>
+					<div class="row4 ac"><span class="p_line50">100</span></div>
+					<div class="row6">
+						<div class="p_quantity ac p_line50">
+							<span>x 1</span>
+						</div>
+					</div>
+					<div class="row5 ac"><span class="p_line50">有货</span></div>
+				</div>
+			</div>
+			<!--end套装-->
+		</div>
+	</div>
+	<div class="p_total">
+		<div class="pad5 clearfix">
+			<div class="ar"><span class="p_total_num">共 <em>3</em> 件商品，总商品金额：<i style="font-style:normal; padding-left:50px;">￥1800.00</i></span></div>
+			<div class="ar">
+				<table align="right">
+					<tr>
+							<td class="ar">&nbsp;</td>
+							<td class="ar">&nbsp;</td>
+					</tr>
+					<tr>
+						<td class="ar">优惠：</td>
+						<td class="ar" width="140">￥10.00</td>
+					</tr>
+					<tr>
+						<td class="ar">运费：</td>
+						<td class="ar">￥20.00</td>
+					</tr>
+					<tr>
+						<td class="ar">应付总额：</td>
+						<td class="ar">￥1800.00</td>
+					</tr>
+				</table>
+			</div>
+		</div>
+		<div class="pad5 use_yhq">
+			<script>
+				$(function(){
+					$(".use_yhq h3").click(function(){
+						$(this).children("i").toggleClass("icon_plus")
+						$(this).next().toggleClass("hide")	
+					})	
+				})
+			</script>
+			<h3><i class="icon_add01"></i>使用优惠券</h3>
+			<div class="hide"> 
+				<div class="tab_change" style="padding-left:0;">
+					<a href="#" class="cur" style="margin-left:0;">可用优惠券</a>
+					<a href="#">不可用优惠券</a>
+				</div>
+				<div class="tab_change_con">
+					<div class="tab_con">
+						<div class="use_yhq_box">
+							<ul>
+								<li><input type="checkbox" name="" id="checkbox1" class="input_vertical" /><label for="checkbox1"><span><strong>面值：</strong>优惠券10元 </span><span><strong>有效期：</strong>2013-11-11至2014-01-01</span><span><strong>使用范围：</strong>床上用品</span></label></li>
+								<li><input type="checkbox" name="" id="checkbox2" class="input_vertical" ><label for="checkbox2"><span><strong>面值：</strong>优惠券10元 </span><span><strong>有效期：</strong>2013-11-11至2014-01-01</span><span><strong>使用范围：</strong>床上用品</span></label></li>
+								<li><input type="checkbox" name="" id="checkbox3" class="input_vertical" ><label for="checkbox3"><span><strong>面值：</strong>优惠券10元 </span><span><strong>有效期：</strong>2013-11-11至2014-01-01</span><span><strong>使用范围：</strong>床上用品</span></label></li>
+							</ul>
+						</div>
+						<div class="pad5 ac">本次订单您暂时没有可用优惠券</div>
+					</div>
+					<div class="tab_con">
+						<div class="use_yhq_box">
+							<ul>
+								<li><input type="checkbox" name="" id="checkbox1" class="input_vertical" disabled /><label for="checkbox1"><span><strong>面值：</strong>优惠券10元 </span><span><strong>有效期：</strong>2013-11-11至2014-01-01</span><span><strong>使用范围：</strong>床上用品</span></label></li>
+								<li><input type="checkbox" name="" id="checkbox2" class="input_vertical" disabled /><label for="checkbox2"><span><strong>面值：</strong>优惠券10元 </span><span><strong>有效期：</strong>2013-11-11至2014-01-01</span><span><strong>使用范围：</strong>床上用品</span></label></li>
+								<li><input type="checkbox" name="" id="checkbox3" class="input_vertical" disabled /><label for="checkbox3"><span><strong>面值：</strong>优惠券10元 </span><span><strong>有效期：</strong>2013-11-11至2014-01-01</span><span><strong>使用范围：</strong>床上用品</span></label></li>
+							</ul>
+						</div>
+						<div class="pad5 ac">本次订单您暂时没有可用优惠券</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="ar p_total_txt">
+			<a href="cart_step_3.html" class="fr btn_qjs" style="margin:7px 0 0 15px;">提交订单</a>
+			<div class="fr"><span class="l">金额总计：</span><span class="r">￥1830.00</span></div>
+		</div>
+	</div>
+</div>
+<!--底部 参见 footer.html-->
+<div class="ui_footer_top">
+		<div class="w1200">
+				<div class="w1200">
+						<div class="ui_footer_top_l">
+								<p class="ui_footer_top_l_name">广东丝纺集团服务热线</p>
+								<p class="ui_footer_top_l_tel">400-000-0000</p>
+								<p class="ui_footer_top_l_time">客服时间： 09:00-18:00（周一至周五）</p>
+						</div>
+						<div class="ui_footer_top_r">
+								<dl>
+										<dt>新手上路</dt>
+										<dd><a href="#">服务条款</a></dd>
+										<dd><a href="#">购物流程</a></dd>
+										<dd><a href="#">使用优惠券</a></dd>
+										<dd><a href="#">积分说明</a></dd>
+										<dd><a href="#">促销说明</a></dd>
+								</dl>
+								<dl>
+										<dt>支付方式</dt>
+										<dd><a href="#">支付方式</a></dd>
+										<dd><a href="#">支付等待时间</a></dd>
+										<dd><a href="#">发票制度</a></dd>
+								</dl>
+								<dl>
+										<dt>配送说明</dt>
+										<dd><a href="#">配送范围</a></dd>
+										<dd><a href="#">配送说明</a></dd>
+										<dd><a href="#">商品验货与签收</a></dd>
+								</dl>
+								<dl>
+										<dt>账户管理</dt>
+										<dd><a href="#">支付方式</a></dd>
+										<dd><a href="#">支付等待时间</a></dd>
+										<dd><a href="#">发票制度</a></dd>
+								</dl>
+								<dl>
+										<dt>支付方式</dt>
+										<dd><a href="#">账户注册</a></dd>
+										<dd><a href="#">找回密码</a></dd>
+								</dl>
+								<dl>
+										<dt>售后服务</dt>
+										<dd><a href="#">退换货政策</a></dd>
+										<dd><a href="#">退换货流程</a></dd>
+										<dd><a href="#">退款说明</a></dd>
+								</dl>
+								<dl>
+										<dt>关于我们</dt>
+										<dd><a href="#">网上商城</a></dd>
+										<dd><a href="#">业务合作</a></dd>
+								</dl>
+						</div>
+				</div>
+		</div>
+</div>
+<div class="ui_footer_bot">Copyright 2013 丝纺商贸城 粤ICP备11089621号</div>
+<!--end底部 参见 footer.html-->
+
+<script type="text/javascript">
+$(function(){
+	$(".openP").click(function(){//打开层
+		openPop({
+			cover_layer:".cover_layer",
+			list_qr_pop:".themes_alert"		
+		});	
+	});	
+	$(".web_win_close").click(function(){//关闭层
+		closePop(".themes_alert",".cover_layer")	
+	})
+	$(".btn_bcdwddz").click(function(){//关闭层
+		closePop(".themes_alert",".cover_layer")	
+	})
+	$(".btn_bcdwddz_gray").click(function(){//关闭层
+		closePop(".themes_alert",".cover_layer")	
+	})
+});
+</script>
+<!--背景层-->
+<div class="cover_layer"></div>
+<!--弹出层-->
+<div class="themes_alert" style="display:none; z-index:9999">
+	<div class="themes_alert_head">
+		<h3 class="themes_alert_title">保存到我的收货地址</h3>
+		<a class="web_win_close" href="#"></a>	
+	</div>
+	<div class="themes_alert_content">
+		<div class="user_address">
+			<div class="add_address nobor">
+				<div class="add_new_address_step clearfix">
+					<div style="width:550px; float:left;">
+						<dl>
+							<dt><span>*</span>收货人：</dt>
+							<dd><input type="text" name="" id="" /><!--span class="error">请填写收货人</span--></dd>
+						</dl>
+						<dl>
+							<dt><span>*</span>所在地区：</dt>
+							<dd>
+								<select name="select" id="select">
+									<option>请选择：</option>
+								</select>&nbsp;
+								<select name="select" id="select">
+									<option>请选择：</option>
+								</select>&nbsp;
+								<select name="select" id="select">
+									<option>请选择：</option>
+								</select>
+								<!--<span class="error">请填写收货人</span>-->
+							</dd>
+						</dl> 
+						<dl>
+							<dt><span>*</span>详细地址：</dt>
+							<dd><span class="padr20">北京朝阳区三环到四环之间</span><input type="text" name="" id="" /><!--<span class="error">请填写收货人</span>--></dd>
+						</dl>
+						<dl>
+							<dt><span>*</span>手机号码：</dt>
+							<dd><input type="text" name="" id="" /></dd>                
+						</dl>
+						<dl>
+							<dt>固定电话：</dt>
+							<dd><input type="text" name="" id="" /><span class="">例如：010-88966596</span></dd>                
+						</dl>
+						<dl>
+							<dt>电子邮件：</dt>
+							<dd><input type="text" name="" id="" /></dd>
+						</dl>
+						<dl>
+							<dt>邮政编码：</dt>
+							<dd><input type="text" name="" id="" /></dd>
+						</dl>
+					</div>
+					<div style="width:380px; float:right;">
+						<dl>
+							<dt>支付方式：</dt>
+							<dd>
+								<!--input type="radio" name="radio1" id="radio2-1" class="input_vertical add_bg" checked><label for="radio2-1" class="add_bg">在线支付</label>
+								<input type="radio" name="radio1" id="radio2-2" class="input_vertical add_bg"><label for="radio2-2" class="add_bg">公司转账</label>
+								<input type="radio" name="radio1" id="radio2-3" class="input_vertical add_bg"><label for="radio2-3" class="add_bg">邮局汇款</label-->
+								<select>
+									<option>公司转账</option>
+									<option>公司转账</option>
+									<option>公司转账</option>
+									<option>公司转账</option>
+								</select>
+							</dd>
+						</dl>
+						<dl>
+							<dt>配送方式：</dt>
+							<dd>
+								<!--input type="radio" name="radio2" id="radio4-4" class="input_vertical add_bg" checked><label for="radio4-4" class="add_bg">快递运输</label-->
+								<select>
+									<option>公司转账</option>
+									<option>公司转账</option>
+									<option>公司转账</option>
+									<option>公司转账</option>
+								</select>
+							</dd>
+						</dl> 
+						<dl>
+							<dt>发票类型：</dt>
+							<dd class="padt5"><input type="radio" name="radio3" id="radio3-21" class="input_vertical" checked><label for="radio3-21">普通发票</label></dd>
+						</dl> 
+						<dl>
+							<dt>发票抬头：</dt>
+							<dd>						
+								<input type="radio" name="radio4" id="radio3-22" class="input_vertical" checked><label class="span_ma_r20" for="radio3-22">个人</label>
+								<input type="radio" name="radio4" id="radio3-23"  class="input_vertical"><label class="span_ma_r20" for="radio3-23">单位</label>
+								<input type="text" class="input_address_155" style="width:135px;">
+							</dd>
+						</dl> 
+						<dl>
+							<dt>发票内容：</dt>
+							<dd class="padt5">
+								<input type="radio" name="radio5" id="radio5-24" class="input_vertical" checked><label class="span_ma_r20" for="radio5-24">明细</label>
+								<input type="radio" name="radio5" id="radio5-25" class="input_vertical"><label class="span_ma_r20" for="radio5-25">办公用品</label>
+								<input type="radio" name="radio5" id="radio5-26" class="input_vertical"><label class="span_ma_r20" for="radio5-26">电脑配件</label>
+								<input type="radio" name="radio5" id="radio5-27" class="input_vertical"><label class="span_ma_r20" for="radio5-27">耗材</label>
+							</dd>
+						</dl> 
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="clearfix ac"><a href="#" class="btn_bcdwddz">保存</a>&nbsp;&nbsp;<a href="#" class="btn_bcdwddz_gray">放弃</a></div>
+	</div>
+</div>
+</body>
+</html>

@@ -1,0 +1,67 @@
+@charset "utf-8";
+/*	
+标题：global文件
+作者：Hanxianwei
+创建日期：2013年12月03日
+*/
+/*
+所有页面都会调用global.css样式表  
+各自页面调各自的css文件 //// 
+用户中心统一调用user.css
+*/
+
+/*=======全局=======*/
+/*重置*/
+@import "reset.css";
+/*基本*/
+@import "base.css";
+/*布局*/
+@import "layout.css";
+/*图标*/
+@import "icon.css";
+/*按钮*/
+@import "button.css";
+/*=======头部 尾部=======*/
+/*公用头*/
+@import "header.css";
+@import "reg_header.css";
+/*公用尾*/
+@import "footer.css";
+@import "reg_footer.css";
+/*购物车头尾定义在cart.css*/
+/*end头部 尾部*/
+/*面包屑*/
+@import "breadcrumb.css";
+/*导航菜单*/
+@import "toggleMenu.css";
+/*??????*/
+@import "banner_list.css";
+/*??????*/
+@import "magni.css";
+/*图片滚动*/
+@import "img_scroll.css";
+/*翻页*/
+@import "page.css";
+/*标签*/
+@import "tabs.css";
+/*弹出浮层*/
+@import "user_pop.css";
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

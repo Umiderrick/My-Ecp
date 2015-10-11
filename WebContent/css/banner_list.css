@@ -1,0 +1,85 @@
+@charset "utf-8";
+/* CSS Document */
+/*	
+标题：banner_slide文件
+作者：yuxingyang
+创建日期：2013年11月21日  
+*/
+.fl{ float:left;}
+.banner_slide *{ margin:0px; padding:0px; list-style:none}
+.banner_slide {
+	position: relative;
+	overflow: hidden; 
+	height: 344px; 
+	width:1200px;
+
+}
+.banner_slide .bannerpic {
+	height: 100%;
+	position: relative;
+	overflow: hidden; 
+	width: 970px; 
+
+}
+.banner_slide .bannerpic ul {
+	position: absolute;
+	width:15240px;
+}
+.banner_slide .bannerpic ul li{ float:left; width:970px;}
+.banner_slide .title {
+	position: absolute; 
+	width:1200px;
+	height: 19px; 
+	line-height: 15px; 
+	bottom: -10px;
+	left: 0px;
+	z-index: 10; 
+}
+.banner_slide .title ul {
+	bottom:15px;
+    position: relative;
+	width:90px;
+	left:250px;
+	z-index:10;
+}
+.banner_slide .title ul li {
+	margin-right: 1px;
+}
+.banner_slide .title ul li a {
+	background:url(../res/images/bg/circle_b.png) no-repeat left top;
+    cursor: pointer;
+    float: left;
+    height: 10px;
+    line-height: normal;
+    margin: 2px 3px;
+    width: 10px;
+}
+.banner_slide .title ul li.cur {
+	margin-right: 0;
+	/*background:#ce0907;*/
+}
+.banner_slide .title ul li.cur a {
+	background:url(../res/images/bg/circle_c.png) no-repeat left top;
+    padding-left: 0;
+}
+.banner_slide .tit_bg {
+	position: absolute;
+	left: 0;
+	bottom: 0;
+	width: 100%; 
+	height: 19px;
+	background: #000; 
+	opacity: 0.5;
+	filter: alpha(opacity=50)
+}
+.banner_slide .tit_txt { 
+	position: absolute;
+	overflow: hidden; 
+	padding: 0 10px;
+	width: 340px; 
+	line-height: 19px;
+	color: #e2e2e2; 
+	left: 0; 
+	bottom: 0; 
+	z-index: 20;
+}

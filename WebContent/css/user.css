@@ -1,0 +1,454 @@
+@charset "utf-8";
+/* CSS Document */
+
+/*用户中心*/
+
+/*用户中心的全局样式 包含 左侧菜单 表格样式  布局定义*/
+
+/*遇到复杂的栏目比如"我的订单"页面，可以新起一个css,但命名必须以user-开头,如:user-oder.css  注意：要留意user.css里定义的全局样式，尽量的直接调用，不要重写css*/
+
+/*导入所有用户中心用到的css*/
+
+/*	
+标题：我的投诉
+作者：xucaihua
+创建日期：2013年12月02日  
+*/
+@import "user_compliant.css";
+/*	
+标题：我的消费记录
+作者：xucaihua
+创建日期：2013年12月02日  
+*/
+@import "user_consume_record.css";
+/*	
+标题：我的优惠券
+作者：xucaihua
+创建日期：2013年12月02日  
+*/
+@import "user_coupon.css";
+/*	
+标题：商品评价
+作者：xucaihua
+创建日期：2013年12月02日  
+*/
+@import "user_goods_evaluate.css";
+/*标题：我的订单*/
+@import "user_myorder.css";
+/*	
+标题：我的订单
+作者：xucaihua
+创建日期：2013年12月02日  
+*/
+@import "user_order.css";
+/*	
+标题：pop文件
+作者：yuxingyang
+创建日期：2013年11月27日  
+*/
+@import "user_pop.css";
+/*	
+标题：退换货
+作者：Hanxianwei
+创建日期：2013年11月27日  
+*/
+@import "user_repair.css";
+/*	
+标题：账户安全文件
+作者：yuxingyang
+创建日期：2013年11月27日  
+*/
+@import "user_safe.css";
+
+
+
+a {
+	color: #333333;	
+}
+/* begin 左侧分类菜单  */
+.sort_menu_wrap {
+	margin-bottom: 15px;
+	border-top: 1px solid #e7e7e7;
+	border-bottom: 1px solid #e7e7e7;
+	color: #333333;
+}
+.sort_menu_wrap h2 {
+	line-height: 35px;
+	font-family: "微软雅黑";
+	font-size: 14px;
+	color: #bc826e;
+	cursor:pointer;
+}
+.sort_menu_wrap h2 a{
+	 text-decoration:none;
+}
+.sort_menu_wrap i {
+	line-height: 35px;
+	margin-top: 10px;
+	margin-left: 14px;
+	margin-right: 16px;
+}
+.sort_menu_wrap h3 {
+	line-height: 35px;
+	font-family: "宋体";
+	font-size: 12px;
+	cursor: pointer;
+}
+.icon_title {
+	margin-top: 10px;
+	margin-left: 10px;
+	margin-right: 6px;
+}
+.sort_menu_wrap ul {
+	color: #666666;
+	padding-left: 58px;
+	padding-bottom: 12px;
+}
+.sort_menu_wrap ul li {
+	margin-top:8px;
+	color: #666666;
+	height: 14px;
+	padding-left: 10px;
+}
+.sort_menu_wrap ul li a:hover {
+	font-weight: bold;
+	color: #000;
+	text-decoration: none;
+}
+.sort_menu_wrap div {
+	border-top: 1px solid #e7e7e7;
+}
+i.icon_arrowup, i.icon_arrowdown {
+	margin-right: 35px;
+	margin-top: 15px;
+*margin-top:-20px;
+	float: right
+}
+/* end 左侧分类菜单  */
+/* begin 右侧标题  */
+.title {
+	height: 32px;
+	background-color: #faf9f9;
+	border-top: 2px solid #a48269
+}
+.title h3 {
+	font-size: 14px;
+	color: #333333;
+	line-height: 32px;
+	padding-left: 10px;
+}
+/* end 右侧标题  */
+/* begin 右侧内容  */
+.content_wrap {
+}
+/* end 右侧内容  */
+/* 用户中心表格 样式*/
+.table_user {
+	width: 100%
+}
+.table_user th {
+	height: 30px;
+	background: #faf9f9;
+	color: #333;
+	line-height: 30px;
+	text-align: center;
+	font-weight: normal
+}
+.table_user tr td {
+	border-bottom: 1px dashed #e6e2e1;
+}
+.table_user tr.bor_bnone {
+	border-bottom: none;
+}
+.table_user tr td {
+	text-align: center;
+	padding: 10px 0;
+	line-height:21px;
+}
+.table_user tr td.pad0{padding:0;}
+.table_user tr td.al{
+	text-align:left;
+}
+.table_user tr td.fl {
+	float: left;
+}
+.table_user.pad5 tr td{
+	padding:5px 0;color:#666;
+}
+.table_user.pad5 tr td a{color:#666;}
+.table_user tr td span {
+	color: #999;
+}
+.table_user tr td a.btn_zong span{color:#fff;}
+.table_user tr td a.btn_zong i{margin-right:0;}
+.table_user tr td span.qxgz{display:block; margin-top:5px;}
+.table_user tr td b {
+	color: #e4393c;
+}
+.table_user tr td img {
+	margin-right: 10px;
+}
+ #btn{ float:none; display:inline-block}
+ #btn:hover span{color:#FFF}
+
+.table_user.nobor tr td {
+	border: 0px;
+}
+/* end 用户中心表格样式 */
+
+/*用户资料样式*/
+.customer_data {
+	border-top: 1px solid #e7e7e7;
+	padding-top: 15px;
+	padding-bottom: 20px;
+}
+.customer_head {
+	width: 80px;
+	float: left;
+	margin-right: 20px;
+}
+.customer_head dt {
+	width: 80px;
+	height: 80px;
+	overflow: hidden;
+}
+.customer_head dd {
+	text-align: center;
+	padding-top: 5px;
+}
+.customer_head dd a {
+	color: #999;
+}
+.customer_detail {
+	float: left;
+	width: 430px;
+	color: #333;
+}
+.customer_detail p {
+	padding-bottom: 5px;
+}
+.customer_detail p span.font14 {
+	color: #bc826e;
+	font-size: 14px;
+}
+.customer_detail p span.font_span {
+	color: #e6e2e1;
+	padding: 0 25px;
+}
+.customer_detail p b {
+	color: #999;
+	font-weight: normal;
+}
+.customer_detail p.pa_b25 {
+	padding-bottom: 20px;
+	padding-top: 3px;
+}
+.customer_intergal {
+	border-left: 1px solid #e6e2e1;
+	float: left;
+	padding-left: 15px;
+	color: #333;
+	line-height: 200%;
+	margin-top: 35px;
+}
+.customer_intergal span {
+	color: #999;
+}
+.customer_intergal b {
+	color: #e4393c;
+}
+.member_level {
+	height: 35px;
+	padding-left: 22px;
+	color: #bc826e;
+	margin-left: 20px;
+}
+.account_list span.member_level {color: #bc826e;}
+.member_level.level00 {
+	background: url(../res/images/icon/member_level.png) 0 -145px no-repeat;
+}
+.member_level.level01 {
+	background: url(../res/images/icon/member_level.png) 0 -1px no-repeat;
+}
+.member_level.level02 {
+	background: url(../res/images/icon/member_level.png) 0 -37px no-repeat;
+}
+.member_level.level03 {
+	background: url(../res/images/icon/member_level.png) 0 -73px no-repeat;
+}
+.member_level.level04 {
+	background: url(../res/images/icon/member_level.png) 0 -109px no-repeat;
+}
+/*用户中心通用的*/
+.user_more {
+	padding: 10px 0;
+	text-align: right;
+}
+.pa_tb15 {
+	padding: 15px 0 20px 10px;
+	line: 180%
+}
+.pa_tb15 b {
+	color: #333;
+}
+.btn_table_brown {
+	background: #d3b38d;
+	padding: 3px 15px;
+	color: #fff;
+}
+.btn_table_brown:hover {
+	color: #fff;
+	text-decoration: none;
+	background:#a58169
+}
+/*账户中心input 列表页*/
+.account_list {
+	width: 765px;
+	margin: 0 auto 15px auto;
+	color: #333;
+}
+.account_list dt {
+	width: 120px;
+	text-align: right;
+	float: left;
+	padding-right: 10px;
+	height:25px;
+	line-height:25px;
+}
+.account_list dd{
+	line-height:25px;
+}
+.tab_con .account_list .error {
+	color: #f00;
+	display: inline-block;
+	padding-left: 20px;
+	background: url(../res/images/bg/no.png) 0 5px no-repeat
+}
+.tab_con .account_list .error.fl{background: url(../res/images/bg/no.png) no-repeat 0 2px; margin-left:5px; margin-top:2px;}
+.tab_con .account_list .info {
+	margin-left: -12px;
+	color: #999;
+	display: inline-block;
+	padding-left: 20px;
+	background: url(../res/images/bg/tishi.png) no-repeat 0 5px;
+}
+.account_list a.btn_zong span{ color:#fff}
+.account_list{ overflow:hidden}
+.account_list .input_account_span{  height: 25px;
+    line-height: 25px;
+    margin-right: 5px;
+    width: 155px;
+	font-weight:bold;
+	font-size:14px;
+	color:#000}
+.span_account_reset{color: #005EA7; margin-right:5px; height:25px; line-height:25px;}
+.account_list dt b {
+	font-weight: normal;
+	color: #f00;
+	font-family: "宋体"
+}
+.account_list dt.dt_w260 {
+	width: 260px;
+	text-align: left;
+}
+.account_list dt.dt_w100 {
+	width: 100px;
+	padding-left: 40px;
+	margin-right: 10px;
+}
+.account_list h3 {
+	font-size: 14px;
+	font-weight: bold;
+	color: #666666;
+	border-bottom: 1px dashed #e6e2e1;
+	padding: 10px 0;
+	margin: 10px 0;
+}
+.account_list span {
+	color: #999;
+}
+.account_list span.padr20{padding-right:20px;}
+.account_list span.span_ma_r20 {
+	margin-right: 20px;
+	color: #333;
+}
+.input_account_215 {
+	height: 25px;
+	border: 1px solid #e6e2e1;
+	line-height: 25px;
+	width: 155px;
+	margin-right: 5px;
+}
+.account_data_title {
+	font-weight: 700;
+	border-bottom: 1px solid #e8e4e3;
+	padding-bottom: 8px;
+	color: #333;
+	padding-left: 10px;
+}
+.textarea_w215 {
+	height: 75px;
+	border: 1px solid #e6e2e1;
+	width: 215px;
+}
+/*申请售后服务*/
+.user_sale_service{ border-top:1px solid #e6e2e1; background:#faf9f9; padding:10px 15px; margin:10px 0 20px 0;}
+.user_sale_service_title{ height:35px; background:#faf9f9; line-height:35px; font-size:14px; font-weight:700; padding-left:10px; margin:10px 0; color:#333;}
+.user_search_search{ height:25px; line-height:25px; border:1px solid #e6e2e1; background: url(../res/images/icon/search_dot.gif) right no-repeat; width:245px; color:#999; padding-left:3px;}
+
+/*新增地址*/
+.add_address_tit{padding:15px 10px 10px;line-height:21px;}
+.add_address_tit a{background:#d2b38e; padding:5px 10px; color:#fff;}
+.user_address .add_address{}
+.user_address .add_address{padding:0 0px 20px;border:2px solid #a58169}
+.user_address .add_address.nobor{border:0;}
+.user_address .add_address h4{ padding:10px; background:#faf9f9; margin-bottom:15px;color:#333;}
+.user_address .add_address dl{margin:0 10px 5px; clear:both;}
+.user_address .add_address dt{width:90px; text-align:right; float:left; line-height:26px;}
+.user_address .add_address dt,.user_address .add_address dd{margin-bottom:0;}
+.user_address .add_address dt span,.user_address .add_address dd span{font-family:serif; padding-right:5px; color:#f00;}
+.user_address .add_address dd span{color:#666; line-height:26px; background:none;}
+.user_address .add_address dd span.error{color:#f00;}
+.user_address .add_address dd input[type="text"]{height:26px; border:1px solid #e6e2e1; line-height:26px; width:203px; padding:0px 5px; margin-right:5px;}
+.user_address .add_address dd select{height:26px; border:1px solid #e6e2e1; line-height:26px;padding:2px 1px; margin-right:5px;}
+.user_address .add_address dd a{ background:#d2b38e; font-size:14px; color:#fff; font-weight:bold; padding:6px 20px; margin-top:10px;}
+.user_address .add_address dd a:hover{text-decoration:none;}
+.user_address .add_address dd.padt5{padding-top:5px;}
+
+/*新增地址、支付、配送、发票信息
+.user_address .add_address .step{background:#f2f9f9; margin:0 15px;}
+.user_address .add_address .step li{float:left; text-align:center; width:25%; padding:5px 0;}
+.user_address .add_address .step li.cur{ background:#d2b38e; color:#fff;}
+.user_address .add_address .add_new_address_step{padding:15px;}
+*/
+
+/*默认地址*/
+.user_address .mr_address{background:#fff9ee;border:1px solid #e9d5b2;}
+.user_address .my_address.mr_address .tit{background:#fff9ee;border-bottom:1px solid #e9d5b2;}
+/*地址*/
+.user_address .my_address{ margin-top:20px;}
+.user_address .my_address .tit{background:#faf9f9; height:32px; line-height:32px; padding:0 12px; color:#333;}
+.user_address .my_address .tit span{font-weight:bold;}
+.user_address .my_address .tit a{ margin-left:20px;}
+.user_address .my_address table{ margin:10px 0 0 20px;}
+.user_address .my_address table tr td{padding:1px 5px;color:#333;}
+
+/*我的收藏*/
+
+.shoucang_sj dl{ clear:both;border-bottom:1px dashed #e6e2e1; padding:10px 0;}
+.shoucang_sj dt{width:220px; float:left; border-right:1px dashed #e6e2e1;text-align:center;}
+.shoucang_sj dt p{line-height:22px; margin-bottom:5px;}
+.shoucang_sj dt p a{ margin:0 5px;}
+.shoucang_sj dd{width:730px;float:left; overflow:hidden;}
+.shoucang_sj .guanzh_sj_goods ul{display:block; width:760px;}
+.shoucang_sj .guanzh_sj_goods li{ float:left; display:block; width:150px; padding:0 20px;}
+.shoucang_sj .guanzh_sj_goods li p{height:36px; overflow:hidden; line-height:18px;}
+
+/*  用户中心搜索  公用样式 */       
+.user_search {padding:15px 0; color:#333;  padding-left:11px; overflow:hidden; line-height:25px;}
+.user_search input{ height:24px;*height:22px; width:190px;float:left;margin-right:10px;border:0 none;line-height:24px; color:#999999;}
+.user_search span.search { border:1px solid #e6e2e1; width:220px; padding-left:7px;overflow:hidden; float:left;margin-right:10px;background:url(../res/images/bg/serach.png) no-repeat 200px center;}
+           
+
+
+

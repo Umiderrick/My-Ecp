@@ -1,0 +1,35 @@
+@charset "utf-8";
+/*	
+标题：登陆注册头部文件
+作者：xucaihua
+创建日期：2013年11月25日  
+*/
+.ui_reg_header{
+	margin-top: 1px;
+	height: 103px;
+	overflow:hidden;
+	background: url(../res/images/bg/reg_header_bg.png) repeat-x;
+}
+.ui_reg_header_logo {
+	margin-top: 15px;
+	margin-left:15px;
+}
+.ui_reg_header_line {
+	margin: 25px 17px 25px 17px;
+}
+.ui_header_text {
+	margin-top: 42px;
+	*margin-top:35px;
+	*line-height:30px;/*覆盖body 定义的样式*/
+}
+.ui_header_text a {
+	font-family: "微软雅黑";
+	font-size: 22px;
+	color: #a48169;
+	text-decoration:none;
+}
+.ui_header_bottom_bg {
+	height: 15px;
+	background: url(../res/images/bg/header_bottom_bg.png) repeat-x;
+}
+.ui_reg_header .w990{ *height:103px;_height:103px;}

@@ -1,0 +1,42 @@
+@charset "utf-8";
+/* CSS Document */
+
+/*退换货状态*/
+.repair_step p{color:#333; line-height:21px;}
+.repair_step p a{color:#b27068;}
+.repair_step_txt{padding:20px 15px 15px; background:#faf9f9; border-top:1px solid #ccc; margin-bottom:20px;}
+.repair_step p.row1{font-size:14px; font-weight:bold;padding-bottom:10px; margin-left:-20px;}
+.repair_step p.row1 span{padding-left:20px;}
+.repair_step p.row1 span em{color:#41b202;}
+
+.repair_step ul{}
+.repair_step li{ float:left;width:155px; text-align:center; margin-right:5px; color:#999;}
+.repair_step ul li div{display:block; border-bottom:2px solid #ccc; padding:4px;font-size:14px; font-family:"微软雅黑";}
+.repair_step ul li div span{background:url(../res/images/bg/order_state_step.png) no-repeat left bottom; padding:0 10px 0 6px; width:15px; margin-right:5px;color:#fff;}
+.repair_step ul li p{display:block; padding:4px;color:#999;}
+/*已完成*/
+.repair_step ul li.ready div{border-bottom:2px solid #41b202; color:#41b202;}
+.repair_step ul li.ready div span{background:url(../res/images/bg/order_state_step.png) no-repeat left top;}
+.repair_step ul li.ready p{display:block; padding:4px;}
+.repair_step .repair_step_step{ width:800px; margin:0 auto 20px;padding:20px 0 0 0;}
+
+/*处理信息列表*/
+.repair_info{color:#333;}
+.repair_info h4{margin:10px auto; font-size:14px; font-weight:normal; padding:8px 10px; background:#faf9f9;}
+.repair_info dl{border-bottom:1px solid #e6e2e1; padding:5px 10px 4px;}
+.repair_info dl dt{display:inline-table;*float:left;width:145px; font-weight:bold; vertical-align:top;}
+.repair_info dl dd{padding-left:18px;display: inline-table;*float:left;}
+.repair_album{display:block;width:730px; padding-left:0; padding-top:5px; padding-bottom:5px;}
+.repair_album ul{float:none; padding:0; margin:0;}
+.repair_album ul li{float:left; margin:0 10px 0 0;}
+.repair_album ul li img{width:135px; height:100px;}
+.repair_btn{clear:both; margin-top:10px;}
+.repair_btn a{ padding:3px 15px; display:inline-block; background:#ededed;color:#666; text-decoration:none;}
+.repair_btn a:hover{color:#fff; background:#d2b38e;}
+.repair_btn a.yjj{color:#fff; background:#d2b38e;}
+
+.repair_info table{width:100%; border-collapse:collapse; margin-top:10px;}
+.repair_info table tr th{text-align:left; border-bottom:1px solid #ccc;}
+.repair_info table tr th,.repair_info table tr td{padding:5px 0 5px 10px;}
+
+

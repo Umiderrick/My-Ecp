@@ -1,0 +1,12 @@
+@charset "utf-8";
+/* CSS Document */
+/*	
+标题：tab文件
+作者：yuxingyang
+创建日期：2013年11月27日  
+*/
+.tab_change{ padding-left:5px; overflow:hidden; border-bottom:2px solid #a58169}
+.tab_change a{ margin-left:4px; float:left; padding:8px 12px; background:#f0f0f0; line-height:12px; color:#333}
+.tab_change a:hover{ text-decoration:none;}
+.tab_change a.cur{ background:#a58169; color:#fff}
+.tab_con{ display:none}

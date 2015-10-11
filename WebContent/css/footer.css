@@ -1,0 +1,16 @@
+@charset "utf-8";
+/*	
+标题：footer文件
+作者：yuxingyang
+创建日期：2013年11月15日  
+*/
+.ui_footer_top{ border:1px solid #cdcdcd; border-left:0; border-right:0; padding:15px 0; margin-top:25px;}
+.ui_footer_top_l{ border-right:1px solid #ccc; margin-left:25px; width:245px; float:left; margin-right:70px; height:140px;}
+.ui_footer_top_l .ui_footer_top_l_name{ font-family:"微软雅黑"; font-size:16px; color:#333; background:url(../res/images/icon/footer_tel.png) no-repeat; padding-left:36px; line-height:30px; font-weight:bold;}
+.ui_footer_top_l .ui_footer_top_l_tel{ font-family:"微软雅黑"; font-size:28px; color:#666; padding-top:25px;}
+.ui_footer_top_l .ui_footer_top_l_time{color:#666; padding-top:12px;}
+.ui_footer_top_r{ float:left;}
+.ui_footer_top_r dl{ width:120px; float:left;}
+.ui_footer_top_r dl dd{ padding-bottom:2px;}
+.ui_footer_top_r dt{ font-weight:bold; padding-bottom:20px;}
+.ui_footer_bot{ height:75px; margin-top:15px; background:#f8f8f8; line-height:75px; text-align:center;color:#1c1f7a;}

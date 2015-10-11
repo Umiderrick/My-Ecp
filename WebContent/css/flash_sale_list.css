@@ -1,0 +1,160 @@
+@charset "utf-8";
+/* CSS Document */
+/*	
+标题：限时抢购
+作者：xucaihua
+创建日期：2014年02月11日
+修改日期：	
+*/
+/*  面包屑  */
+.breadcrumb {
+	height: 42px;
+	line-height: 42px
+}
+/*商品分类 页签切换*/
+.tab_sort {
+	height: 14px;
+	line-height: 14px;
+	margin: 15px 0;
+	font-family:"宋体";
+	font-size: 14px;
+	color: #e6e2e1;
+}
+.tab_sort a {
+	padding: 0 20px;
+	text-decoration: none;
+	font-family: "微软雅黑";
+	color: #666;
+}
+.tab_sort a:hover {
+	color: #b58e4f
+}
+.tab_sort a:first-child {
+	padding-left: 11px;
+	color: #b58e4f;
+}
+/*  商品列表 */
+.order i{left:190px;}
+.product_filter_goods ul.filter_goods {
+	height: 408px;
+}
+.product_filter_goods .filter_goods li {
+	height: 398px;
+	*height:384px;
+	position: relative;
+}
+.filter_goods li img {
+	display: block;
+	margin: 0;
+	padding: 0;
+}
+.filter_goods  .p_price {
+	color: #e4393c;
+	height: 26px;
+	line-height: 26px;
+	margin-top: 10px;
+}
+.product_filter_goods .p_price span {
+	font-family: "新宋体";
+}
+.product_filter_goods .p_price em {
+	font-family: "微软雅黑";
+	font-weight: normal;
+}
+.product_filter_goods .p_price strong {
+	font-family: "Arial";
+	font-size: 26px;
+	font-weight: normal;
+}
+.product_filter_goods .p_reference {
+	color: #999;
+	font-family: "新宋体";
+	font-size: 12px;
+	height: 12px;
+	line-height: 12px;
+	margin-top: 10px;
+}
+.product_filter_goods .p_reference em {
+	font-family: "微软雅黑";
+	font-weight: normal;
+	text-decoration: line-through;/*background: url(../res/images/bg/under_line.jpg) no-repeat scroll 1px center rgba(0, 0, 0, 0);*/
+}
+.p_reference strong, .p_save strong {
+	font-weight: normal;
+	color: #999;
+	font-size: 12px;
+}
+.p_save {
+	color: #999;
+	font-family: "新宋体";
+	font-size: 12px;
+	height: 12px;
+	line-height: 12px;
+	margin-top: 6px;
+}
+.p_save em {
+	font-family: "微软雅黑";
+	font-weight: normal;
+}
+.p_time {
+	color: #999;
+	font-family: "宋体";
+	font-size: 12px;
+	width: 220px;
+	height: 30px;
+	line-height: 30px;
+	margin-top: 10px;
+	padding-left: 42px;
+	background-color: #fafafa;
+}
+.p_time span {
+	background: url(../res/images/bg/clock.png) left center no-repeat;
+	padding-left: 22px;
+	display: block;
+}
+.p_time em {
+	font-family: "Arial";
+}
+.filter_goods li.hove {
+	border-radius: 3px;
+	border-color: #d2b38e;
+	border-width: 2px;
+	border-style: solid;
+	-webkit-box-shadow: 3px 4px 5px rgba(5,1,1,.3);
+	-moz-box-shadow: 3px 4px 5px rgba(5,1,1,.3);
+	box-shadow: 3px 4px 5px rgba(5,1,1,.3);
+}
+.p_snap_up a {
+	position: absolute;
+	right: 8px;
+	bottom: 46px;
+ *bottom:45px;
+	display: block;
+	width: 90px;
+	height: 30px;
+	line-height: 30px;
+	text-decoration: none;
+	text-align: center;
+	background-color: #d2b38e;
+	color: #fff;
+	font-family: "宋体";
+	font-weight: bold;
+	font-size: 14px;
+}
+.p_snap_up span {
+	height: 14px;
+	line-height: 14px;
+	display: block;
+	padding: 8px 0;
+}
+.p_snap_up a:hover {
+	background-color: #a58269;
+	color:#fff;
+	text-decoration:none;
+}
+.snap_up_icon {
+	position: absolute;
+	top: 67.5px;
+	left: 67.5px;
+	z-index: 99;
+}

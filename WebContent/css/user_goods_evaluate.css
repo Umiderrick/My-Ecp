@@ -1,0 +1,129 @@
+@charset "utf-8";
+/* CSS Document */
+/*	
+标题：商品评价
+作者：xucaihua
+创建日期：2013年12月02日  
+*/
+
+/* begin 商品评价*/
+.evalute_con {
+	padding: 18px 20px 25px 20px;
+}
+.evalute_con img {
+	margin-right: 12px;
+}
+.evalute_details {
+	width: 956px;
+	margin: 0 auto ;
+}
+.evalute_details dt {
+	width: 100px;
+	text-align: right;
+	float: left;
+	color: #333;
+	margin-right: 6px;
+	margin-bottom: 8px;
+}
+.evalute_details dd {
+	text-align:left;
+	float: left;
+	color: #333;
+	margin-right: 6px;
+	margin-bottom: 8px;
+	width:800px;
+}
+.evalute_all .evalute_details dt span {
+	font-family: serif;
+	padding-right: 5px;
+	color: red;
+	font-weight: normal;
+}
+.evalute_all .evalute_details a.btn_none_third span {
+	color: #033333
+}
+.evalute_details a.btn_none_third:hover span {
+	color: #fff
+}
+.evalute_details font {
+	color: #ff0000
+}
+.evalute_details .input_vertical {
+	margin-right: 0px;
+}
+.evalute_details textarea {
+	border: 1px solid #e6e2e1;
+	color: #999999;
+	padding-left: 10px;
+}
+.evalute_details img {
+	margin-right: 26px;
+}
+.evalute_details div {
+	margin-left: 80px;
+	margin-bottom: 5px;
+}
+.evalute_details .upload {
+	width: 73px;
+	height: 25px;
+	background-color: #ededed;
+	text-align: center;
+	line-height: 25px;
+	cursor: pointer;
+}
+.evalute_details .prompt_info {
+    color: #033333 ;
+	letter-spacing: 1px;
+	line-height: 20px;
+	color: #033333;
+/*	width: 520px;*/
+}
+.evalute_details .img_explain {
+	height: 98px;
+	float: left;
+}
+.evalute_details .img_explain img {
+	margin-right: 10px;
+}
+.evalute_details .img_explain .textarea {
+	margin-top: 7px;
+	height: 50px;
+	width: 355px;
+}
+.evalute_details .img_explain span{
+	margin-left:166px;
+}
+.evalute_details .make_comment {
+	clear: both;
+	width: 90px;
+	height: 30px;
+	background-color: #d2b38e;
+	color: #FFF;
+	text-align: center;
+	line-height: 30px;
+	cursor: pointer;
+}
+.evalute_details div.txt {
+	width: 375px;
+	margin-left: 0px;
+	height: 98px;
+	padding-top: 20px;
+	float: left;
+}
+#eva_textarea {
+	width: 500px;
+	height:50px;
+}
+
+
+.evalute_all{border: 2px solid #A58169; padding:10px 0 0 0px;}
+.evalute_all_detial .table_user tr td{border:0 none;}
+.evalute_all_detial .table_user tr { border-bottom: none}
+ul.goods_info li{ float:left ; list-style:none}
+.evalute_table .table_user tr td{padding:0px;}
+.table_user tr td .goods_info{padding:10px 0}
+.evalute_details em{ margin-left:15px;}
+.table_user .evalute_all{ display:none;}
+.evalute_line{height:1px;border-bottom:1px dashed #E6E2E1;}
+
+

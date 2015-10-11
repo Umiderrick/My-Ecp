@@ -1,0 +1,211 @@
+@charset "utf-8";
+/* CSS Document */
+/*	
+标题：品牌页、品牌推荐列表
+作者：xucaihua
+创建日期：2013年11月22日
+修改日期：	
+*/
+
+/*begin       品牌页         */
+/*begin logo部分*/
+.brand_wrap {
+	height: 100px;
+	margin-bottom: 20px;
+	*padding-bottom:20px;/*ie7下Bug浮动元素的margin-bottom不能解析已经闭合浮动的高度*/
+}
+.brand_logo {
+	width: 182px;
+	height: 98px;
+	border: 1px solid #e6e2e1;
+}
+.brand_text {
+	width: 1016px;
+*width:1015px;
+	height: 98px;
+	line-height: 98px;
+	border-top: 1px solid #e6e2e1;
+	border-bottom: 1px solid #e6e2e1;
+	border-right: 1px solid #e6e2e1;
+}
+.brand_text a {
+	height: 98px;
+	font-family: "微软雅黑";
+	font-size: 14px;
+	font-weight: bold;
+	display: block;
+	color: #8a8a8a;
+	margin-left: 20px;
+	text-decoration: none;
+}
+/*begin logo部分*/
+/*  begin  商品排序  */
+a {
+	color: #666666
+}
+.product_filter .order_wrap {
+	background-color: #faf9f9;
+	padding-top: 6px;
+	padding-left: 11px;
+	padding-bottom: 6px;
+	border-top: 2px solid #a48269;
+	overflow: hidden;
+	_height: 31px;
+}
+.order dl, .order dt, .order dd {
+	float: left;
+	lin-height: 26px;
+}
+.order dd {
+	margin-right: 5px;
+}
+.order dl, .order dt, .order dd {
+	float: left;
+	lin-height: 26px;
+}
+.order dt.order_01 {
+	border: none;
+	margin-top: 5px;
+	margin-right: 15px;
+}
+.order dd {
+	margin-right: 5px;
+}
+.order a {
+	border: 1px solid #cecbce;
+	padding: 4px 12px;
+	display: block;
+	text-decoration: none;
+}
+.order a.cur ,.order a:hover{
+	background-color: #152058;
+	border: 1px solid #152058;
+	color: #FFF;
+	text-decoration: none;
+}
+.order {
+	position: relative;
+}
+.order i {
+	position: absolute;
+	top: 8px;
+	left: 135px;
+}
+.icon_orderup, .icon_orderdown {
+	float: none;
+}
+.product_filter_goods {
+/*	height: 1276px;
+	_height: 1286px;
+*height:1280px;*/
+	overflow: hidden;
+}
+.product_filter_goods .title{color:#e4393c;}
+.product_filter_goods ul.filter_goods {
+	border-bottom: 1px dashed #e6e2e1;
+	height: 314px;
+	margin-top: 5px;
+	overflow: hidden;
+}
+.product_filter_goods .filter_goods li {
+	width: 240px;
+ *width:224px;
+	height: 310px;
+ *height:296px;
+	float: left;
+	padding: 8px 8px 8px 8px;
+ *padding:8px 4px 4px 8px;
+	border: 2px solid transparent;
+	_border: 2px solid #FFF;
+	overflow: hidden;
+}
+.filter_goods li.hove {
+	border-radius: 3px;
+	border-color: #d2b38e;
+	border-width: 2px;
+	border-style: solid;
+	box-shadow: 4px 4px 6px #a7a2a2;
+}
+.filter_goods .rate {
+	height:35px;
+	margin-top: 10px;
+	margin-bottom: 5px;
+}
+.filter_goods strong {
+	font-size: 16px;
+	font-family:"微软雅黑";
+}
+.filter_goods a.reduce {
+	height: 14px;
+	text-align: center;
+	background-color: #e4393c;
+	margin-left: 3px;
+	padding: 2px 2px;
+	color: #FFF;
+}
+.p_img, .p_price, .p_name {
+	overflow: hidden;
+}
+.p_price strong {
+	color: #e4393c;
+	font-size: 16px;
+}
+img {
+	vertical-align: middle;
+}
+.rate {
+	text-align: left;
+	overflow: hidden;
+}
+/*  end  商品排序  */
+
+/*end         品牌页            */
+
+/*begin         品牌推荐列表            */
+.brand_list_wrap {
+	height: 45px;
+	border: 1px solid #e8e4e3;
+	border-top: 2px solid #a48269;
+	line-height: 44px;
+	margin-bottom: 25px;
+	padding-left:117px;
+	background-color:#faf8f9;
+}
+.brand_list_wrap a {
+	font-family: "微软雅黑";
+	font-size: 14px;
+	color: #333;
+	display: inline-block;
+	margin-right:100px;
+}
+
+.brand_list_wrap a.none_info {
+	color: #ccc;
+}
+.fieldset {
+	border: 0px;
+	border-top: 1px solid #e6e2e1;
+	padding-left: 20px;
+	font-size: 24px;
+	margin-bottom: 25px;
+}
+.brand_info {
+	margin: 25px 12px 0px 0px;
+	width: 184px;
+	float: left
+}
+.brand_info dt {
+	width: 184px;
+	height: 100px;
+*width:182px;
+*height:98px;
+	border: 1px solid #dedede;
+}
+.brand_info dd {
+	font-family: "宋体";
+	font-size: 12px;
+	width: 184px;
+	margin-top: 10px;
+	text-align: center;
+}
+/*end         品牌推荐列表            */

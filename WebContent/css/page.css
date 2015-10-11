@@ -1,0 +1,92 @@
+@charset "utf-8";
+/* CSS Document */
+
+/*	
+标题：分页文件
+作者：xucaihua
+创建日期：2013年11月21日  
+*/
+.page_wrap {
+	margin: 15px 0px;
+	height: 24px;
+}
+.page_wrap ul {
+	height: 22px;
+	width: auto;
+	list-style: none;
+	float: right;
+}
+.page_wrap li {
+	float: left;
+
+	text-decoration: none;
+}
+.page_wrap li a {
+	font-family: Arial;
+	font-size: 12px;
+	color: #8a8a8a;
+	text-decoration: none;
+	display: block;
+	height: 20px;
+*height:8px;
+	width: auto;
+	_width: 20px;/*ie6 会自动自适应*/
+	line-height: 8px;
+	text-align: center;
+	background-color: #f7f7f7;
+	margin-right: 5px;
+	border: 1px solid #d5d5d5;
+	padding: 6px;
+}
+.page_wrap li.pre a {
+	width: 20px;
+	height: 21px;
+	padding: 0px;
+}
+.page_wrap li.next a {
+	width: 20px;
+	height: 21px;
+	padding: 0px;
+}
+.page_wrap li.pageNum a:hover {
+	background-color: #8a8a8a;
+	color: #FFF;
+	border: 1px solid #8a8a8a;
+}
+.page_wrap li a.hove {
+	background-color: #8a8a8a;
+	color: #FFF;
+	border: 1px solid #8a8a8a;
+}
+.page_wrap .pre_hover {
+	margin-right: 20px;
+	background-color: #8a8a8a;
+	border: 1px solid #8a8a8a;
+}
+.page_wrap .next_hover {
+	margin-left: 20px;
+	background-color: #8a8a8a;
+	border: 1px solid #8a8a8a;
+}
+.page_wrap li a.icon_prehover {
+	background-color: #8a8a8a
+}
+.page_wrap li a.icon_nexthover {
+	background-color: #8a8a8a
+}
+.page_wrap .pre {
+	margin-left: 20px;
+	margin-right: 20px;
+}
+.page_wrap .next {
+	margin-left: 20px;
+}
+.page_wrap li.point a {
+	border: 0px;
+	background-color: #FFF
+}
+.page_wrap li.point a:hover {
+	border: 0px;
+	background-color: #FFF;
+	color: #8a8a8a
+}

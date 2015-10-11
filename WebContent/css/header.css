@@ -1,0 +1,310 @@
+@charset "utf-8";
+/*	
+标题：header文件
+作者：yuxingyang
+创建日期：2013年11月15日  
+*/
+.ui_header{ position:relative; z-index:20;min-width:1200px;}
+.ui_header_top {
+	border: 1px solid #f4ead8;
+	height: 28px;
+	background: #ead5b2;
+}
+.ui_header_top, .ui_header_top a {
+	color: #7d5c3c
+}
+.ui_header_top .store {
+	float: left;
+	margin-top: 3px;
+}
+.ui_header_top .store span {
+	margin-left: 5px;
+}
+.ui_header_top .welcome {
+	float: right;
+	margin-top: 3px
+}
+.ui_header_top .welcome span {
+	margin-right: 10px;
+}
+.ui_header_top .welcome a {
+	margin-left: 10px;
+}
+.ui_header_top .welcome a.no_mag {
+	margin: 0px
+}
+.ui_header_logo {
+	height: 105px;
+	background: url(../res/images/bg/header_search_bg.png) repeat-x left center
+}
+.ui_header_logo .ui_header_logo_bg {
+	width:1200px;
+	background: url(../res/images/bg/header_search.png) no-repeat left center;
+	padding-top: 13px;
+	padding-bottom: 0px;
+	margin: 0 auto;
+}
+.ui_header_logo .ui_header_logo_bg .ui_header_logo_pic {
+	float: left;
+	margin-left: 20px
+}
+.ui_header_logo .ui_header_logo_bg .ui_header_logo_search {
+	float: left;
+	margin-left: 65px;
+	margin-top: 10px
+}
+.ui_header_logo .ui_header_logo_bg .serch_box {
+	background: #a48169;
+	padding: 3px;
+	overflow:hidden;
+}
+.ui_header_logo .ui_header_logo_bg .serch_box input {
+	background: #fff;
+	width: 416px;
+	height: 30px;
+	border: 0 none;
+	color: #999999;
+	text-indent: 10px;
+	line-height:30px;
+	float:left;
+}
+.ui_header_logo .ui_header_logo_bg .serch_box button {
+	background: 0 none;
+	border: 0 none;
+	width: 78px;
+	height: 29px;
+	font-weight: bold;
+	color: #fff;
+	font-size: 14px;
+}
+.ui_header_logo .ui_header_logo_bg .hot_search a {
+	margin-right: 10px;
+	color:#666;
+	text-decoration:none;
+}
+.ui_header_logo .ui_header_logo_bg .hot_search a:hover{color:#b27166}
+.ui_header_logo .ui_header_logo_bg .hot_search a:first-child {
+	margin: 0px
+}
+.ui_header_logo .ui_header_logo_bg .ui_header_logo_func {
+	float: right;
+	margin-top: 15px;
+	position:relative;
+	 z-index: 999;
+}
+.ui_header_logo_func .btn_zong{ border:1px solid #A48169; border-bottom:0 none;}
+.ui_header_logo_func .btn_zong.cur {
+	background: #fff;
+	box-shadow: 3px -3px 5px #eaeaea;
+	border:1px solid #dddddd;
+	border-bottom:0px;
+}
+.ui_header_logo_func .btn_zong i{ margin-right:5px;}
+.ui_header_logo_func .btn_zong.cur .icon_account {
+	background-position: -41px -170px
+}
+.ui_header_logo_func .btn_zong.cur .icon_cart {
+	background-position: -41px -205px
+}
+.ui_header_logo_func .btn_zong.cur span {
+	color: #b27068
+}
+.ui_header_logo_posi {
+ 	background: none repeat scroll 0 0 #fff;
+    height: 0px;
+    position: absolute;
+    left: 0;
+    top: 84px;
+    width: 100%;
+    z-index: 99;
+	_line-height:0px;
+	_width:0px;
+}
+.ui_header_logo_posi>div {
+    -webkit-box-shadow: 0 0 7px rgba(14,14,14,.1);
+	-moz-box-shadow: 0 0 7px rgba(14,14,14,.1);
+	box-shadow: 0 0 7px rgba(14,14,14,.1);
+	border: 1px solid #dddddd;
+	position: absolute;
+	background: #fff;
+	display:none;
+}
+.ui_header_logo_posi div.ui_header_logo_posi_account {
+	
+	left:0;
+    top: -2px;
+	*top:1px;
+    width: 310px;
+}
+.ui_header_logo_posi div.ui_header_logo_posi_cart {
+	left:0;
+    top: -2px;
+	*top:1px;
+    width: 350px;
+}
+.ui_header_logo_bg .w1200{overflow:auto}
+
+.ui_header_logo .hot_search {
+    margin-top: 5px;
+}
+.ui_header_logo_posi_cart .posi_wrap_content, .ui_header_logo_posi_account .posi_wrap_content {
+	padding: 8px;
+	overflow:hidden;
+}
+.wrap_top {
+	padding-bottom: 10px;
+	border-bottom: 1px solid #dddddd
+}
+.wrap_top a {
+	color: #b27068
+}
+.wrap_middle {
+	padding: 10px;
+	padding-bottom: 2px;
+	overflow: hidden;
+}
+.wrap_middle_cart {
+	padding-bottom: 2px;
+	overflow: hidden
+}
+.wrap_middle a {
+	color: #666666
+}
+.wrap_middle a:hover {
+	color: #b27068
+}
+.wrap_middle_l {
+	border-right: 1px solid #ddd;
+	float: left;
+	overflow: hidden;
+	width: 132px;
+}
+.wrap_middle_l span {
+	color: #b27068
+}
+.wrap_middle a {
+	display: block;
+	height: 25px;
+	line-height: 25px;
+}
+.wrap_middle_r {
+	float: left;
+	overflow: hidden;
+	width: 132px;
+	*width:112px;
+	padding-left: 20px;
+}
+.wrap_middle_r span {
+	paddding-right: 5px;
+}
+.wrap_bottom {
+	background: none repeat scroll 0 0 #FAF9F9;
+	overflow: hidden;
+	padding: 10px 8px;
+}
+.wrap_bottom .wrap_bottom_account{ font-size:0px; margin-left: -10px;}
+.wrap_bottom .wrap_bottom_account a{ margin-left:10px; float:left;}
+.wrap_bottom_show {
+	font-size: 0px;
+	clear: both;
+	float: right;
+	font-size: 0;
+	margin-top: 10px;
+}
+.wrap_bottom_show a {
+	margin-right: 2px;
+}
+.wrap_bottom_show .btn_zong span{ font-size:14px; font-weight:bold; margin:0px}
+.wrap_bottom h3 {
+	margin-bottom: 10px;
+	font-size: 12px;
+}
+.wrap_middle_cart .wrap_middle_one.pd8 {
+	padding: 8px;
+}
+.wrap_middle_cart .wrap_middle_one {
+	position: relative;
+	padding-top: 10px
+}
+.wrap_middle_cart .wrap_middle_one span {
+	float: left;
+	margin-right: 10px;
+	height: 50px;
+}
+.wrap_middle_cart .wrap_middle_one span.num {
+	line-height: 50px;
+	margin-right: 0;
+	text-align: right;
+	width: 14px;
+}
+.wrap_middle_cart .wrap_middle_one span.num b {
+	width: 14px;
+	height: 14px;
+	text-align: right;
+	line-height: 20px;
+	position: relative;
+	top: 3px;
+}
+.wrap_middle_cart .wrap_middle_one span.money {
+	color: #E2393C;
+	font-family: "微软雅黑";
+	font-weight: bold;
+	line-height: 50px;
+	margin-left: 25px;
+	margin-right: 0;
+}
+.wrap_middle_cart .wrap_middle_one span.txt {
+	width: 173px;
+	margin-right: 0px;
+}
+.txt_red {
+	color: #e2393c;
+	font-family: "宋体"
+}
+.ui_header_logo_posi_cart .wrap_bottom .txt_red{ font-size:18px;}
+.wrap_middle_one div {
+	overflow: hidden
+}
+a.middle_one_close {
+	position: absolute;
+	right: 5px;
+	top: 0px;
+}
+.wrap_middle_cart .wrap_middle_one.pd8 a.middle_one_close {
+	position: absolute;
+	right: 12px;
+	top: 0px;
+}
+.wrap_middle_cart .wrap_bottom_bod{ color:#999}
+.wrap_bottom_bod {
+	padding-top: 10px;
+	padding-bottom: 10px;
+	border-bottom: 1px dashed #ddd
+}
+.wrap_bottom_reduce {
+	margin-top: 10px;
+	margin-bottom: 10px;
+	padding-left: 50px;
+	background: url(../res/images/bg/cart_middle_reduce.jpg) no-repeat 10px center #bffab1;
+	*background-position:10px 3px;
+	height: 22px;
+	line-height: 22px;
+}
+.ui_header_logo_posi_cart.kong .posi_wrap_content{ padding-left:45px; padding-top:20px; padding-bottom:20px; line-height:45px;}
+.ui_header_logo_posi_cart.kong .posi_wrap_content i{ margin-right:15px}
+.ui_header_logo_posi_cart.kong .posi_wrap_content span{ color:#999999}
+/*头部购物车 xucaihua  2013-11-25日添加*/
+.gowuche {
+	position: absolute;
+	right: 45px;
+	top: -18px;
+}
+i.icon_point {
+	color: #FFFFFF;
+	font-family: "宋体";
+	font-size: 12px;
+	font-style: normal;
+	line-height: 20px;
+	text-align: center;
+}
+.breadcrumb{ height:30px; line-height:30px;}

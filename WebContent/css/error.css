@@ -1,0 +1,15 @@
+@charset "utf-8";
+/* CSS Document */
+/*	
+标题：404
+作者：xucaihua
+创建日期：2013年12月12日
+修改日期：	
+*/
+
+.error_info{ width:640px;height:170px;margin:0 auto;margin-top:90px;overflow:hidden}
+.error_info img{float:left; }
+.error_info p{ overflow:hidden;float:right; margin-left:30px;width:480px; text-align:left;font-family:"微软雅黑"; font-size:14px;color:#000;}
+.error_info p strong {color:#666;}
+
+

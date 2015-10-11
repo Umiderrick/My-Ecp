@@ -1,0 +1,24 @@
+@charset "utf-8";
+/* CSS Document */
+/*	
+标题：我的消费记录
+作者：xucaihua
+创建日期：2013年12月02日  
+*/
+
+/*begin  我的消费记录 */
+.consume_con{ padding:16px 12px;}
+.consume_con strong {color:#e4393c;}
+.operation{ display:block;width:67px;height:25px; background-color:#d2b38e; text-align:center;line-height:25px; margin:0 auto; color:#FFF}
+.consume_con .table_user tr td{ text-align:center;}/*根据自己的需要 修改用户中心表格样式*/
+.font_color{ color:#b27068;}
+.select_by_date{width:945px; margin:0 auto 15px auto;height:25px;}
+.select_by_date dt{text-align:left; float:left;height:25px;line-height:25px;}
+.select_by_date dd{ width:415px;text-align:center; float:right;height:25px;line-height:25px;}
+.select_by_date select {width: 74px;text-align: center;}
+.consume_con .btn_zong { float:right;}
+.record_con{ border-top: 2px solid #a48269; }
+.record_con .table_user tr td{ border-bottom:1px solid #e6e2e1; }
+.record_con .table_user.pad5 tr td a:hover{color:#b27168;} 
+/*end  我的消费记录 */
+

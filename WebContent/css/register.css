@@ -1,0 +1,234 @@
+@charset "utf-8";
+/*会员的注册页*/
+body,html{ line-height:normal}
+.meber_register_list {
+	margin: 0 auto;
+	color: #5a5959;
+	font-size: 12px;
+}
+.meber_register_list_l {
+	width: 90px;
+	padding-right: 2px;
+	line-height: 30px;
+}
+.meber_register_list_m {
+	float: left;
+	height: 30px;
+	line-height: 30px;
+	width: 100%
+}
+.meber_register_list_m input {
+	height: 100%;
+	width: 305px;
+}
+.meber_register_list_m input.input_register02 {
+	width: 90px;
+}
+.meber_register_list_m div {
+	height: 30px;
+	float: left;
+	padding-left: 22px;
+	width: 270px;
+}
+.meber_register_list_m div.divPhone.info {
+	line-height: 15px;
+}
+.meber_register_list_m div.divAdmin.info {
+	line-height: 15px;
+}
+.img_code {
+	float: left;
+}
+.meber_register_list_m a {
+	color: #666666
+}
+.meber_register_list_l span {
+	color: #fd0303;
+	padding: 0 3px;
+	font-size: 12px;
+}
+.meber_register_list_m input.info {
+	border: 1px solid #a7c0f1;
+	margin: 0px 5px 0 0;
+	
+}
+.ok {
+	background: url(../res/images/bg/yes.png) 0 6px no-repeat;
+	color: #757575;
+}
+.error, .meber_register_list_m div.error {
+	background: url(../res/images/bg/no.png) 0px center no-repeat;
+	color: #757575;
+	line-height:30px;
+}
+.meber_register_list_m div.error {
+	color: #de4d4d
+}
+.info {
+	background: url(../res/images/bg/info.png) no-repeat 0 center;
+	color: #999;
+	line-height:15px;
+}
+.divPassword02.info{line-height:30px;}
+.input_register01, .input_register02 {
+	border: 1px solid #d8d8d8;
+	width: 185px;
+	float: left;
+	background:#fff;
+	margin-right: 10px;
+	padding: 4px;
+	font-size: 14px;
+	height: 18px;
+}
+.cheke {
+	line-height: 26px;
+}
+.chekekk {
+	margin-left: 27px;
+}
+.btn_register01 {
+	width: 115px;
+	height: 33px;
+	border: 1px solid #ccc;
+	background: #f8f8f8;
+	color: #555;
+	cursor: pointer;
+	line-height: 33px;
+	font-size: 14px;
+	margin-right: 5px;
+}
+.btn_register02 {
+	height: 38px;
+	color: #fff;
+	font-family: "微软雅黑";
+	font-size: 20px;
+	width: 130px;
+	cursor: pointer;
+	background: url(../res/images/icon/register_btn01.jpg) no-repeat;
+}
+.member_register_phone {
+	padding: 0px 30px;
+}
+.member_register_phone h1 {
+	font-family: "微软雅黑";
+	font-size: 24px;
+	color: #444444;
+	margin-bottom: 10px;
+	padding-top: 5px;
+}
+.member_register_phone h4 {
+	font-family: "微软雅黑";
+	font-size: 18px;
+	color: #ff6600;
+	margin-bottom: 10px;
+	font-weight: bold;
+}
+.member_register_phone p {
+	font-family: "微软雅黑";
+	font-size: 14px;
+	color: #757575;
+	text-indent: 1.8em;
+	line-height: 24px;
+}
+.meber_register_fwtk a {
+	color: #a48169;
+}
+.member_register .member_register_top {
+	border-bottom: 2px solid #D8D8D8;
+	float: left;
+	margin-bottom: 10px;
+	width: 305px;
+}
+.member_register_top h3 {
+	border-bottom: 2px solid #A48169;
+	color: #A48169;
+	float: left;
+	font-family: "微软雅黑";
+	font-size: 20px;
+	font-weight: normal;
+	margin-bottom: -2px;
+	padding: 5px 5px;
+}
+.regist_left {
+	float: left;
+	margin-top: 15px;
+	width: 680px;
+	*width:632px;
+	padding-left: 48px;
+	padding-bottom:30px;
+}
+.regist_left .member_register_rege {
+	width: 100%;
+	float: left;
+}
+.regist_left .img_code span {
+	margin-left: 10px
+}
+.regist_left .meber_register_list_m input.check {
+	float: left;
+	width: auto;
+	margin-right: 5px;
+}
+.regist_left .meber_register_list_m .meber_register_check {
+	float: left;
+	padding-left: 0px;
+	width: auto
+}
+.regist_left .member_register_button {
+	float: left;
+	margin-top: 15px;
+}
+.regist_right {
+	width: 300px;
+	*width:250px;
+	float: left;
+	margin-top: 65px;
+	padding-left: 40px;
+	padding-right: 10px;
+}
+.regist_right_t span.sczh {
+	height: 28px;
+	line-height: 28px;
+}
+.regist_right_b {
+	clear: both;
+	padding-top: 20px;
+	white-space:nowrap;
+}
+.regist_right_b {
+	color: #999;
+}
+.regist_right_b a {
+	color: #999
+}
+
+.regist_ok{padding:60px 0;}
+.regist_ok div:last-child{padding:20px;}
+.regist_ok a{padding-right:20px; margin-right:20px;}
+.regist_ok_icon{background:url(../res/images/bg/finish_pop.png) no-repeat 20px 15px; margin-left:230px; padding:20px 0 20px 88px; color:#333;}
+.regist_ok_icon span{font-size:18px; color:#666; font-family:微软雅黑; padding:7px 0 6px; 0}
+
+.regist_yhzcxy{width:700px; height:500px; overflow-y:auto; line-height:24px;}
+.regist_yhzcxy h5{font-size:12px; margin:15px 0;}
+.regist_yhzcxy p{margin-bottom:10px;}
+/*12月19日增加*/
+.regist_box{ border:1px solid #ebebeb; background:#fbfbfb url(../res/images/bg/regist_bg.png) no-repeat right 20px; width:988px; margin:5px auto 25px auto;}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

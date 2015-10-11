@@ -1,0 +1,129 @@
+﻿@charset "utf-8";
+/* CSS Document */
+/*	
+标题：toggleMenu文件
+作者：yuxingyang
+创建日期：2013年11月15日  
+*/
+.ui_header_nav {
+	height: 40px;
+	background: #a48169
+}
+.ui_header_nav .w1200 {
+	overflow: visible
+}
+.ui_header_nav ul.first_menu li {
+	float: left;
+	position: relative;
+}
+.ui_header_nav ul.first_menu li.all_products{ z-index:9999}
+.ui_header_nav ul.first_menu li.all_products a {
+	width: 230px
+}
+.ui_header_nav ul.first_menu li a.hove{background: #152058;font-weight: bold}
+.ui_header_nav ul.first_menu li.all_products a.cur{background: #152058;font-weight: bold}
+.ui_header_nav ul.first_menu li a:hover {
+	background: #886248;
+	font-weight: bold;
+	text-decoration: none;
+}
+.ui_header_nav ul.first_menu li a.hove{background: #152058;
+	font-weight: bold}
+ul.second_menu li dl.hove{
+	background: #e2dbd6;
+	font-weight: normal;
+}
+.ui_header_nav ul.first_menu li ul.second_menu li a:hover {
+	background: none;
+	font-weight: normal;
+	text-decoration: underline
+}
+.ui_header_nav ul.first_menu li a {
+	display: block;
+	width: 108px;
+	height: 40px;
+	line-height: 40px;
+	text-align: center;
+	font-size:14px;
+}
+.ui_header_nav ul.first_menu li ul.second_menu {
+	position: absolute;
+	width: 230px;
+	border-left: 1px solid #cfcfcf;
+	border-right: 1px solid #cfcfcf;
+	border-bottom: 1px solid #cfcfcf;
+	z-index: 10;
+	background:#fff;
+	*width:229px;
+	*margin-top:2px;
+	*margin-left:-1px;
+}
+.ui_header_nav ul.first_menu li ul.second_menu li {
+	float: none;
+	padding: 0px;
+	/*height: 60px;*/
+	*min-height:62px;
+	*margin-top:-3px;
+	position: relative;
+}
+.ui_header_nav ul.first_menu li ul.second_menu li dl{
+	padding: 12px 10px 8px;
+}
+ul.second_menu li dl dt span {
+	font-family: "微软雅黑";
+	color: #333333;
+	font-weight: bold;
+	padding-left: 5px
+}
+.ui_header_nav ul.first_menu li ul.second_menu {
+	-ms-box-shadow: 3px 3px 3px 0px #cfcfcf;
+	-o-box-shadow: 3px 3px 3px 0px #cfcfcf;
+	box-shadow: 3px 3px 3px 0px #cfcfcf;
+}
+.ui_header_nav ul.first_menu li ul.second_menu li a {
+	color: #666;
+	display: inline;
+	height: auto;
+	line-height: normal;
+	font-size: 12px;
+}
+div.third_menu {
+	width: 250px;
+	position: absolute;
+	right: -251px;
+	top: 0px;
+	background: #fff;
+	padding:0px;
+	box-shadow:3px 3px 5px #cfcfcf;
+	display:none;
+	border:1px solid #cfcfcf;
+	border-left:0;
+	*right:-252px;
+}
+.third_shadow_inset{box-shadow: inset 2px 0px 5px #cfcfcf; padding:15px; padding-left:10px;}
+.ui_header_nav a {
+	color: #fff0d8
+}
+ul.second_menu li dd {
+	padding-left: 23px;
+	padding-top: 6px
+}
+ul.second_menu li dd a {
+	margin-right: 10px
+}
+ul.second_menu li dt span {
+	cursor: pointer
+}
+.ui_header_nav ul.first_menu li ul.second_menu li div.third_menu a{ margin-right:0px}
+ul.second_menu li div.third_menu dl{padding-bottom:20px}
+
+ul.second_menu li div.third_menu dl.hove{ background:none}
+ul.second_menu li div.third_menu dt{ border-bottom:1px solid #999; padding-bottom:10px}
+ul.second_menu li div.third_menu dt span {
+	padding-left: 0px
+}
+ul.second_menu li div.third_menu dd {
+	padding-left: 0px;
+	padding-top:10px;
+}
+ul.second_menu li div.third_menu dd span{ padding:0 10px}

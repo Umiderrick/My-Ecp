@@ -1,0 +1,38 @@
+@charset "utf-8";
+/*	
+标题：登陆注册页尾部文件
+作者：xucaihua
+创建日期：2013年11月25日  
+*/
+.ui_reg_footer {
+	margin-top: 10px;
+	border-top: 1px solid #cdcdcd;
+}
+.ui_reg_footer_top {
+	width: 480px;
+	margin: 0 auto;
+}
+.ui_reg_footer_top ul {
+	margin-top: 15px;
+	float: left;
+}
+.ui_reg_footer_top ul li {
+	float: left;
+	width: 63px;
+	height: 15px;
+	margin-left: 14px;
+	border-right: 1px solid #cccccc;
+	_display: inline;
+}
+.ui_reg_footer_top ul li.end_li {
+	border: 0px;
+}
+.ui_reg_footer_bottom {
+	width: 260px;
+	margin: 0 auto;
+	margin-top: 45px;
+*margin-top:15px;
+}
+.ui_reg_footer_bottom span {
+	color: #1c1f7a;
+}

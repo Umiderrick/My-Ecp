@@ -1,0 +1,49 @@
+@charset "utf-8";
+/* CSS Document */
+/*	
+标题：img_scroll文件
+作者：yuxingyang
+创建日期：2013年11月20日  
+*/
+.scroll_wrap *{ margin:0px; padding:0px; list-style:none;}
+.scroll_wrap {
+	width: 600px;
+	overflow: hidden;
+	min-height: 58px;
+	float: left;
+	position:relative;
+}
+.scroll_wrap .scroll_body {
+	width: 10000px;
+	position: absolute;
+	overflow: hidden;
+}
+.scroll_wrap .scroll_body li {
+	float: left;
+	margin-right: 5px;
+	
+}
+.scroll_wrap .scroll_body li a{ float:left; overflow:hidden; height:54px;
+	width:50px;}
+.scroll_wrap .scroll_body li.end {
+	margin-right: 0px;
+}
+.sc_content .prev_go {
+	float: left;
+	background:url(../res/images/bg/pshow_forward.png) no-repeat center center #f5f5f5;
+	height:54px;
+	width: 17px;
+	margin-right: 5px;
+	cursor:pointer;
+}
+.sc_content .prev_go.scroll_end{ background:url(../res/images/bg/prev_end.png) no-repeat center center #f5f5f5; cursor:default}
+.sc_content .next_go {
+	float: right;
+	background:url(../res/images/bg/pshow_back.png) no-repeat center center #f5f5f5;
+	height:54px;
+	width: 17px;
+	cursor:pointer;
+}
+.sc_content .next_go.scroll_end{ background:url(../res/images/bg/next_end.png) no-repeat center center #f5f5f5; cursor:default}
+.preview{ height:430px; position:relative;float: left; z-index:1}
+.sc_content{ overflow:hidden}

@@ -1,0 +1,14 @@
+@charset "utf-8";
+/* CSS Document */
+
+/*布局*/
+
+.w1200{ width:1200px; margin:0 auto; overflow:hidden}
+.w960{ width:960px; margin:0 auto; overflow:hidden}
+.w1200 .w230{ float:left; width:230px;}
+.w1200 .w960{ float:left; width:960px; margin-left:10px;}
+.w990{ width:990px; margin:0 auto; overflow:hidden}
+.w990 .w190{width:190px; float:left;}
+.w990 .w790{ width:790px; float:left; margin-left:10px;}
+
+.overflow_v{overflow:visible;}

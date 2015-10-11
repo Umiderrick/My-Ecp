@@ -1,0 +1,136 @@
+@charset "utf-8";
+/* CSS Document */
+/*	
+标题：团购
+作者：xucaihua
+创建日期：2014年02月12日
+修改日期：	
+*/
+
+.w760 {
+	width: 760px;
+	_width: 745px;
+}
+.w230 {
+	width: 230px;
+	_clear: both;
+}
+.order_wrap {
+	margin-bottom: 15px;
+}
+.order i {
+	left: 190px;
+}
+.product_filter_goods ul.filter_goods {
+	height: 484px;	
+*height:476px;
+margin-bottom: 15px;
+*padding-bottom:15px;
+}
+.product_filter_goods .filter_goods li {
+		width: 366px;
+*width:350px;
+	height: 484px;
+*height:476px;
+	padding: 7px 7px 0 7px;
+	margin-right: 14px;
+	_margin-right: 6px;
+	border: 1px solid #e6e2e1;
+}
+.product_filter {
+	margin-top: 15px;
+}
+.product_filter_goods .p_price .p_reference {
+	font-family: "微软雅黑";
+	font-weight: normal;
+	margin-left: 10px;
+	text-decoration: line-through;
+}
+.product_filter_goods ul.filter_goods {
+	border: 0px;
+}
+.product_filter_goods .p_time {
+	width: 365px;
+	height: 30px;
+	padding-left: 13px;
+}
+.product_filter_goods .p_price b {
+	font-size: 26px;
+	font-family: "微软雅黑"
+}
+.product_filter_goods .p_price strong {
+	font-weight: bold;
+}
+.product_filter_goods .p_time span {
+	display: inline;
+}
+.product_filter_goods .p_time{*margin-top:0;}
+.product_filter_goods .p_time span.total_people {
+	background: none;
+	float: right;
+	margin-right:13px;
+ *margin-right:20px;
+}
+.product_filter_goods .p_time span.total_people em {
+	font-weight: bold;
+	color: #b27068
+}
+.filter_goods li.hove {
+	height: 482px;
+ *height:475px;
+	border-radius: 0;
+	border-color: #d2b38e;
+	border: 1px solid #d2b38e;
+	border-bottom: 3px solid #d2b38e;
+	box-shadow: none;
+}
+.product_filter_goods ul.filter_goods {
+	margin-top: 0;
+}
+.product_week_rank, .promote_product {
+	margin-right: 0px;
+}
+.filter_goods .rate {
+	padding:0 5px;
+	margin-bottom: 10px;
+}
+.product_week_rank h3 {
+*width:218px;
+}
+.p_snap_u a {
+	display: block;
+	width: 90px;
+	height: 30px;
+	line-height: 30px;
+	margin-right:5px;
+	text-decoration: none;
+	text-align: center;
+	background-color: #d2b38e;
+	color: #fff;
+	font-family: "宋体";
+	font-weight: bold;
+	font-size: 14px;
+}
+.p_snap_u span {
+	height: 14px;
+	line-height: 14px;
+	display: block;
+	padding: 8px 0;
+}
+.p_snap_u a:hover {
+	background-color: #a58269;
+	color:#fff;
+	text-decoration:none;
+}
+.filter_goods .p_price {
+	margin-top: 0px;
+}
+.product_filter_goods .p_time {
+	margin-left: -8px;
+}
+.p_time span:first-child {
+	float: left
+}
+.page_wrap {
+	margin: 15px 10px 15px 0;
+}

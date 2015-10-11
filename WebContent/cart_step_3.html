@@ -1,0 +1,156 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>订单支付</title>
+<link href="css/global.css" rel="stylesheet" type="text/css"/>
+<link href="css/cart.css" rel="stylesheet" type="text/css"/>
+</head>
+<!--	
+标题：购物车文件
+作者：Songshiqin
+创建日期：2013年11月25日  
+-->
+<body>
+<!--begin 购物车头部-->
+<div class="cart_header">
+	<div class="ui_header_top"><!--和公用头部-->
+		<div class="w990">
+			<div class="store"><i class="icon_store"></i><a href="index.html" onClick="window.external.addFavorite(this.href,this.title);return false" title='首页' rel="sidebar">加入收藏</a></div>
+			<div class="welcome"> <span>您好！欢迎来到广丝!</span> <a href="#" class="no_mag">[登录]</a> <a href="#" class="no_mag">[免费注册]</a> <a href="#">|</a> <a href="#">我的订单</a> <a href="#">|</a> <a href="#">客户服务</a> </div>
+		</div>
+	</div>
+	<div class="w990">
+		<!--begin logo-->
+		<div class="cart_header_logo fl"><a href="index.html"><img src="res/images/bg/logo.png"/></a></div>
+		<!--end logo-->
+		<!--begin 当前第几步提示-->
+		<div class="cart_step_tips fr">
+			<div class="cart_step_tips_txt clearfix">
+				<span>我的购物车</span>
+				<span>填写核对订单信息</span>
+				<span class="dq">成功提交订单</span>
+			</div>
+			<div class="cart_step_tips_bg step3"></div>
+		</div>
+		<!--end 当前第几步提示-->
+	</div>
+</div>
+<!--end 购物车头部-->
+
+<div class="w990">
+	<!--购物车标题-->
+	<h3 class="h3_mycart_tit"><i></i><span>我的购物车</span></h3>
+</div>
+<!--订单成功提交-->
+<div class="w990">
+	<div class="cart_order_content">
+    	<div class="cart_order">
+        	<p class="cart_order_tip">订单提交成功，请您尽快付款！</p>
+            <p class="pad10">订单号：1456845350<span style="margin-left:40px;">应付金额（元）：<b>￥699.00元</b></span></p>
+        </div>
+        <div class="cart_order_other"><b>立即支付 <span>￥699.00元</span>，即可完成订单。</b>请您在24小时内完成支付，否则订单会被自动取消。</div>
+    </div>
+	<!--平台支付选择-->
+	<p class="pad10"><b>请点击支付平台支付：</b></p>
+	<div class="payment_choose">
+		<h3>支付宝为您提供以下网上支付服务</h3>
+		<p><img src="res/images/temp/payment_temp.jpg" width="691" height="150"></p>
+	</div>
+	<p style="padding:10px 0;"><a href="#" class="btn_brown">立即支付</a></p>
+	<p class="pad10">完成支付后，您可以：<a href="#" class="font_brown">查看订单详情</a>&nbsp;&nbsp;&nbsp;&nbsp;<a href="#" class="font_brown">支付调查</a></p>
+	<!--平台支付选择结束-->
+</div>
+<!--订单成功提交-->
+
+
+<div class="w990">
+	<!--购物车标题-->
+	<h3 class="h3_mycart_tit"><i></i><span>我的购物车</span></h3>
+</div>
+<!--支付成功界面-->
+<div class="w990">
+	<div class="cart_order_content">
+    	<div class="cart_order">
+        	<p class="cart_order_tip">订单支付成功！我们将尽快安排为您发货！</p>
+            <p class="pad10">订单号：1456845350<span style="margin-left:40px;">已付金额（元）：<b>￥699.00元</b></span></p>
+        </div>
+    </div>
+    <p class="pad10">您可以：<a href="#" class="font_brown">查看订单详情</a>&nbsp;&nbsp;&nbsp;&nbsp;<a href="#" class="font_brown">继续购物</a></p>
+</div>
+<!--支付成功界面结束-->
+
+<div class="w990">
+	<!--购物车标题-->
+	<h3 class="h3_mycart_tit"><i></i><span>我的购物车</span></h3>
+</div>
+<!--支付失败界面-->
+<div class="w990">
+	<div class="cart_order_content">
+    	<div class="cart_order_fail">
+        	<p class="cart_tip_fail">很抱歉，订单支付失败！</p>
+            <p class="pad10">交易未完成。</p>
+        </div>
+    </div>
+	<p class="pad10">您可以：<a href="#" class="font_brown">返回当前页面 &gt;&gt;</a></p>
+</div>
+<!--支付失败结束-->
+<!--底部 参见 footer.html-->
+<div class="ui_footer_top">
+	<div class="w1200">
+	<div class="ui_footer_top_l">
+		<p class="ui_footer_top_l_name">广东丝纺集团服务热线</p>
+		<p class="ui_footer_top_l_tel">400-000-0000</p>
+		<p class="ui_footer_top_l_time">客服时间： 09:00-18:00（周一至周五）</p>
+	</div>
+	<div class="ui_footer_top_r">
+		<dl>
+			<dt>新手上路</dt>
+			<dd><a href="#">服务条款</a></dd>
+			<dd><a href="#">购物流程</a></dd>
+			<dd><a href="#">使用优惠券</a></dd>
+			<dd><a href="#">积分说明</a></dd>
+			<dd><a href="#">促销说明</a></dd>
+		</dl>
+		<dl>
+			<dt>支付方式</dt>
+			<dd><a href="#">支付方式</a></dd>
+			<dd><a href="#">支付等待时间</a></dd>
+			<dd><a href="#">发票制度</a></dd>
+		</dl>
+		<dl>
+			<dt>配送说明</dt>
+			<dd><a href="#">配送范围</a></dd>
+			<dd><a href="#">配送说明</a></dd>
+			<dd><a href="#">商品验货与签收</a></dd>
+		</dl>
+		<dl>
+			<dt>账户管理</dt>
+			<dd><a href="#">支付方式</a></dd>
+			<dd><a href="#">支付等待时间</a></dd>
+			<dd><a href="#">发票制度</a></dd>
+		</dl>
+		<dl>
+			<dt>支付方式</dt>
+			<dd><a href="#">账户注册</a></dd>
+			<dd><a href="#">找回密码</a></dd>
+		</dl>
+		<dl>
+			<dt>售后服务</dt>
+			<dd><a href="#">退换货政策</a></dd>
+			<dd><a href="#">退换货流程</a></dd>
+			<dd><a href="#">退款说明</a></dd>
+		</dl>
+		<dl>
+			<dt>关于我们</dt>
+			<dd><a href="#">网上商城</a></dd>
+			<dd><a href="#">业务合作</a></dd>
+		</dl>												
+	</div>
+	</div>
+</div>
+<div class="ui_footer_bot">Copyright 2013 丝纺商贸城 粤ICP备11089621号</div>
+<!--end底部 参见 footer.html-->
+</body>
+</html>
+

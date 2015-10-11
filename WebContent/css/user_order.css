@@ -1,0 +1,37 @@
+@charset "utf-8";
+/* CSS Document */
+/*整理到user_order.css中*/
+.order_details h4{background:#faf9f9;border-top:2px solid #a48269; height:33px; line-height:33px; padding:0 10px; font-size:14px; font-family:"微软雅黑"; color:#333;}
+.order_details div.pad10{padding:10px;}
+/*订单状态*/
+.order_state p{color:#333;}
+.order_state p a{color:#b27068;}
+.order_state p.row1{font-size:14px; font-weight:bold;padding-bottom:10px; margin-left:-20px;}
+.order_state p.row1 span{padding-left:20px;}
+.order_state p.row1 span em{color:#41b202;}
+
+.order_state ul{}
+.order_state li{ float:left;width:155px; text-align:center; margin-right:5px; color:#999;}
+.order_state ul li div{display:block; border-bottom:2px solid #ccc; padding:4px;font-size:14px; font-family:"微软雅黑";}
+.order_state ul li div span{background:url(../res/images/bg/order_state_step.png) no-repeat left bottom; padding:0 10px 0 6px; width:15px; margin-right:5px;color:#fff;}
+.order_state ul li p{display:block; padding:4px;color:#999;}
+/*已完成*/
+.order_state ul li.ready div{border-bottom:2px solid #41b202; color:#41b202;}
+.order_state ul li.ready div span{background:url(res/images/bg/order_state_step.png) no-repeat left top;}
+.order_state ul li.ready p{display:block; padding:4px;}
+.order_state .order_state_step{ width:640px; margin:0 auto;padding:20px 0 0 0;}
+
+
+/*订单跟踪*/
+.order_details .order_track{}
+.order_details .order_track dl{clear:both; line-height:24px;}
+.order_details .order_track dl dt{float:left;}
+.order_details .order_track dl dd{padding-left:18px;float:left;}
+.order_details .order_track dl dd.last-child{background:url(../res/images/bg/bg_order_track.png) no-repeat right center; padding-right:26px;}
+.order_details .order_track p{clear:both; padding:15px 0; color:#999;}
+/*订单信息*/
+.order_details .order_info h5{font-size:14px; margin:10px; color:#333;}
+.order_details .order_info .moren_info{border-bottom:1px solid #ccc; padding:0px 0 10px 25px;margin-bottom:10px;}
+.order_details .order_info .moren_info:last-child{margin-bottom:0;border-bottom:0;}
+/*用户中心 我的订单*/
+

@@ -1,0 +1,58 @@
+@charset "utf-8";
+/* CSS Document */
+/*	
+标题：我的优惠券
+作者：xucaihua
+创建日期：2013年12月02日  
+*/
+
+
+
+
+/*begin  我的优惠券 */
+.consume_con {padding:16px 12px 0px 12px;}
+.consume_con strong {color: #e4393c;margin-left: 10px;}
+.consume_con .font_darkred {color: #b27068;margin-left: 25px}
+.consume_con .table_user tr td {text-align: center;}/*根据自己的需要 修改用户中心表格样式*/
+.record_con {border-top: 2px solid #a48269;}
+.record_con .table_user tr {border-bottom: 1px solid #e6e2e1;}
+.record_con .table_user tr.bor_bnone {border-bottom: none;}
+.table_user tr td {color:#666;}
+.record ul{float:left;padding-left:30px; padding-right:28px;overflow:hidden}
+.record ul li{float:left;margin:12px 30px 30px 30px;}
+.record ul li div.p_state{color: #b27068; text-align:center; margin-top:30px; margin-bottom:10px;}
+.jifen_details { margin-left:60px; margin-right:60px;clear:left;padding-top:20px;padding-bottom:20px; padding-left:20px;border:1px solid #e6e2e1;}
+.record p{ line-height:180%; letter-spacing:1px;}
+.record .p_price{font-family: "微软雅黑";font-size:12px;color:#666;}
+.record .expire{ color:#ccc;}
+/*end  我的优惠券 */
+
+
+/*begin  我的积分*/
+.consume_con .btn_zong { float:right}
+.font_color {color: #b27068;}
+.view {display: block;width: 60px;height: 25px;float: right;background-color: #d2b38e;text-align: center;line-height: 25px;margin-left: 10px;color: #FFF}
+.record_con {border-top: 2px solid #a48269;}
+.record_con .table_user tr {border-bottom: 1px solid #e6e2e1;}
+.record_con .table_user tr.bor_bnone {border-bottom: none;}
+.table_user tr td {color:#666;}
+/*end  我的积分*/
+
+
+/*begin  积分兑换优惠券 */
+.redeemed_coupon_con {padding:16px 12px 0px 12px;}
+.redeemed_coupon_con strong {color: #e4393c;margin-left: 10px;}
+.redeemed_coupon_con .font_darkred {color: #b27068;margin-left: 25px}
+.font_color {color: #b27068;}
+.p_btn { margin-left:12px}
+.p_btn .btn_fen{ background-color:#bc3318 ;}
+.p_btn .btn_fen:hover{ background-color:#a01b03 ;}
+.redeemed_coupon_record ul{float:left;padding-left:30px; padding-right:28px;overflow:hidden;}
+.redeemed_coupon_record ul li{float:left;margin:30px 30px 30px 30px;}
+.redeemed_coupon_record ul li div.p_state{color: #b27068; text-align:center; margin-top:30px; margin-bottom:10px;}
+.jifen_details { margin-left:60px; margin-right:60px;clear:left;padding-top:20px;padding-bottom:20px; padding-left:20px;border:1px solid #e6e2e1;}
+.redeemed_coupon_record p{ line-height:180%; letter-spacing:1px;}
+.redeemed_coupon_record .p_price{font-family: "微软雅黑";font-size:12px;color:#666;}
+.redeemed_coupon_record .expire{ color:#999;}
+/*end  积分兑换优惠券 */
+

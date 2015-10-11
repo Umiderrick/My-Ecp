@@ -1,0 +1,50 @@
+@charset "utf-8";
+/* CSS Document */
+/*	
+标题：我的订单
+作者：xucaihua
+创建日期：2013年12月02日  
+*/
+.user_search span.grey{color:#999; margin:0px 15px;}
+.user_search .red{ color:#b27068; margin:0px 15px; cursor:pointer;}
+.my_order_table{ border-top:2px solid #a48269;}
+.my_order_table .table_user tr.control_height td {padding: 5px 0;}
+.my_order_table .table_user tr td.fl {padding: 17px 0;}
+.my_order_table .table_user tr.bor_bnone {border-bottom:  1px solid #e6e2e1;}
+.my_order_table .table_user tr td.remind{ border:1px solid #e6e2e1; background-color:#fcf7e3;padding: 6px 0;}
+.my_order_table .table_user {border:1px solid #e6e2e1;}
+.my_order_table  .table_user tr td.name{ font-family:"微软雅黑"; color:#666; font-size:11px;}
+.my_order_table  .table_user tr.last-child{border-bottom:1px solid red; }
+.myorder_list .posr{position:relative;}
+.dialog_nav{height:22px; line-height:22px; cursor:pointer; text-align:center;}
+.myorder_list .dialog{position:absolute; z-index:999999;top:10px; right:80px; background:#faf8f9; border:1px solid #efe7e4; padding:8px;-ms-box-shadow:4px 4px 4px #f00; box-shadow:4px 4px 4px #e4e2e3;}
+.myorder_list .dialog a.close_dialog{position:absolute;right:-5px;top:-5px;background:url(../res/images/icon/icon_cart.png) no-repeat right -85px;width:18px; height:18px;}
+.myorder_list .dialog_con{background:#fff; padding:8px; width:445px; padding:5px 15px 10px 10px;}
+.my_order_table .table th{background-color:#fff;border-bottom:1px solid #d8d8d8;}
+.my_order_table .table_user .table th{ text-align:left;padding-top:10px;height:20px;line-height:20px}
+.my_order_table .table tr td{text-align:left; vertical-align:top; padding:0px; border-bottom:0 none; line-height:normal;}
+.my_order_table .btn_gray,.my_order_table .btn_zong{ float:none; display:inline-block;}
+.my_order_table a.btn_zong:hover {background:#d2b38e;text-decoration: none}
+.my_order_table .line{color:#e2e6e1}
+.my_order_table { position:relative;}
+ /*删除商品*/
+.alert_del_goods_box{position:absolute;background:#faf8f9;border:1px solid #efe7e4; padding:8px; box-shadow:2px 2px 2px #eee; z-index:9999;}
+.alert_del_goods_con{background:#fff; padding:10px; min-width:220px;}
+.alert_del_goods_con h4{text-align:left; border-bottom:1px solid #f3f3f3; padding:0 0 8px 0; font-size:14px;}
+.alert_del_goods_con p{color:#c00; line-height:36px; margin-bottom:10px;}
+.alert_del_goods_con a{background:#fafbfb; padding:3px 7px; border:1px solid #dcdcdc; border-radius:2px;}
+.alert_del_goods_box.pad0{padding:0;}
+.alert_del_goods_box.pad0 .alert_del_goods_con{padding:0 0 15px 0; text-align:center;}
+.alert_del_goods_box.pad0 .alert_del_goods_con h4{background:#faf9f9;padding:5px 0 5px 10px;}
+.alert_del_goods_box.pad0 a.close_dialog{position:absolute;right:10px;top:5px;background:url(../res/images/icon/icon_cart.png) no-repeat right -115px;width:18px; height:18px;}
+ /*取消订单*/
+.cancel_order_goods_box{position:absolute;background:#faf8f9;border:1px solid #efe7e4; padding:8px; box-shadow:2px 2px 2px #eee; z-index:9999;}
+.cancel_order_goods_con{background:#fff; padding:10px; min-width:220px;}
+.cancel_order_goods_con h4{text-align:left; border-bottom:1px solid #f3f3f3; padding:0 0 8px 0; font-size:14px;}
+.cancel_order_goods_con p{color:#c00; line-height:36px; margin-bottom:10px;}
+.cancel_order_goods_con a{background:#fafbfb; padding:3px 7px; border:1px solid #dcdcdc; border-radius:2px;}
+.cancel_order_goods_box.pad0{padding:0;}
+.cancel_order_goods_box.pad0 .cancel_order_goods_con{padding:0 0 15px 0; text-align:center;}
+.cancel_order_goods_box.pad0 .cancel_order_goods_con h4{background:#faf9f9;padding:5px 0 5px 10px;}
+.cancel_order_goods_box.pad0 a.cancel_close_dialog{position:absolute;right:10px;top:5px;background:url(../res/images/icon/icon_cart.png) no-repeat right -115px;width:18px; height:18px;}
+

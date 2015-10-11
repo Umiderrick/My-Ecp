@@ -1,0 +1,56 @@
+@charset "utf-8";
+/* CSS Document */
+/*	
+标题：我的投诉
+作者：xucaihua
+创建日期：2013年12月02日  
+*/
+
+/*begin  我的投诉 */
+.compliant_con{ padding:21px 12px;}
+.operation{ display:block;width:67px;height:25px; background-color:#d2b38e; text-align:center;line-height:25px; margin:0 auto; color:#FFF}
+.compliant_con .table_user tr td{ text-align:center; padding:17px 0;}/*根据自己的需要 修改用户中心表格样式*/
+.font_color{ color:#b27068;}
+.table_user tr td.align_left{color:#b27068; text-align:left;padding-left:20px;}
+.font_gray{color:#999999;}
+.compliant_details {width:600px;padding: 20px 0px 20px 32px;line-height: 180%}
+.compliant_details select{ width:100px;padding-left:10px;}
+.compliant_details .line1{ margin-bottom:12px;}
+.compliant_details .line2{ margin-bottom:15px;}
+.compliant_details .line1 span,.compliant_details .line2 span{ margin-right:68px;}
+.compliant_details textarea{ width:430px;height:100px;border:1px solid #e6e2e1; margin-bottom:10px;}
+.compliant_details span.tishi,#submit{ margin-left:65px; margin-bottom:15px;}
+.record .btn_zong{display:inline-block; float:none;}
+.record .btn_fen span{color:#fff;}
+/*end  我的投诉 */
+
+
+
+/*begin 查看我的投诉 */
+.my_message{width:600px;padding: 20px 0px 20px 10px;line-height: 180%; }
+.my_message .message_area span{ margin-right:68px;}
+.my_message textarea{ width:430px;height:100px;border:1px solid #e6e2e1; margin-bottom:10px;}
+.my_message .tishi, #submit{ margin-left:65px;}
+.my_message #submit{ margin-top:15px;margin-bottom:15px;}
+.back{color:#b27068; margin-right:10px; line-height:30px; display:inline-block}
+.deal_state{ background-color:#faf9f9; padding:20px 10px; border-top:1px solid #e6e2e1; margin-top:20px;}
+ b,.font_dark_gray{ color:#333333;}
+.font_green{color:#41b202;}
+.deal_state span{ margin-right:30px; margin-bottom:6px; display:inline-block}
+.state{ margin-right:300px;}
+.complaint_list {width: 200px;margin: 0 auto 15px auto;color: #333;}
+.btn_none_third{ background-color:#ededed;}
+.btn_none_third span{color:#b27068;margin-right:0px;}
+.info_title {height: 32px;background-color: #faf9f9;margin-top:20px;}
+.info_title h3 {font-size: 14px;color: #333333;line-height: 32px;padding-left: 10px;}
+.details_compliant{padding-top:10px;}
+.details_compliant dl{clear:both; line-height:24px; }
+.details_compliant dl dt{float:left;}
+.details_compliant dl dd{float:left;}
+.details_compliant dl dd.last-child{background:url(res/images/bg/bg_order_track.png) no-repeat right center; padding-right:26px;}
+.compliant_content{padding:10px 10px 25px 10px;border-bottom:1px dashed #e6e2e1;}
+.solidline{ border-bottom:1px solid #e6e2e1;}
+.btn a{color:#000;}
+.btn a:hover{ color:#b27068;}
+.my_message a{ text-decoration:none}
+/*end 查看我的投诉 */

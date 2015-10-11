@@ -1,0 +1,201 @@
+@charset "utf-8";
+/* CSS Document */
+/*	
+标题：button文件
+作者：yuxingyang
+创建日期：2013年11月15日  
+*/
+[class^=btn_] {
+ font-family:"宋体";
+}
+a{ cursor:pointer; border:0;}
+input{ border:none;}
+.btn_zong {
+	/*padding: 5px 10px;*/
+	padding: 4px 10px;/*modify by xucaihua 2013-11-25*/
+	background: #a48169;
+	float: left;
+	color:#fff;
+   /*border: 1px solid #A48169;*/
+   /*border-bottom: 0 none;*/
+}
+.btn_zong .icon_addcart {
+	margin-top: 5px;
+}
+.btn_zong i{ margin-right:0px;}
+.btn_zong span {
+	/*margin-left: 10px;*/
+	color: #fff;
+	font-size: 12px;
+	white-space: nowrap;
+	float: left;
+	color:#FFF;
+}
+
+a.btn_zong:hover {
+	background: #a58269;
+	text-decoration: none
+}
+.btn_gray {
+	/*padding: 5px 10px;*/
+	padding: 4px 10px;/*modify by xucaihua 2013-11-25*/
+	float: left;
+	color:#999999;
+}
+.btn_gray span {
+	/*margin-left: 10px;*/
+	font-size: 12px;
+	white-space: nowrap;
+	float: left;
+}
+.btn_fen_2 {
+	background: #ededed;
+	padding: 7px 15px 6px;
+	line-height:12px;
+/*	border: 1px solid #d2b38e;*/
+}
+.btn_fen_2 i{ margin-left:5px;}
+
+a.btn_gray:hover {
+	/*color:#FFF;*/
+	background:#d2b38e;
+	text-decoration: none;
+}
+a.btn_gray:hover i{
+	width:13px;
+	height:13px;
+	background-position:-43px -143px;
+	}
+.btn_more {
+	padding: 5px 10px;
+	background: #d0b48d;
+	line-height: 15px;
+	*width:90px;
+}
+.btn_more i {
+	float: right;
+	margin-top: 2px;
+	margin-left: 5px
+}
+.btn_more span {
+	color: #fff;
+	font-size: 12px;
+	float: right;
+	white-space:nowrap;
+}
+a.btn_more:hover {
+	background: #a48169;
+	text-decoration: none
+}
+.btn_fen {
+	background: #d2b38e;
+	padding: 7px 15px 6px;
+	line-height:12px;
+/*	border: 1px solid #d2b38e;*/
+}
+.btn_fen:hover{ background:#a2836a}
+.btn_fen i{ margin-left:5px;}
+.btn_fen_little{
+	background: #d2b38e;
+	padding: 5px 10px 5px;
+	line-height:12px;
+}
+.btn_fen_little span { color:#fff;}
+.btn_none_f{background: #d2b38e;
+	padding: 9px 15px;
+	line-height:14px;
+	}
+.btn_none_f:hover{ background:#a58269}
+.btn_none_f span{ font-size:14px; font-weight:bold; margin-right:0px; line-height:14px; }
+.btn_none_f i{ margin-left:5px}
+.btn_qian{
+	background:#d3b38d;
+	padding: 8px 15px;
+	float:left;
+	color:#fff;
+	line-height:12px;
+}
+.btn_none {
+	background: none repeat scroll 0 0 #FAF9F9;
+	overflow: hidden;
+	float: left;
+	margin-left: 10px;
+	padding: 5px 8px;
+	border: 1px solid #e6e2e1;
+	line-height:12px;
+}
+.btn_none_third {
+	background: none repeat scroll 0 0 #FAF9F9;
+	overflow: hidden;
+	float: left;
+	margin-left: 10px;
+	padding: 7px 15px 6px;
+	line-height:12px;
+}
+.btn_none_third span {
+	color:#000;
+	margin-left: 4px;
+	margin-top: 1px;
+	float: left;
+	line-height:12px;
+}
+a.btn_none_third:hover{background:#d2b48d; cursor:pointer}
+a.btn_none_third:hover span{color:#fff}
+.btn_none span {
+	color: #a48068;
+	margin-left: 4px;
+	margin-top: 1px;
+	float: left;
+	line-height:12px;
+}
+.btn_none .icon_add {
+	margin-top: 0px;
+}
+.btn_zong.big{ padding:9px 20px 8px; line-height:19px; }
+.btn_zong.big span{ font-size:18px; font-family:"微软雅黑"; color:#fff; font-weight:bold; /*letter-spacing: 4px;*/ text-shadow:1px 1px 1px #634e40;margin:0px;}
+.btn_zong.big i{ margin-top:0px; margin-right:10px;}
+.btn_zong.big:hover{ background:#bc9274}
+span.shadow_txt {
+	font-size: 18px;
+	font-weight: bold;
+	color: #fff;
+	margin-top: 1px;
+	float: left;
+	font-family: "微软雅黑";
+	margin-left: 5px
+}
+.comment {
+    background: none repeat scroll 0 0 #D2B38E;
+    color: #FFFFFF;
+    float: right;
+    font-family: "宋体";
+    font-size: 12px;
+    font-weight: normal;
+    height: 21px;
+    line-height: 21px;
+    margin-right: 10px;
+    margin-top: 3px;
+    text-align: center;
+}
+.comment:hover{ background:#a58269; text-decoration:none; color:#fff}
+.ui_header_logo_func .btn_zong {
+	margin-left: 15px
+}
+
+.btn {
+	float: left;
+}
+.btn i {
+	float: left;
+}
+.btn span {
+	float: left
+}
+/*通用的*/
+.btn_address{ height:30px; line-height:30px; background:#d2b38e; font-size:14px; color:#fff; padding:0 15px; border:none; font-weight:bold; margin:10px 0 0 30px;}
+.btn_address:hover{ background:#a58269;}
+.ma_tb10{ margin:10px 0;}
+.input_vertical{vertical-align:middle; margin-top:-2px; margin-bottom:1px; margin-right:8px;}
+a.font_brown{color:#bc826e;}
+a.btn_brown{padding:4px 20px;font-size:18px; color:#fff; font-family: "微软雅黑";cursor:pointer; background:#a48068;}
+a.btn_brown:hover{ text-decoration:none;}

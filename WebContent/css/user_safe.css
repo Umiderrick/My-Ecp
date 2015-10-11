@@ -1,0 +1,72 @@
+@charset "utf-8";
+/* CSS Document */
+/*	
+标题：账户安全文件
+作者：yuxingyang
+创建日期：2013年11月27日  
+*/
+/*账户安全*/
+.user_safe{ padding:20px 10px; overflow:hidden;}
+.user_safe dl{ width:470px; overflow:hidden; float:left;_height:104px;}
+.user_safe dl dt{ float:left; margin-right:10px;_height:104px;}
+.user_safe dl .user_safe_t{ font-family:"微软雅黑"; color:#333}
+.user_safe dl .user_safe_t h3{font-size:18px; line-height:18px}
+.user_safe dl .user_safe_t p{ line-height:22px; font-size:12px; margin-bottom:27px;}
+.user_safe dl .user_safe_t p.user_safe_p{ margin-top:15px; margin-bottom:22px; line-height:12px}
+/*修改登陆密码*/
+.reset_password {
+	width: 370px;
+	margin: 0 auto;
+	padding-top:30px;
+}
+.reset_password dl {
+	margin-bottom: 15px;
+	overflow: hidden;
+	line-height:25px;
+}
+.reset_password dl dt {
+	width: 110px;
+	text-align: right;
+	float: left;
+	margin-right:7px;
+}
+.reset_password dl dt span.info {
+	color: #ff0000;
+	font-size: 12px;
+	display: inline-block;
+	height: 10px;
+	width: 10px;
+	background: url(../res/images/bg/reset_pass_info.png) no-repeat center center
+}
+.reset_password dl dd {
+	
+	width: 215px;
+	float: left
+}
+.reset_password dl dd input {
+	height:25px;
+	border: 1px solid #e6e2e1;
+	padding: 0px;
+	width: 100%
+}
+.reset_password dl dd.yzm a{ color:#b27068; float:left}
+.reset_password dl dd .yzm_link{ display:inline-block; margin-left:10px; line-height:30px; height:25px;}
+.reset_password dl dd .yzm_link a{ float:none}
+/*修改登陆密码成功*/
+.reset_password_success{ height:60px; padding-left:90px; padding-top:5px; background:url(../res/images/bg/finish.png) no-repeat left top}
+.reset_password_success .top{ color:#41b101; font-size:24px; font-family:"微软雅黑"}
+.reset_password_success .bottom{ margin-top:16px;}
+.reset_password_success .bottom a{ color:#b27068}
+/*修改登陆密码失败*/
+.reset_password_error{ height:60px; padding-left:90px; padding-top:5px; background:url(../res/images/icon/cart_order_tip_bg.png) no-repeat; background-position:0 -210px;}
+.reset_password_error .top{ color:#d03433; font-size:24px; font-family:"微软雅黑"}
+.reset_password_error .bottom{ margin-top:16px;}
+.reset_password_error .bottom a{ color:#b27068}
+
+/*修改邮箱验证*/
+.reset_email_vertifi{ padding-top:25px;}
+.reset_email_vertifi .reset_email_vertifi_wrap{ width:530px; margin:0 auto; margin-bottom:15px;}
+.reset_email_vertifi_wrap p{ color:#999; line-height:25px;}
+.verti_green{ color:#41b101; font-size:14px;}
+.verti_grey{ color:#333; font-family:"微软雅黑";}
+.vertifi_red{ color:#dd1800;}

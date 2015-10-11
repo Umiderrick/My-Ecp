@@ -1,0 +1,27 @@
+@charset "utf-8";
+/* CSS Document */
+/*	
+标题：magni文件
+作者：yuxingyang
+创建日期：2013年11月20日  
+*/
+#magnifier{
+    font-size: 0;
+    height: 350px;
+    width: 350px;
+	position:absolute;
+	left:0px;
+	top:0px;
+}
+#Browser{
+ border:1px solid #000;
+ z-index:100;
+ position:absolute;
+ background:#555;
+}
+#mag{
+ border:1px solid #000;
+ overflow:hidden;
+ z-index:100;
+}
+.preview *,preview *:before,preview *:after{ -moz-box-sizing:content-box}

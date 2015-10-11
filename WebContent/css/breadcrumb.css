@@ -1,0 +1,13 @@
+@charset "utf-8";
+/* CSS Document */
+/*	
+标题：面包屑
+作者：xucaihua
+创建日期：2013年11月20日
+修改日期：	
+*/
+
+.breadcrumb {
+	height: 30px;
+	line-height: 30px
+}

@@ -1,0 +1,78 @@
+@charset "utf-8";
+/* CSS Document */
+/*	
+标题：index文件
+作者：yuxingyang
+创建日期：2013年11月15日  
+*/
+/*首页*/
+.banner_wrap{ background:url(../res/images/bg/header_banner_bg.jpg) repeat-x;}
+.banner_wrap .banner_slide{margin: 0 auto;}
+.banner_wrap .banner_slide .bannerpic{	margin-left:230px;}
+.ui_container .hot_show{ margin-left: 233px; overflow:hidden; margin-top:10px; margin-bottom:20px}
+.ui_container .hot_show dl{float:left}
+.ui_container .hot_show dl dt{ text-align:center; margin-bottom:10px}
+.ui_container .hot_show dl dd{ width:186px; text-align:center}
+.ui_container .goods_display{border:1px solid #dedede; padding:10px; padding-top:0px; margin-bottom:15px;overflow: hidden;}
+.ui_container .goods_display h4{ height:45px; font-weight:normal; line-height:45px; border-bottom:2px solid #a48169; margin-bottom:10px; font-size:24px; font-family:"微软雅黑"; color:#333333}
+.ui_container .goods_display h4 .title_font{ font-size:36px;padding-right:5px; float:left}
+.ui_container .goods_display h4 dl{ padding:12px 0px; font-size:12px; line-height:normal; font-family:"宋体"}
+.ui_container .goods_display h4 dl dt{ float:right; *width:110px;}
+.ui_container .goods_display h4 dl dd{ 
+	float: right;
+    line-height: 25px;
+    margin-right: 15px;
+}
+.ui_container .goods_display h4 dl a{color:#666666}
+.ui_container .goods_display h4 dl a:hover{ color:#b27166}
+.ui_container .goods_display h4 dl dd span{color:#ebe8e7}
+.gowuche {
+	position: absolute;
+	right: 45px;
+	top: -18px;
+}
+i.icon_point {
+	color: #FFFFFF;
+	font-family: "宋体";
+	font-size: 12px;
+	font-style: normal;
+	line-height: 20px;
+	text-align: center;
+}
+.hot_show .scroll_wrap {
+	 height: 138px;
+}
+.hot_show .scroll_wrap .scroll_body li a{ padding: 0 15px; width:180px; *width:150px; height:138px}
+.hot_show .sc_content .prev_go {
+	background: url(../res/images/bg/cotrol_forward.png) no-repeat left center;
+	height: 123px;
+	visibility:hidden;
+}
+.hot_show .sc_content .next_go{background:url(../res/images/bg/cotrol_backward.png) no-repeat left center;
+	height: 123px;visibility:hidden;}
+.scroll_wrap .scroll_body li.end dl{ margin-right:0px}
+
+.goods_display .goods_display_hot, .goods_display .goods_display_pinpai {
+	font-size: 0px;
+	width: 110%
+}
+.goods_display .goods_display_hot a {
+	margin-right: 10px
+}
+.goods_display_pinpai img{margin-bottom:10px;}
+.goods_display .goods_display_pinpai {
+	/*margin-bottom: 15px;*/
+}
+.goods_display .goods_display_pinpai a {
+	padding-right: 15px;
+	*padding-right: 14px;
+	_padding-right: 10px;
+}
+.goods_display .goods_display_pinpai.end {
+	margin-bottom: 0px
+}
+.goods_display .goods_display_pinpai a:last-child {
+	padding-right: 0px
+}
+.ui_header_logo_func .btn_zong span{ color:#fff0d8;}
+.ui_header_logo_func a.btn_zong:hover span{color:#b27166;}
