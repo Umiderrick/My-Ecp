@@ -13,7 +13,6 @@ import java.util.Map;
 import javax.servlet.ServletConfig;
 import javax.servlet.ServletContext;
 import javax.servlet.ServletException;
-import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
@@ -26,7 +25,6 @@ import org.apache.commons.fileupload.servlet.ServletFileUpload;
 /**
  * Servlet implementation class ItemupdServlet
  */
-@WebServlet("/ItemupdServlet")
 public class ItemupdServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        
@@ -64,22 +62,6 @@ public class ItemupdServlet extends HttpServlet {
 
 	@Override
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-//		
-//		String itemid = request.getParameter("itemid");
-//		String itemname = request.getParameter("itemname");
-//		int qty = Integer.parseInt(request.getParameter("qty"));
-//		double price = Double.valueOf(request.getParameter("price")).doubleValue();
-//		String thitypeid = request.getParameter("thitypeid");
-//		String imgurl = request.getParameter("imgurl").toString();
-//		Itemdealer itd =new Itemdealer();
-//		boolean ok =itd.update(itemid,itemname,qty,price,thitypeid,imgurl);
-//		if (ok) {
-//			response.sendRedirect("success.jsp");
-//		} 
-//		else {
-//			response.sendRedirect("fail.jsp");
-//			System.out.println("更新失败");
-//		}
 		response.setContentType("text/plain;charset=gbk");
 		PrintWriter pw = response.getWriter();
 		try {
@@ -161,6 +143,4 @@ public class ItemupdServlet extends HttpServlet {
 		// pw.println("文件大小为 ：" + fileSize + "\r\n");
 		data.put("imgurl", "/users/images/" + filename + subfix);
 	}
-	
-
 }

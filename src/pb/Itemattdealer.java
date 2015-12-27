@@ -9,9 +9,9 @@ import pb.db.DB;
 import pb.db.TableValues;
 
 public class Itemattdealer {
-
+	DB db = new DB();
 	public TableValues query(String tablename) {
-		DB db = new DB();
+		
 		TableValues tv = null;
 		String sql ="select * from "+tablename;
 		tv = db.query(sql);
@@ -19,7 +19,6 @@ public class Itemattdealer {
 		
 	}
 	public boolean insert (String attid ,String itemid,String attrigid) {
-		DB db = new DB();
 		boolean ok = true;
 		try {
 			List<Map<String, Object>> dataList= new ArrayList<Map<String,Object>>();
@@ -38,7 +37,6 @@ public class Itemattdealer {
 		return ok;
 	}
 	public void delete(int iaid) {
-		DB db =new DB();
 		List<Map<String,Object>> list = new ArrayList<Map<String,Object>>();
 		Map<String,Object> map =new HashMap<String,Object>();
 		map.put("iaid",iaid);

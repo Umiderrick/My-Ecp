@@ -9,8 +9,8 @@ import pb.db.DB;
 import pb.db.TableValues;
 
 public class Attributedealer {
+	DB db = new DB();
 	public boolean insert (String attid ,String attname) {
-			DB db = new DB();
 			TableValues tv = null;
 			boolean ok = true;
 			try {
@@ -37,17 +37,15 @@ public class Attributedealer {
 			}
 			return ok;
 		}
-	public boolean update (String attid, String attname)
-	{
-		DB db =new DB();
+	public boolean update (String attid, String attname){
 		String sql ="update attribute set attname = '"+ attname +"' where attid = '" +attid +"'" ;
 		System.out.println(sql);
 		db.executeUpdate(sql);
+		db.closeDatabase();
 		return true;
 		
 	}
-	public void delete(String attid)
-	{	DB db =new DB();
+	public void delete(String attid){	
 		List<Map<String,Object>> list = new ArrayList<Map<String,Object>>();
 		Map<String,Object> map =new HashMap<String,Object>();
 		map.put("attid",attid);
@@ -57,28 +55,26 @@ public class Attributedealer {
 		System.out.println(attid +"ÒÑÉ¾³ý");
 	}
 	public TableValues query(String tablename) {
-		DB db = new DB();
 		TableValues tv = null;
 		String sql ="select * from "+tablename;
 		tv = db.query(sql);
+		db.closeDatabase();
 		return tv;
-		
 	}
 	public TableValues query(String tablename,String PKey) {
-		DB db = new DB();
 		TableValues tv = null;
 		String sql ="select * from "+tablename +" where attid = '"+PKey+"'" ;
-		System.out.println(sql);
 		tv = db.query(sql);
+		db.closeDatabase();
 		return tv;
 				
 	}
 	public TableValues innerquery(String tablename,String PKey) {
-		DB db = new DB();
 		TableValues tv = null;
-		String sql ="SELECT * FROM item INNER JOIN item_att ON item.itemid=item_att.itemid " ;
+		String sql ="SELECT itemid FROM item INNER JOIN item_att ON item.itemid = item_att.itemid "  ;
 		System.out.println(sql);
 		tv = db.query(sql);
+		db.closeDatabase();
 		return tv;
 		
 	}

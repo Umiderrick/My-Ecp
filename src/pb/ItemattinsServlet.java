@@ -21,9 +21,6 @@ import pb.db.TableValues;
  */
 public class ItemattinsServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
-	
-	
-	@Override
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		String attid =request.getParameter("attid");
 		List<Map<String,Object>> listg = new ArrayList<Map<String,Object>>();
@@ -49,9 +46,7 @@ public class ItemattinsServlet extends HttpServlet {
 }
 	
 
-	@Override
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-	
 	Itemattdealer tad = new Itemattdealer();
 	String attid = request.getParameter("attid");
 	String itemid = request.getParameter("itemid");

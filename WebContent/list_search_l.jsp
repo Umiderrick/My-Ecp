@@ -1,47 +1,5 @@
-<%@ page language="java"  pageEncoding="UTF-8"%>
+<%@ page language="java" import="java.util.*,pb.db.*,pb.*" pageEncoding="UTF-8"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %> 
-<%@ page import="java.util.*,pb.db.*,pb.*"%>
-<%
-	Object O =null;
-	O = session.getAttribute("pattern");
-	Searchdealer scd =new Searchdealer();
-	List<Map<String,Object>> list = new ArrayList<Map<String,Object>>();
-	if(null==O)
-	{
-		String thitypeid = session.getAttribute("thitypeid").toString();
-		TableValues tv = scd.thitypesearch(thitypeid);
-			DataColumn[] dcl=tv.getDataColumns();
-			for(int i=0;i<tv.getValues().length;i++)
-				{
-					Map<String,Object> map = new HashMap<String,Object>();
-						for(int j=0 ;j<tv.getDataColumns().length;j++)
-							{
-								String key =dcl[j].getName();
-								String value =tv.getValues()[i][j].toString();
-								map.put(key,value);
-							}
-					list.add(map);
-				}
-				request.setAttribute("list", list);
-	}else{
-	String pattern =O.toString();
-	TableValues tv = scd.indexsearch(pattern);
-	DataColumn[] dcl=tv.getDataColumns();
-	for(int i=0;i<tv.getValues().length;i++)
-		{
-			Map<String,Object> map = new HashMap<String,Object>();
-				for(int j=0 ;j<tv.getDataColumns().length;j++)
-					{
-						String key =dcl[j].getName();
-						String value =tv.getValues()[i][j].toString();
-						map.put(key,value);
-					}
-			list.add(map);
-		}
-		request.setAttribute("list", list);
-	
-	}
-%>
 <%
 {List<Map<String,Object>> list1 = new ArrayList<Map<String,Object>>();
 	Firtypedealer ftd =new Firtypedealer();
@@ -223,26 +181,6 @@ function attrigsearch(attrigid)
 								</c:forEach>
 								</dd>
 						</dl>
-						<div class="third_menu">
-								<div class="third_shadow_inset">
-								<dl>
-									<dd> 
-									<c:forEach items="${list2}" var ="list2"> 
-									<c:if test="${list2.firtypeid==list1.firtypeid}">
-									 <dt><span>${list2.sectypename} </span></dt>
-									 <dd> 
-									 <c:forEach items="${list3}" var ="list3"> 
-									 <c:if test="${list3.sectypeid==list2.sectypeid}">
-									 <a onclick="thitypesearch('${list3.thitypeid}')">${list3.thitypename}</a> <span>|</span> 
-									 </c:if>
-									 </c:forEach>
-									 </dd>
-									</c:if>
-									</c:forEach>
-									</dd>
-								</dl>
-								</div>
-							</div>
 						</li>
 						</c:forEach>
 					</ul>
@@ -252,12 +190,9 @@ function attrigsearch(attrigid)
 		</div>
 		</div>
 	</div>	
-<!-- end 头部结束 --> 
-<!-- begin 内容部分 开始-->
 <div class="w1200">
 <div class="w230 fl"> 
  <h3>类别筛选<strong>-三级类别筛选</strong></h3>
-  <!--begin 内容部分左侧菜单分类  -->
   <div class="list_menu_wrap">
   		<c:forEach items="${list2}" var ="list2"> 
 			<h3>${list2.sectypename}</h3>
@@ -270,17 +205,13 @@ function attrigsearch(attrigid)
 						  </ul>
 		</c:forEach>
   </div>
-  <!--end 内容部分左侧菜单分类  --> 
 </div>
-<!--end 内容部分左侧  --> 
-<!--begin 内容部分右侧  -->
 <div class="w960 fr"> 
-   <!-- begin 右侧商品筛选 -->
-  <div class="product_select">
-  <div class="select_title">
+<div class="product_select">
+<div class="select_title">
       <h3>属性筛选<strong>- &nbsp;商品筛选</strong></h3>
       <div class="extra"> <a href="###">重置筛选条件</a> </div>
-    </div>
+</div>
     <c:forEach items="${list4}" var ="list4"> 
    		<dl id="select_brand" class="fore clearfix">
       <dt>${list4.attname}</dt>
@@ -294,7 +225,6 @@ function attrigsearch(attrigid)
 			</c:if>
 			</c:forEach>
         </ul>
-     
       </dd>
    	</dl>
    	</c:forEach>
@@ -319,7 +249,6 @@ function attrigsearch(attrigid)
     </div>
  
    <div class="product_filter_goods">
-   
     <ul class="filter_goods ">
     <c:forEach items="${list}" var ="list" varStatus="sta">  
     	<li class="fore">
@@ -335,7 +264,6 @@ function attrigsearch(attrigid)
         		</c:forEach>
     </ul> 
  </div>
-
   <div class="product_paging fr"> 
       <div class="page_wrap">
         <ul class="page">
@@ -351,11 +279,7 @@ function attrigsearch(attrigid)
         </ul>
       </div>
     </div> 
-    <!-- end 右侧商品排序 --> 
-   <!-- end 右侧最近浏览 --> 
   </div>
-  <!--end 内容部分右侧  --> 
 </div>
-<!-- end   内容部分 结束--> 
 </body>
 </html>

@@ -9,8 +9,8 @@ import pb.db.DB;
 import pb.db.TableValues;
 
 public class Thitypedealer {
+	DB db = new DB();
 	public boolean insert (String sectypeid, String thitypeid,String thitypename) {
-		DB db = new DB();
 		TableValues tv = null;
 		boolean ok = true;
 		try {
@@ -40,7 +40,6 @@ public class Thitypedealer {
 	}
 public boolean update (String sectypeid,String thityprid, String thitypename)
 {
-	DB db =new DB();
 	String sql ="update thitype set thitypename = '"+ thitypename +"',sectypeid = '"+ sectypeid + "' where thitypeid = '" +thityprid +"'" ;
 	System.out.println(sql);
 	db.executeUpdate(sql);
@@ -49,7 +48,6 @@ public boolean update (String sectypeid,String thityprid, String thitypename)
 }
 public void delete(String thitypeid)
 {
-	DB db =new DB();
 	List<Map<String,Object>> list = new ArrayList<Map<String,Object>>();
 	Map<String,Object> map =new HashMap<String,Object>();
 	map.put("thitypeid",thitypeid);
@@ -61,7 +59,6 @@ public void delete(String thitypeid)
 	
 }
 public TableValues query(String tablename) {
-	DB db = new DB();
 	TableValues tv = null;
 	String sql ="select * from "+tablename;
 	tv = db.query(sql);
@@ -69,13 +66,10 @@ public TableValues query(String tablename) {
 			
 }
 public TableValues query(String tablename,String PKey) {
-	DB db = new DB();
 	TableValues tv = null;
 	String sql ="select * from "+tablename +" where thitypeid = '"+PKey+"'" ;
 	System.out.println(sql);
 	tv = db.query(sql);
 	return tv;
-			
 }
-
 }

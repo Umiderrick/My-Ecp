@@ -13,6 +13,7 @@ public class FirtypeinsServlet extends HttpServlet {
 
 	@Override
 	public void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		request.setCharacterEncoding("utf-8");
 		String firtypeid = request.getParameter("firtypeid");// 获取大类id
 		String firtypename = request.getParameter("firtypename");// 获取大类名称
 		Firtypedealer ftd = new Firtypedealer();

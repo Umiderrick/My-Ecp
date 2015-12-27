@@ -38,9 +38,7 @@ function deletep(firtypeid)
 	alert("确认删除" +firtypeid);
 	$.post("FirsttypeServlet",{"firtypeid":firtypeid},new function(data){
 		 window.location.reload();
-		 
 	 });
-	 
 }
 function update(firtypeid)
 {	alert(firtypeid);

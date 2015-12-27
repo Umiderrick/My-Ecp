@@ -9,9 +9,21 @@ import pb.db.DB;
 import pb.db.TableValues;
 
 public class Userdealer {
-	
-	public boolean canlogin(String username, String password)
-	{	DB db = new DB();
+	DB db =new DB();
+	public TableValues typejudge(String username) {
+		TableValues tv =null;
+		String sql ="select usertype from users where username = '" + username +"'";
+		try {
+		tv =db.query(sql);
+		return tv;
+		}catch(Exception e) {
+			e.printStackTrace();
+		}finally {
+			db.closeDatabase();
+		}
+		return tv;
+	}
+	public boolean canlogin(String username, String password){	
 		TableValues tv =null;
 		try {
 		String sql ="select * from users where username = '" + username +"' and password = '" + password +"'";
@@ -24,10 +36,8 @@ public class Userdealer {
 		db.closeDatabase();
 	}
 		return !tv.isEmpty();
-		
 	}
-	public boolean insert(String username, String password,String usertype) {
-		DB db = new DB();
+	public boolean insert(String username, String password,String usertype,String address,String phone) {
 		boolean ok = true;
 		TableValues tv =null;
 		try {
@@ -36,11 +46,14 @@ public class Userdealer {
 			data.put("username", username);
 			data.put("password", password);
 			data.put("usertype", usertype);
+			data.put("address", address);
+			data.put("phone", phone);
 			dataList.add(data);
 			String sql ="select * from users where username = '" + username + "'";
 			tv=db.query(sql);
 			if(tv.isEmpty()) {
 			db.tableInsert("users", dataList);
+			ok=true;
 			}
 			else {
 				System.out.println("用户名已存在");
@@ -53,5 +66,19 @@ public class Userdealer {
 			db.closeDatabase();
 		}
 		return ok;
+	}
+	public TableValues query (String username){
+		TableValues tv =null;
+		try {
+		String sql ="select * from users where username ='" + username + "'";
+		 tv = db.query(sql);
+		return tv;
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+	finally {
+		db.closeDatabase();
+	}
+		return tv;
 	}
 }

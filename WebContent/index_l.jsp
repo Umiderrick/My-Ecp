@@ -3,7 +3,6 @@
 <%@ page import="java.util.*,pb.db.*,pb.Firtypedealer,pb.Sectypedealer,pb.Thitypedealer"%>
 <%
 {
-
 List<Map<String,Object>> list1 = new ArrayList<Map<String,Object>>();
 	Firtypedealer ftd =new Firtypedealer();
 	TableValues tv1 = ftd.query("firtype");
@@ -75,21 +74,16 @@ List<Map<String,Object>> list1 = new ArrayList<Map<String,Object>>();
 <script type="text/javascript" src="js/magni.js"></script>
 <script type="text/javascript">
 $(function(){
-	
 	toggleMenu(null,".second_menu",".third_menu");
-	
 })
 function listsearch()
 {	var pattern = document.getElementById('search').value;
-	window.location.href='list_search.jsp';
-	$.post("IndexServlet",{ "pattern": pattern },null);
-	}
+	$.post("IndexServlet",{ "pattern": pattern },window.location.href='list_search.jsp');
+}
 function thitypesearch(thitypeid)
 {	
-	alert(thitypeid);
-	window.location.href='list_search.jsp';
-	$.post("IndexServlet",{ "thitypeid": thitypeid },null);
-	}
+	$.post("IndexServlet",{ "thitypeid": thitypeid },window.location.href='list_search.jsp');
+}
 </script>
 <style>
 dl {
@@ -105,14 +99,10 @@ dl {
 }
 </style>
 </head>
-
 <body>
 <div class="ui_header">
 	<div class="ui_header_top">
 		<div class="w1200">
-		<div class="store"><i class="icon_store"></i><a href="fir_type.jsp">类别录入界面</a></div>
-		<div class="store"><i class="icon_store"></i><a href="attribute.jsp">属性录入界面</a></div>
-		<div class="store"><i class="icon_store"></i><a href="item.jsp">商品录入界面</a></div>
 		<div class="welcome">欢迎您！<%=session.getAttribute("userName")%>登录</div>
 			</div>
 	</div>
@@ -120,25 +110,21 @@ dl {
 	<div class="ui_header_logo">
 		<div class="ui_header_logo_bg">
 			<div class="w1200">
-				<div class="ui_header_logo_pic"> <a href="index.jsp"><img src="res/images/bg/logo.png"/></a> </div>
+				<div class="ui_header_logo_pic"> <a href="index.jsp"><img src="res/images/wuhang.png"/></a> </div>
 				<div class="ui_header_logo_search">
 					<div class="serch_box">
 						<input type="text" placeholder="请输入关键字" id="search" />
 						<button onclick="listsearch()">搜索</button>
 					</div>
 				</div>
-				<div class="ui_header_logo_func"> <a href="welcome.jsp" class="btn_zong" ><i class="icon_account" ></i><span>我的账户</span></a> <a href="#" class="btn_zong" ><i class="icon_cart"></i><span>购物车</span></a><span class="gowuche"><i class="icon_point">0</i></span> </div>
+				<div class="ui_header_logo_func"> <a href="welcome.jsp" class="btn_zong" ><i class="icon_account" ></i><span>我的账户</span></a> <a href="cart_step_1.jsp" class="btn_zong" ><i class="icon_cart"></i><span>购物车</span></a><span class="gowuche"><i class="icon_point">0</i></span> </div>
 				<div class="ui_header_logo_posi">
 					<div class="ui_header_logo_posi_account">
 						<div class="posi_wrap_content">
 							<div class="wrap_top"><b>您好</b><%=session.getAttribute("userName")%></div>
 							<div class="wrap_middle">
-								<div class="wrap_middle_r"> <a href="salorder.jsp">我的订单&nbsp;&nbsp;&gt;</a>  </div>
+								<div class="wrap_middle_r"> <a href="cart_.jsp">我的订单&nbsp;&nbsp;&gt;</a>  </div>
 							</div>
-						</div>
-						<div class="wrap_bottom">
-							<h3>最近浏览的商品:</h3>
-							<div class="wrap_bottom_account"> <a href="#"><img src="res/images/temp/account_show.jpg"></a> <a href="#"><img src="res/images/temp/account_show.jpg"></a> <a href="#"><img src="res/images/temp/account_show.jpg"></a> <a href="#"><img src="res/images/temp/account_show.jpg"></a> <a href="#"><img src="res/images/temp/account_show.jpg"></a> </div>
 						</div>
 					</div>
 				</div>

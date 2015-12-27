@@ -19,7 +19,7 @@ public class FirsttypeServlet extends HttpServlet {
 
 	    @Override
 		public void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-	    	String fid =request.getParameter("firtypeid");
+	    	  String fid =request.getParameter("firtypeid");
 	    	  Firtypedealer ftd =new Firtypedealer();
 	    	  ftd.delete(fid);
 	    	  HttpSession session = request.getSession();

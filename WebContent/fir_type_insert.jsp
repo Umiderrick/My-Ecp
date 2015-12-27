@@ -20,7 +20,6 @@ function submitMyForm(){
 </head>
 
 <body>
-
 <div class="w990">
 		<div class="place_mid">
 			<div class="login_title">

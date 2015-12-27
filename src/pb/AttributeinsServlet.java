@@ -7,17 +7,12 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
-/**
- * Servlet implementation class AttributeinsServlet
- */
 public class AttributeinsServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        
-	@Override
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 	}
 
-	@Override
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		request.setCharacterEncoding("utf-8");
 		String attid = request.getParameter("attid");// 获取大类id

@@ -3,8 +3,7 @@
 <%@ page import="java.util.*,pb.db.*,pb.Firtypedealer,pb.Sectypedealer,pb.Thitypedealer"%>
 <%
 {
-
-List<Map<String,Object>> list1 = new ArrayList<Map<String,Object>>();
+	List<Map<String,Object>> list1 = new ArrayList<Map<String,Object>>();
 	Firtypedealer ftd =new Firtypedealer();
 	TableValues tv1 = ftd.query("firtype");
 	DataColumn[] dcl1=tv1.getDataColumns();
@@ -81,14 +80,11 @@ $(function(){
 })
 function listsearch()
 {	var pattern = document.getElementById('search').value;
-	window.location.href='list_search.jsp';
-	$.post("IndexServlet",{ "pattern": pattern },null);
+	$.post("IndexServlet",{ "pattern": pattern },window.location.href='list_search.jsp');
 	}
 function thitypesearch(thitypeid)
 {	
-	alert(thitypeid);
-	window.location.href='list_search.jsp';
-	$.post("IndexServlet",{ "thitypeid": thitypeid },null);
+	$.post("IndexServlet",{ "thitypeid": thitypeid },window.location.href='list_search.jsp');
 	}
 </script>
 <style>
@@ -110,17 +106,14 @@ dl {
 <div class="ui_header">
 	<div class="ui_header_top">
 		<div class="w1200">
-		<div class="store"><i class="icon_store"></i><a href="fir_type.jsp">类别录入界面</a></div>
-		<div class="store"><i class="icon_store"></i><a href="attribute.jsp">属性录入界面</a></div>
-		<div class="store"><i class="icon_store"></i><a href="item.jsp">商品录入界面</a></div>
 		<div class="welcome">欢迎您！<a href="login.jsp"><b>登录</b></a></div>
-			</div>
+		</div>
 	</div>
 </div>
 	<div class="ui_header_logo">
 		<div class="ui_header_logo_bg">
 			<div class="w1200">
-				<div class="ui_header_logo_pic"> <a href="index.jsp"><img src="res/images/bg/logo.png"/></a> </div>
+				<div class="ui_header_logo_pic"> <a href="index.jsp"><img src="res/images/wuhang.png"/></a> </div>
 				<div class="ui_header_logo_search">
 					<div class="serch_box">
 						<input type="text" placeholder="请输入关键字" id="search" />

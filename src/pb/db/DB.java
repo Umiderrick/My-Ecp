@@ -21,7 +21,6 @@ import pb.DbConfig;
 
 public class DB implements AutoCloseable {
 	boolean bInited = false;
-
 	// 加载驱动
 	void initJDBC() throws ClassNotFoundException {
 		String driverClass = DbConfig.readValue("DRIVER_CLASS"); 
@@ -77,29 +76,16 @@ public class DB implements AutoCloseable {
 		return executeUpdate(sql, null, null);
 	}
 
-	/**
-	 * 
-	 * update users set password=:password where username=:username
-	 * 
-	 * {password="123",username="user"}
-	 * 
-	 * @param sql
-	 * @param parameter
-	 * @throws SQLException
-	 * @throws ClassNotFoundException
-	 */
 	public int executeUpdate(String sql, Map<String, Object> parameter) {
-		// 解析列明
 		Matcher m = colPattern.matcher(sql);
 		StringBuffer sb = new StringBuffer();
-		List<String> colList = new ArrayList(parameter.size());
+		List<String> colList = new ArrayList<String>(parameter.size());
 		while (m.find()) {
 			String col = m.group(1);
 			colList.add(col);
 			m.appendReplacement(sb, "?");
 		}
 		m.appendTail(sb);
-		// 解析参数值
 		int[] sqlTypes = new int[colList.size()];
 		Object[] paramValues = new Object[colList.size()];
 		for (int i = 0; i < colList.size(); i++) {
@@ -111,15 +97,6 @@ public class DB implements AutoCloseable {
 	}
 
 	static final Pattern colPattern = Pattern.compile(":(\\w+)");
-
-	/**
-	 * delete from table where ip=? update table set ip=? where name=?
-	 * 
-	 * @param sql
-	 * @param sqlTypes
-	 *            java.sql.Types
-	 * @param paramValues
-	 */
 	public int executeUpdate(String sql, int[] sqlTypes, Object[] paramValues) {
 		try {
 			Statement stmt = null;
@@ -139,13 +116,6 @@ public class DB implements AutoCloseable {
 
 	}
 
-	/**
-	 * 向指定的表中插入数据 inert into table（colname） values(?,?,?)
-	 * 
-	 * @param table
-	 * @param dataList
-	 * @throws Exception
-	 */
 	public int tableInsert(String table, List<Map<String, Object>> dataList) {
 		try {
 			Set<String> colSet = parseColSet(dataList);
@@ -368,9 +338,6 @@ public class DB implements AutoCloseable {
 	/**
 	 * 根据指定的SQL语句及对应的参数返回关系表中的数据值。
 	 * 
-	 * DEMO: sql=select * from users where user=? sqlTypes=new int[]{12}
-	 * paramValues=new Object[]{"admin"}
-	 * 
 	 * @param sql
 	 *            查询语句
 	 * @param sqlTypes
@@ -469,83 +436,4 @@ public class DB implements AutoCloseable {
 		Object[][] obj = List.toArray(new Object[List.size()][]);
 		return obj;
 	}
-
-//	static void testQuery() {
-//		DB query = new DB();
-//		TableValues tv = query.query("select * from users ", null, null);
-//		try {
-//			query.close();
-//		} catch (Exception e) {
-//			e.printStackTrace();
-//		}
-//		System.out.println(tv);
-//	}
-//
-//	static void testUpdate() {
-//		DB update = new DB();
-//		String sql = "update users set password=:password where username=:username";
-//		Map<String, Object> params = new HashMap();
-//		params.put("username", "admin");
-//		params.put("password", "" + System.currentTimeMillis());
-//		update.executeUpdate(sql, params);
-//		try {
-//			update.close();
-//		} catch (Exception e) {
-//			e.printStackTrace();
-//		}
-//	}
-//
-//	static void testInsert() {
-//		DB db = new DB();
-//		List<Map<String, Object>> recordList = new ArrayList<>();
-//		Map<String, Object> record = new HashMap();
-//		record.put("salid", "x02");
-//		record.put("salcode", "1507-02");
-//		record.put("ccode", "李四");
-//		recordList.add(record);
-//		db.tableInsert("salorder", recordList);
-//		try {
-//			db.close();
-//		} catch (Exception e) {
-//			e.printStackTrace();
-//		}
-//	}
-//
-//	static void testDelete() {
-//		DB db = new DB();
-//		List<Map<String, Object>> recordList = new ArrayList<>();
-//		Map<String, Object> record = new HashMap();
-//		record.put("salid", "x01");
-//		recordList.add(record);
-//		db.tableDelete("salorder", recordList);
-//		try {
-//			db.close();
-//		} catch (Exception e) {
-//			e.printStackTrace();
-//		}
-//	}
-//
-//	static void testUpdate2() {
-//		DB db = new DB();
-//		List<Map<String, Object>> recordList = new ArrayList<>();
-//		Map<String, Object> record = new HashMap();
-//		record.put("salid", "x001");
-//		record.put("salcode", "1507-24");
-//		record.put("ccode", "李四");
-//		record.put("jixl", "阿斯达斯的");
-//		recordList.add(record);
-//		db.tableUpdate("salorder", recordList);
-//		try {
-//			db.close();
-//		} catch (Exception e) {
-//			e.printStackTrace();
-//		}
-//	}
-//
-//	public static void main(String[] args) {
-//		 testUpdate2();
-//		 testQuery();
-//		 testDelete();
-//		 testInsert();
-//	}
 }

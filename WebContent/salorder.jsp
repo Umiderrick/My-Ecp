@@ -43,7 +43,7 @@
 <div class="cart_list posr">
 	<!--表头-->
 	<div class="cart_thead clearfix">
-		<div class="row1 ar"><input type="checkbox" id="checkall" name="checkall"><label for="checkall">全选</label></div>
+		<div class="row1 ar"><input id="checkall" name="checkall" type="checkbox"><label for="checkall">全选</label></div>
 		<div class="row2"><span>商品</span></div>
 		<div class="row3 ac">价格</div>
 		<div class="row5 ac">库存</div>
@@ -52,52 +52,8 @@
 	</div>
 	<!--表体-->
 	<div class="cart_tbody_con">
-		<!--营销活动 === 满赠-->
-		<div class="yx">
-				<div class="fl">
-					<i class="mz">满赠</i>
-					<span>活动商品已购满300元</span>
-				</div>
-				<div class="fl">
-					<i class="mz">满赠</i>
-					<span>活动商品已购满300元</span>
-				</div>
-				<div class="gift_dialog_box">
-					<a class="gift_dialog_nav" href="javascript:;">领取赠品1</a>
-					<div class="gift_dialog hide">
-						<a class="close_gift_dialog" href="javascript:;"></a>
-						<div class="gift_dialog_con">
-							<h4>请选择赠品</h4>
-							<table>
-								<colgroup>
-									<col width="65">
-									<col width="230">
-									<col width="50">
-									<col width="50">
-								</colgroup>
-								<tbody>
-								<tr>
-									<td><a href="javascript:;"><img alt="" src="res/images/temp/cart_middle_02.jpg"></a></td>
-									<td><a href="javascript:;">雨荷 毛巾家纺 素色缎条毛巾四条装</a></td>
-									<td><a href="javascript:;">*1</a></td>
-									<td><a class="cho" href="javascript:;">选择</a></td>
-								</tr>
-								<tr>
-									<td><a href="javascript:;"><img alt="" src="res/images/temp/cart_middle_02.jpg"></a></td>
-									<td><a href="javascript:;">雨荷 毛巾家纺 素色缎条毛巾四条装</a></td>
-									<td><a href="javascript:;">*1</a></td>
-									<td><a class="cho" href="javascript:;">选择</a></td>
-								</tr>
-								</tbody>
-							</table>
-						</div>
-					</div>
-				</div>
-				<div class="clr"></div>
-			</div>
-		<!--end 营销活动 === 满赠-->
 		<div class="cart_tbody clearfix">
-			<div class="row1"><input type="checkbox" id="" name=""></div>
+			<div class="row1"><input id="" name="" type="checkbox"></div>
 			<div class="row2">
 				<!--商品信息-->
 				<div class="p_goods clearfix">
@@ -111,7 +67,7 @@
 			<div class="row6">
 				<div class="p_quantity ac">
 					<a class="jian_goods" href="javascript:;">-</a>
-					<input type="text" value="3" class="num" id="" name="">
+					<input value="3" class="num" id="" name="" type="text">
 					<a class="jia_goods" href="javascript:;">+</a>
 					<!--div class="ac js">仅剩<span>3</span>件</div-->
 				</div>
@@ -120,196 +76,9 @@
 				<span class="p_del p_line50"><a class="alert_del_goods" href="javascript:;">删除</a></span>
 			</div>
 		</div>
-		<!--赠品-->
-		<div class="cart_gift clearfix">
-			<div class="row1">&nbsp;</div>
-			<div class="row2">
-				<!--赠品-->
-				<div class="p_gift">
-					<p><a href="javascript:;">[赠品]超效清洁擦拭布/毛巾 3条装 40cm×40cm</a></p>
-				</div>
-			</div>
-			<div class="row3 ac">&nbsp;</div>
-			<div class="row4 ac">&nbsp;</div>
-			<div class="row5 ac">&nbsp;</div>
-			<div class="row6">
-				<div class="p_quantity ac">					
-					<span>x 1</span>
-				</div>
-			</div>
-			<div class="row7 ac posr">&nbsp;</div>
-		</div>
-		<div class="cart_gift clearfix">
-			<div class="row1">&nbsp;</div>
-			<div class="row2">
-				<!--赠品-->
-				<div class="p_gift">
-					<p><a href="javascript:;">[赠品]超效清洁擦拭布/毛巾 3条装 40cm×40cm</a></p>
-				</div>
-			</div>
-			<div class="row3 ac">&nbsp;</div>
-			<div class="row4 ac">&nbsp;</div>
-			<div class="row5 ac">&nbsp;</div>
-			<div class="row6">
-				<div class="p_quantity ac">					
-					<span>x 1</span>
-				</div>
-			</div>
-			<div class="row7 ac posr">&nbsp;</div>
-		</div>
-		<!--营销活动 === 满赠-->
-		<div class="yx">
-				<div class="fl">
-					<i class="mz">满赠</i>
-					<span>活动商品已购满300元</span>
-				</div>
-				<div class="gift_dialog_box">
-					<a class="gift_dialog_nav" href="javascript:;">领取赠品1</a>
-					<div class="gift_dialog hide">
-						<a class="close_gift_dialog" href="javascript:;"></a>
-						<div class="gift_dialog_con">
-							<h4>请选择赠品</h4>
-							<table>
-								<colgroup>
-									<col width="65">
-									<col width="230">
-									<col width="50">
-									<col width="50">
-								</colgroup>
-								<tbody>
-								<tr>
-									<td><a href="javascript:;"><img alt="" src="res/images/temp/cart_middle_02.jpg"></a></td>
-									<td><a href="javascript:;">雨荷 毛巾家纺 素色缎条毛巾四条装</a></td>
-									<td><a href="javascript:;">*1</a></td>
-									<td><a class="cho" href="javascript:;">选择</a></td>
-								</tr>
-								<tr>
-									<td><a href="javascript:;"><img alt="" src="res/images/temp/cart_middle_02.jpg"></a></td>
-									<td><a href="javascript:;">雨荷 毛巾家纺 素色缎条毛巾四条装</a></td>
-									<td><a href="javascript:;">*1</a></td>
-									<td><a class="cho" href="javascript:;">选择</a></td>
-								</tr>
-								</tbody>
-							</table>
-						</div>
-					</div>
-				</div>
-				<div class="clr"></div>
-			</div>
-		<!--end 营销活动 === 满赠-->
-		<!--套装-->
-		<div class="cart_tbody_tz">
-			<div class="cart_tbody clearfix">
-				<div class="row1"><input type="checkbox" id="" name=""></div>
-				<div class="row2">
-					<!--商品信息-->
-					<div class="p_goods clearfix">
-						<strong>[套装] 套装更优惠</strong>
-					</div>
-				</div>
-				<div class="row3 ac"><span class="p_price">￥5999.00</span></div>
-				<div class="row4 ac"><span>100</span></div>
-				<div class="row5 ac"><span>&nbsp;</span></div>
-				<div class="row6">
-					<div class="p_quantity ac">
-						<a class="jian_goods" href="javascript:;">-</a>
-						<input type="text" value="3" class="num" id="" name="">
-						<a class="jia_goods" href="javascript:;">+</a>
-					</div>
-				</div>
-				<div class="row7 ac posr">
-					<span class="p_del"><a class="alert_del_goods" href="javascript:;">删除</a></span>
-				</div>
-			</div>
-			<div class="cart_tbody borbf1 clearfix">
-				<div class="row1"></div>
-				<div class="row2">
-					<!--商品信息-->
-					<div class="p_goods clearfix">
-						<a class="p_img fl" href="javascript:;"><img alt="" src="res/images/temp/account_show.jpg"></a>
-						<a class="p_txt fl" href="javascript:;">床品家纺 全棉缎纹印花双人加大1.8米全棉缎纹印花双人加大1.8米床四件套W-AD58-4虹</a>
-					</div>
-				</div>
-				<div class="row3 ac"><span class="p_price p_line50">￥5999.00</span></div>
-				<div class="row4 ac"><span class="p_line50">100</span></div>
-				<div class="row5 ac"><span class="p_line50">有货</span></div>
-				<div class="row6">
-					<div class="p_quantity ac ">
-						<span class="p_line50">3</span>
-					</div>
-				</div>
-				<div class="row7 ac posr">
-					<span class="p_del p_line50"><a class="alert_del_goods" href="javascript:;">删除</a></span>
-				</div>
-			</div>
-			<div class="cart_tbody clearfix">
-				<div class="row1"></div>
-				<div class="row2">
-					<!--商品信息-->
-					<div class="p_goods clearfix">
-						<a class="p_img fl" href="javascript:;"><img alt="" src="res/images/temp/account_show.jpg"></a>
-						<a class="p_txt fl" href="javascript:;">床品家纺 全棉缎纹印花双人加大1.8米全棉缎纹印花双人加大1.8米床四件套W-AD58-4虹</a>
-					</div>
-					<!--赠品-->
-					<div class="p_gift"></div>
-				</div>
-				<div class="row3 ac"><span class="p_price p_line50">￥5999.00</span></div>
-				<div class="row4 ac"><span class="p_line50">100</span></div>
-				<div class="row5 ac"><span class="p_line50">有货</span></div>
-				<div class="row6">
-					<div class="p_quantity ac">
-						<span class="p_line50">3</span>
-					</div>
-				</div>
-				<div class="row7 ac posr">
-					<span class="p_del p_line50"><a class="alert_del_goods" href="javascript:;">删除</a></span>
-				</div>
-			</div>
-		</div>
-		<!--end套装-->
-		<!--表体-->
-		<!--营销活动 === 满赠-->
-		<div class="yx">
-				<div class="fl">
-					<i class="mz">满赠</i>
-					<span>活动商品已购满300元</span>
-				</div>
-				<div class="gift_dialog_box">
-					<a class="gift_dialog_nav" href="javascript:;">领取赠品1</a>
-					<div class="gift_dialog hide">
-						<a class="close_gift_dialog" href="javascript:;"></a>
-						<div class="gift_dialog_con">
-							<h4>请选择赠品</h4>
-							<table>
-								<colgroup>
-									<col width="65">
-									<col width="230">
-									<col width="50">
-									<col width="50">
-								</colgroup>
-								<tbody>
-								<tr>
-									<td><a href="javascript:;"><img alt="" src="res/images/temp/cart_middle_02.jpg"></a></td>
-									<td><a href="javascript:;">雨荷 毛巾家纺 素色缎条毛巾四条装</a></td>
-									<td><a href="javascript:;">*1</a></td>
-									<td><a class="cho" href="javascript:;">选择</a></td>
-								</tr>
-								<tr>
-									<td><a href="javascript:;"><img alt="" src="res/images/temp/cart_middle_02.jpg"></a></td>
-									<td><a href="javascript:;">雨荷 毛巾家纺 素色缎条毛巾四条装</a></td>
-									<td><a href="javascript:;">*1</a></td>
-									<td><a class="cho" href="javascript:;">选择</a></td>
-								</tr>
-								</tbody>
-							</table>
-						</div>
-					</div>
-				</div>
-				<div class="clr"></div>
-			</div>
 		<!--end 营销活动 === 满赠-->
 		<div class="cart_tbody clearfix">
-			<div class="row1"><input type="checkbox" id="" name=""></div>
+			<div class="row1"><input id="" name="" type="checkbox"></div>
 			<div class="row2">
 				<!--商品信息-->
 				<div class="p_goods clearfix">
@@ -323,7 +92,7 @@
 			<div class="row6">
 				<div class="p_quantity ac">
 					<a class="jian_goods" href="javascript:;">-</a>
-					<input type="text" value="2" class="num" id="" name="">
+					<input value="2" class="num" id="" name="" type="text">
 					<a class="jia_goods" href="javascript:;">+</a>
 					<div class="ac js"></div>
 				</div>

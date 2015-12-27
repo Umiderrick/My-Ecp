@@ -2,8 +2,6 @@
 /* CSS Document */
 /*	
 标题：购物车文件
-作者：Hanxianwei
-创建日期：2013年11月25日  
 */
 
 .marb15{ margin-bottom:15px;}
@@ -61,13 +59,10 @@
 .payment_choose h3{ height:35px; background:#f1f3f2 url(../res/images/bg/cart_zfb.jpg) 3px 2px no-repeat; border-bottom:1px solid #d8d9db; padding-left:75px; font-size:12px; font-weight:normal; line-height:35px;}
 .payment_choose p{padding:10px;}
 
-/*支付失败页面*/
 .cart_order_content .cart_order_fail{ background:url(../res/images/icon/cart_order_tip_bg.png) no-repeat; background-position:0 -210px; margin-left:230px; padding-left:88px;color:#333; display:block;}
 .cart_order_content .cart_order_fail .cart_tip_fail{ font-size:24px; color:#d03433; font-family: "微软雅黑"; padding:7px 0 6px; 0}
-/*end 作者：Songshiqin 创建日期：2013年11月25日  */
 
 
-/*作者：Hanxianwei 创建日期：2013年11月25日*/
 /*空购物车*/
 .cart_empty{padding:40px 20px; text-align:center; border:1px solid #e6e2e1; margin:15px auto; background:#f3f3f3 url(../res/images/bg/empty_cart.png) no-repeat 290px center;}
 .cart_empty a{padding:0 5px; color:#b27068;}

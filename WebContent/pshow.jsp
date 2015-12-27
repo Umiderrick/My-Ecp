@@ -1,9 +1,7 @@
-<%@ page language="java"  pageEncoding="UTF-8"%>
+<%@ page language="java"  pageEncoding="UTF-8" import="java.util.*,pb.db.*,pb.*"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %> 
-<%@ page import="java.util.*,pb.db.*,pb.Itemdealer,pb.Attributedealer"%>
 <%
 	String itemid = session.getAttribute("itemid").toString();
-	{
 	List<Map<String,Object>> list = new ArrayList<Map<String,Object>>();
 	Itemdealer itd =new Itemdealer();
 	TableValues tv = itd.query("item",itemid);
@@ -20,60 +18,6 @@
 		list.add(map);
 	}
 	request.setAttribute("list", list);
-}
-{
-	List<Map<String,Object>> list3 = new ArrayList<Map<String,Object>>();
-	Attributedealer attd =new Attributedealer();
-	TableValues tv3 =attd.innerquery("item_att",itemid);
-	DataColumn[] dcl3=tv3.getDataColumns();
-	for(int i=0;i<tv3.getValues().length;i++)
-		{
-			Map<String,Object> map3 = new HashMap<String,Object>();
-		for(int j=0 ;j<tv3.getDataColumns().length;j++)
-		{
-				String key3 =dcl3[j].getName();
-				String value3 =tv3.getValues()[i][j].toString();
-				map3.put(key3,value3);
-		}
-		list3.add(map3);
-		}
-	request.setAttribute("list3", list3);
-}
-{List<Map<String,Object>> list4 = new ArrayList<Map<String,Object>>();
-Attributedealer atd =new Attributedealer();
-TableValues tv4 =atd.query("attribute");
-DataColumn[] dcl4=tv4.getDataColumns();
-for(int i=0;i<tv4.getValues().length;i++)
-{
-	Map<String,Object> map4 = new HashMap<String,Object>();
-	for(int j=0 ;j<tv4.getDataColumns().length;j++)
-	{
-		String key4 =dcl4[j].getName();
-		String value4 =tv4.getValues()[i][j].toString();
-		map4.put(key4,value4);
-	}
-	list4.add(map4);
-}
-
-request.setAttribute("list4", list4);
-}
-{List<Map<String,Object>> list5 = new ArrayList<Map<String,Object>>();
-Attributedealer agd =new Attributedealer();
-TableValues tv5 = agd.query("attg");
-DataColumn[] dcl5=tv5.getDataColumns();
-for(int i=0;i<tv5.getValues().length;i++)
-{
-	Map<String,Object> map5 = new HashMap<String,Object>();
-	for(int j=0 ;j<tv5.getDataColumns().length;j++)
-	{
-		String key5 =dcl5[j].getName();
-		String value5 =tv5.getValues()[i][j].toString();
-		map5.put(key5,value5);
-	}
-	list5.add(map5);
-}
-request.setAttribute("list5", list5);
-}
 %>
 <html>
 <% 
@@ -89,35 +33,12 @@ request.setAttribute("basePath", basePath);
 <link href="css/global.css" rel="stylesheet" type="text/css">
 <link href="css/pshow.css" rel="stylesheet" type="text/css">
 <link href="css/login.css" rel="stylesheet" type="text/css">
-<style>
-.product_intro_mainName strong {
-    color: #E4393C;
-    display: block;
-    font-size: 16px;
-	float: left;
-}
-.product_intro_mainName{ overflow:hidden; margin-bottom:10px; margin-top:5px}
-.summary .li-img {
-    line-height: 28px;
-    margin-right: 10px;
-    margin-top: -3px;
-}
-.summary .li-img img {
-    border: 1px solid #DDDDDD;
-    float: left;
-    margin-right: 5px;
-}
-.product_intro .product_intro_wrap dl a:hover {
-    text-decoration: underline;
-}
-.hl_red {
-    color: #E4393C;
-}
-</style>
+<link href="css/cart.css" rel="stylesheet"  type="text/css" >
 <script type="text/javascript" src="js/jquery-1.7.2.js"></script>
 <script type="text/javascript" src="js/toggleMenu.js"></script>
 <script type="text/javascript" src="js/banner_slide.js"></script>
 <script type="text/javascript" src="js/magni.js"></script>
+<script src="js/list.js" type="text/javascript"></script> 
 <script type="text/javascript" src="js/img_scroll.js"></script>
 <script type="text/javascript" src="js/header.js"></script>
 <script type="text/javascript" src="js/openPop.js"></script>
@@ -164,27 +85,37 @@ $(function(){
 	f_reply_btn();
 	
 })
-
-//加入收藏弹出
-$(function(){
-	$(".openP").click(function(){//打开层
-		openPop({
-			cover_layer:".cover_layer",
-			list_qr_pop:".themes_alert"		
-		});	
-	});	
-	$(".web_win_close").click(function(){//关闭层
-		closePop(".themes_alert",".cover_layer")	
-	})
-	$(".del_goods_ok").click(function(){//关闭层
-		closePop(".themes_alert",".cover_layer")	
-	})
-	$(".del_goods_qx").click(function(){//关闭层
-		closePop(".themes_alert",".cover_layer")	
-	})
-});
-
+function subcart(){
+	var itemid =document.getElementById('itemid').innerHTML;
+	var num =document.getElementById('num').value;
+	$.get("CartServlet",{ "itemid": itemid ,"num":num});
+}
 </script>
+<style>
+.product_intro_mainName strong {
+    color: #E4393C;
+    display: block;
+    font-size: 16px;
+	float: left;
+}
+.product_intro_mainName{ overflow:hidden; margin-bottom:10px; margin-top:5px}
+.summary .li-img {
+    line-height: 28px;
+    margin-right: 10px;
+    margin-top: -3px;
+}
+.summary .li-img img {
+    border: 1px solid #DDDDDD;
+    float: left;
+    margin-right: 5px;
+}
+.product_intro .product_intro_wrap dl a:hover {
+    text-decoration: underline;
+}
+.hl_red {
+    color: #E4393C;
+}
+</style>
 <style>
 .reply_btn a{  position: absolute;right: 0;top: -20px;}
 .reply_btn{ position:relative; width:100%; display:none;}
@@ -219,7 +150,7 @@ $(function(){
 	</div>
 	<div class="product_intro">
 		<div class="product_intro_wrap">
-			<h3 class="product_intro_title">${list.itemid}</h3>
+			<h3 id ="itemid" class="product_intro_title">${list.itemid}</h3>
 			<h3 class="product_intro_mainName"><strong class="mainName01">${list.itemname}</strong></h3>
 			<div class="summary">
 				<dl class="w150">
@@ -230,34 +161,33 @@ $(function(){
 					<dt>余量：</dt>
 					<dd><span class="txt_red">${list.qty}</span></dd>
 				</dl>
+				<dl class="w150">
+					<dt>购买数量：</dt>
+					<dd><span class="txt_red"><input type="text" id="num" /></span></dd>
+				</dl>
 			</div>
 		</div>
 		</div>
 </c:forEach>
-
-		
 <div class="product_intro">
 		<div class="product_intro_wrap" style="border-bottom:0 none"><a>物品属性</a>
-			 <div class="summary">
-			 <c:forEach items="${list3}" var ="list3"> 
-			 		<c:forEach items="${list4}" var ="list4"> 
-			 		<c:if test="${list4.itemid==list3.itemid}">
-								<option>${list4.attname}</option>
-							</c:if>
-			 		  <dt>${list4.attname}</dt>
-			 		  <select>
-			 			<c:forEach items="${list5}" var ="list5">
-			  				<c:if test="${list5.attid==list4.attid}">
-								<option>${list5.attrigname}</option>
-							</c:if>
-						</c:forEach>
-					</select>
-					</c:forEach>
-				</c:forEach>	
-				</div>
+			 <div class="product_select">
+  				<div class="select_title">
+    			</div>
+   				<dl id="select_brand" class="fore clearfix">
+      				<dt>123213</dt>
+      				<dd> 
+        			<ul class="tab">
+					<li><a href="###" class="hove">不限</a></li>
+					<li><a >2222</a></li>
+        </ul>
+     
+      </dd>
+   	</dl>
+  </div>
 				<dl class="w150">
 					<dt class="kong"></dt>
-					<dd> <a href="cart_step_1.html" class="btn_zong big"><i class="icon_addcart"></i><span class="shadow_txt"><img src="res/images/bg/txt/txt1.png"></span></a>  </dd>
+					<dd> <a onclick="subcart()" class="btn_zong big" href="cart_step_1.jsp"><i class="icon_addcart"></i><span class="shadow_txt"><img src="res/images/bg/txt/txt1.png"></span></a>  </dd>
 				</dl>
 		</div>
 </div>	

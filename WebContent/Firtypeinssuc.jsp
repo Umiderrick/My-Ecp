@@ -13,7 +13,7 @@
     <div class="pass_fill_info">
     	<div class="find_pass_finish">
         	<p class="finish_tip_finish">商品大类<%=session.getAttribute("firtypename")%>录入成功</p>
-            <p>点击&nbsp;&nbsp;<a href="index.html">返回</a>主页</p>
+            <p>点击&nbsp;&nbsp;<a href="index.jsp">返回</a>主页</p>
         </div>  
     </div>
 </div>

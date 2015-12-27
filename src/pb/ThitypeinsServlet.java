@@ -10,10 +10,8 @@ import pb.db.DataColumn;
 import pb.db.TableValues;
 public class ThitypeinsServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
-	@Override
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 	}
-	@Override
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		request.setCharacterEncoding("utf-8");
 		Thitypedealer ttd = new Thitypedealer();

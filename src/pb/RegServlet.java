@@ -15,13 +15,13 @@ public class RegServlet implements javax.servlet.Servlet {
 
 	public void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		request.setCharacterEncoding("utf-8");
-		String username = request.getParameter("username");// 取得用户名
-		String password = request.getParameter("password");// 取得密码
+		String username = request.getParameter("username");
+		String password = request.getParameter("password");
 		String usertype = request.getParameter("usertype");
-		System.out.println("username:" + username);
-		System.out.println("password:" + password);
+		String address = request.getParameter("address");
+		String phone = request.getParameter("phone");
 		Userdealer userd = new Userdealer();
-		boolean insertSuccess = userd.insert(username, password,usertype);
+		boolean insertSuccess = userd.insert(username, password,usertype,address,phone);
 		if (insertSuccess) {
 				response.sendRedirect("regist_ok.html");
 			} else {
@@ -34,25 +34,21 @@ public class RegServlet implements javax.servlet.Servlet {
 
 	@Override
 	public void destroy() {
-		// TODO Auto-generated method stub
 		
 	}
 
 	@Override
 	public ServletConfig getServletConfig() {
-		// TODO Auto-generated method stub
 		return null;
 	}
 
 	@Override
 	public String getServletInfo() {
-		// TODO Auto-generated method stub
 		return null;
 	}
 
 	@Override
 	public void init(ServletConfig arg0) throws ServletException {
-		// TODO Auto-generated method stub
 		
 	}
 

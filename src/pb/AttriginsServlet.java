@@ -9,10 +9,8 @@ import javax.servlet.http.HttpServletResponse;
 public class AttriginsServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        
-	@Override
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 	}
-	@Override
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		request.setCharacterEncoding("utf-8");
 		Attrigdealer atd = new Attrigdealer();
@@ -23,7 +21,7 @@ public class AttriginsServlet extends HttpServlet {
 		if (insertSuccess) {
 				response.sendRedirect("success.jsp");
 			} else {
-				response.sendRedirect("#");
+				response.sendRedirect("fail.jsp");
 			}
 	}
 

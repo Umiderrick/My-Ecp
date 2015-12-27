@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://java.sun.com/xml/ns/javaee" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd" id="WebApp_ID" version="3.0">
   <display-name>Pb_ECP</display-name>
-  <description>666666666</description>
+  <description>电商平台</description>
   <servlet>
     <display-name>LoginServlet</display-name>
     <servlet-name>LoginServlet</servlet-name>
@@ -88,6 +88,11 @@
     <servlet-class>pb.AttrigupdServlet</servlet-class>
   </servlet>
   <servlet>
+    <display-name>ThiattServlet</display-name>
+    <servlet-name>ThiattServlet</servlet-name>
+    <servlet-class>pb.ThiattServlet</servlet-class>
+  </servlet>
+  <servlet>
     <display-name>ThiattinsServlet</display-name>
     <servlet-name>ThiattinsServlet</servlet-name>
     <servlet-class>pb.ThiattinsServlet</servlet-class>
@@ -98,10 +103,61 @@
     <servlet-class>pb.ItemServlet</servlet-class>
   </servlet>
   <servlet>
+    <display-name>ItemattServlet</display-name>
+    <servlet-name>ItemattServlet</servlet-name>
+    <servlet-class>pb.ItemattServlet</servlet-class>
+  </servlet>
+  <servlet>
     <display-name>ItemattinsServlet</display-name>
     <servlet-name>ItemattinsServlet</servlet-name>
     <servlet-class>pb.ItemattinsServlet</servlet-class>
   </servlet>
+  <servlet>
+    <display-name>CartServlet</display-name>
+    <servlet-name>CartServlet</servlet-name>
+    <servlet-class>pb.CartServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <display-name>SalorderServlet</display-name>
+    <servlet-name>SalorderServlet</servlet-name>
+    <servlet-class>pb.SalorderServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <display-name>IteminsServlet</display-name>
+    <servlet-name>IteminsServlet</servlet-name>
+    <servlet-class>pb.IteminsServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <display-name>SalorderinsServlet</display-name>
+    <servlet-name>SalorderinsServlet</servlet-name>
+    <servlet-class>pb.SalorderinsServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <display-name>SalorderupdServlet</display-name>
+    <servlet-name>SalorderupdServlet</servlet-name>
+    <servlet-class>pb.SalorderupdServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <display-name>ItemshowServlet</display-name>
+    <servlet-name>ItemshowServlet</servlet-name>
+    <servlet-class>pb.ItemshowServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <display-name>ItemupdServlet</display-name>
+    <servlet-name>ItemupdServlet</servlet-name>
+    <servlet-class>pb.ItemupdServlet</servlet-class>
+  </servlet>
+   <servlet>
+    <display-name>ListSearchServlet</display-name>
+    <servlet-name>ListSearchServlet</servlet-name>
+    <servlet-class>pb.ListSearchServlet</servlet-class>
+  </servlet>
+   <servlet>
+    <display-name>IndexServlet</display-name>
+    <servlet-name>IndexServlet</servlet-name>
+    <servlet-class>pb.IndexServlet</servlet-class>
+  </servlet>
+  
   <servlet-mapping>
     <servlet-name>LoginServlet</servlet-name>
     <url-pattern>/login</url-pattern>
@@ -171,6 +227,10 @@
     <url-pattern>/AttrigupdServlet</url-pattern>
   </servlet-mapping>
   <servlet-mapping>
+    <servlet-name>ThiattServlet</servlet-name>
+    <url-pattern>/ThiattServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
     <servlet-name>ThiattinsServlet</servlet-name>
     <url-pattern>/ThiattinsServlet</url-pattern>
   </servlet-mapping>
@@ -181,6 +241,42 @@
   <servlet-mapping>
     <servlet-name>ItemattinsServlet</servlet-name>
     <url-pattern>/ItemattinsServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>CartServlet</servlet-name>
+    <url-pattern>/CartServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>SalorderServlet</servlet-name>
+    <url-pattern>/SalorderServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>IteminsServlet</servlet-name>
+    <url-pattern>/IteminsServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>ItemupdServlet</servlet-name>
+    <url-pattern>/ItemupdServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>ItemshowServlet</servlet-name>
+    <url-pattern>/ItemshowServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>SalorderupdServlet</servlet-name>
+    <url-pattern>/SalorderupdServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>SalorderinsServlet</servlet-name>
+    <url-pattern>/SalorderinsServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>ListSearchServlet</servlet-name>
+    <url-pattern>/ListSearchServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>IndexServlet</servlet-name>
+    <url-pattern>/IndexServlet</url-pattern>
   </servlet-mapping>
   <welcome-file-list>
     <welcome-file>index.jsp</welcome-file>

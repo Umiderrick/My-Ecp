@@ -9,8 +9,8 @@ import pb.db.DB;
 import pb.db.TableValues;
 
 public class Itemdealer {
+	DB db = new DB();
 	public TableValues query(String tablename) {
-		DB db = new DB();
 		TableValues tv = null;
 		String sql ="select * from "+tablename;
 		tv = db.query(sql);
@@ -19,27 +19,17 @@ public class Itemdealer {
 	}
 	public TableValues query (String tablename,String Pkey )
 	{
-		DB db = new DB();
 		TableValues tv = null;
 		String sql ="select * from "+tablename +" where itemid = '"+Pkey+"'" ;
-		System.out.println(sql);
 		tv = db.query(sql);
 		return tv;
 		
 	}
 	public boolean insert (Map<String, Object> data) {
-		DB db = new DB();
 		TableValues tv = null;
 		boolean ok = true;
 		try {
 			List<Map<String, Object>> dataList= new ArrayList<Map<String,Object>>();
-//			Map<String, Object> data = new HashMap<String, Object>();
-//			data.put("itemid", itemid);
-//			data.put("itemname", itemname);
-//			data.put("qty", qty);
-//			data.put("price", price);
-//			data.put("thitypeid", thitypeid);
-//			data.put("imgurl", imgurl);
 			dataList.add(data);
 			String itemid =(String) data.get("itemid");
 			String sql ="select * from item where itemid = '" + itemid +"'";
@@ -60,8 +50,7 @@ public class Itemdealer {
 		}
 		return ok;
 	}
-	public void delete(String itemid)
-	{	DB db =new DB();
+	public void delete(String itemid){	
 		List<Map<String,Object>> list = new ArrayList<Map<String,Object>>();
 		Map<String,Object> map =new HashMap<String,Object>();
 		map.put("itemid",itemid);
@@ -70,14 +59,10 @@ public class Itemdealer {
 		db.closeDatabase();
 		System.out.println(itemid +"ÒÑÉ¾³ý");
 	}
-	public boolean update (String itemid ,String itemname,int qty, double price,String thitypeid,String imgurl)
-	{
-		DB db =new DB();
+	public boolean update (String itemid ,String itemname,int qty, double price,String thitypeid,String imgurl){
 		String sql ="update item set itemname = '"+ itemname +"',qty = '"+ qty +"',price = '"+ price+"',thitypeid = '"+ thitypeid+"',imgurl = '"+ imgurl+ "' where itemid = '" +itemid +"'" ;
 		System.out.println(sql);
 		db.executeUpdate(sql);
 		return true;
-		
 	}
-	
 }

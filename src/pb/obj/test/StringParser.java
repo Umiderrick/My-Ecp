@@ -7,10 +7,10 @@ public class StringParser implements Parser {
 
 	@Override
 	public List<String> getIPList(Source src) {
-		List<Rule> ruleList = new ArrayList();
+		List<Rule> ruleList = new ArrayList<Rule>();
 		ruleList.add(new Rule("[IP:", "]"));
 		ruleList.add(new Rule("]@", ":1521/"));
-		List<String> ipList = new ArrayList();
+		List<String> ipList = new ArrayList<String>();
 		for (String line : src.getLineList()) {
 			for (Rule rule : ruleList) {
 				int start = line.indexOf(rule.prefix);

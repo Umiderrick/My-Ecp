@@ -20,7 +20,7 @@ List<Map<String,Object>> listi = new ArrayList<Map<String,Object>>();
 		listi.add(map);
 	}
 	request.setAttribute("listi", listi);
-	}
+}
 {
 	List<Map<String,Object>> list = new ArrayList<Map<String,Object>>();
 	Thitypedealer ttd =new Thitypedealer();
@@ -54,7 +54,7 @@ List<Map<String,Object>> listi = new ArrayList<Map<String,Object>>();
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
-<meta charset="utf-8">
+<meta content="text/html;charset =UTF-8">
 <title>修改商品</title>
 <link type="text/css" rel="stylesheet" href="css/global.css">
 <link type="text/css" rel="stylesheet" href="css/login.css">
@@ -126,7 +126,6 @@ List<Map<String,Object>> listi = new ArrayList<Map<String,Object>>();
 	#imghead {filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(sizingMethod=image);}
 </style>
 </head>
-
 <body>
 	<div class="w990">
 		<div class="place_mid">
@@ -176,7 +175,7 @@ List<Map<String,Object>> listi = new ArrayList<Map<String,Object>>();
 						商品三级类别
 					</span>
 				</div>
-				<select name ="thitypeid" value = ${listi.thitypeid}>
+				<select name ="thitypeid" >
   					<c:forEach items="${list}" var ="list2">  
         				<option>${list2.thitypeid}</option>       	
         			</c:forEach> 

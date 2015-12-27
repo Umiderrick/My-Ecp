@@ -1,9 +1,14 @@
 eclipse.preferences.version=1
+encoding//WebContent/Salorderup.jsp=UTF-8
 encoding//WebContent/attribute_ins.jsp=UTF-8
 encoding//WebContent/attributeg_ins.jsp=UTF-8
+encoding//WebContent/cart_step_1.jsp=UTF-8
+encoding//WebContent/cart_step_2.jsp=UTF-8
+encoding//WebContent/cart_step_3.jsp=UTF-8
 encoding//WebContent/fir_type.jsp=UTF-8
 encoding//WebContent/item.jsp=UTF-8
 encoding//WebContent/management.jsp=UTF-8
+encoding//WebContent/register.jsp=UTF-8
 encoding//WebContent/salorder.jsp=UTF-8
 encoding//WebContent/sec_type_update.jsp=UTF-8
 encoding//WebContent/success.jsp=UTF-8

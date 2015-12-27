@@ -35,17 +35,22 @@ dl {
 					<ul class="second_menu">
 						<li>
 						<dl >
-								<dt><a href="fir_type.jsp">类别录入界面</a></dt>
+								<dt><a href="fir_type.jsp">类别管理界面</a></dt>
 						</dl>
 						</li>
 						<li>
 						<dl>
-								<dt><a href="attribute.jsp">属性录入界面</a></dt>
+								<dt><a href="attribute.jsp">属性管理界面</a></dt>
 						</dl>
 						</li>
 						<li>
 						<dl>
-								<dt><a href="item.jsp">商品录入界面</a></dt>
+								<dt><a href="item.jsp">商品管理界面</a></dt>
+						</dl>
+						</li>
+						<li>
+						<dl>
+								<dt><a href="Salorderm.jsp">订单管理界面</a></dt>
 						</dl>
 						</li>
 					</ul>

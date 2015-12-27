@@ -13,7 +13,6 @@ import java.util.Date;
 import javax.servlet.ServletConfig;
 import javax.servlet.ServletContext;
 import javax.servlet.ServletException;
-import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
@@ -25,7 +24,6 @@ import org.apache.commons.fileupload.servlet.ServletFileUpload;
 /**
  * Servlet implementation class IteminsServlet
  */
-@WebServlet("/IteminsServlet")
 public class IteminsServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 	private String filePath; // 文件存放目录

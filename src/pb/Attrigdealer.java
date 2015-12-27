@@ -9,17 +9,15 @@ import pb.db.DB;
 import pb.db.TableValues;
 
 public class Attrigdealer {
-
+	DB db =new DB();
 	public TableValues sel(String attid){
 		String sql ="select * from attg where attid = '"+ attid +"'";
-		DB db =new DB();
 		TableValues tv = db.query(sql);
 		db.closeDatabase();
 		return tv;
 		
 	};
 	public boolean insert (String attid,String attrigid ,String attrigname) {
-		DB db = new DB();
 		TableValues tv = null;
 		boolean ok = true;
 		try {
@@ -47,16 +45,13 @@ public class Attrigdealer {
 		}
 		return ok;
 	}
-	public boolean update (String attrigid, String attid,String attrigname)
-	{
-		DB db =new DB();
+	public boolean update (String attrigid, String attid,String attrigname){
 		String sql ="update attg set attrigname = '"+ attrigname +"',attid = '"+attid+"' where attrigid = '" +attrigid +"'" ;
-		System.out.println(sql);
 		db.executeUpdate(sql);
+		db.closeDatabase();
 		return true;
 	}
-	public void delete(String attrigid)
-	{	DB db =new DB();
+	public void delete(String attrigid){	
 		List<Map<String,Object>> list = new ArrayList<Map<String,Object>>();
 		Map<String,Object> map =new HashMap<String,Object>();
 		map.put("attrigid",attrigid);
@@ -66,14 +61,11 @@ public class Attrigdealer {
 		System.out.println(attrigid +"ÒÑÉ¾³ý");
 	}
 	public TableValues query(String tablename,String PKey) {
-		DB db = new DB();
 		TableValues tv = null;
 		String sql ="select * from "+tablename +" where attrigid = '"+PKey+"'" ;
 		System.out.println(sql);
 		tv = db.query(sql);
+		db.closeDatabase();
 		return tv;
-				
 	}
-	
-
 }

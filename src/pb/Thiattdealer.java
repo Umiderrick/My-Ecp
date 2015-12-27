@@ -6,21 +6,17 @@ import java.util.List;
 import java.util.Map;
 
 import pb.db.DB;
-import pb.db.DataColumn;
 import pb.db.TableValues;
 
 public class Thiattdealer {
-
+	DB db = new DB();
 	public TableValues query(String tablename) {
-		DB db = new DB();
 		TableValues tv = null;
 		String sql ="select * from "+tablename ;
 		tv = db.query(sql);
 		return tv;
 	}
 	public boolean insert (String attid ,String thitypeid) {
-		DB db = new DB();
-		TableValues tv = null;
 		boolean ok = true;
 		try {
 			List<Map<String, Object>> dataList= new ArrayList<Map<String,Object>>();
@@ -38,11 +34,9 @@ public class Thiattdealer {
 	}
 	
 	
-public void delete(String thitypeid,String attid)
-{	DB db =new DB();
+public void delete(String thitypeid,String attid){	
 	String sql ="select taid from thi_att where thitypeid = '"+thitypeid+"' and attid ='"+attid +"'"; 
 	TableValues tv =db.query(sql);
-	DataColumn[] dcl=tv.getDataColumns();
 	List<Map<String,Object>> list = new ArrayList<Map<String,Object>>();
 	for(int i=0;i<tv.getValues().length;i++)
 	{
@@ -56,5 +50,4 @@ public void delete(String thitypeid,String attid)
 	db.tableDelete("thi_att",list );
 	db.closeDatabase();
 }
-
 }

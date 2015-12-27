@@ -1,71 +1,28 @@
 @charset "utf-8";
 /* CSS Document */
 
-/*用户中心*/
-
-/*用户中心的全局样式 包含 左侧菜单 表格样式  布局定义*/
-
-/*遇到复杂的栏目比如"我的订单"页面，可以新起一个css,但命名必须以user-开头,如:user-oder.css  注意：要留意user.css里定义的全局样式，尽量的直接调用，不要重写css*/
-
-/*导入所有用户中心用到的css*/
-
-/*	
-标题：我的投诉
-作者：xucaihua
-创建日期：2013年12月02日  
-*/
 @import "user_compliant.css";
-/*	
-标题：我的消费记录
-作者：xucaihua
-创建日期：2013年12月02日  
-*/
+
 @import "user_consume_record.css";
-/*	
-标题：我的优惠券
-作者：xucaihua
-创建日期：2013年12月02日  
-*/
+
 @import "user_coupon.css";
-/*	
-标题：商品评价
-作者：xucaihua
-创建日期：2013年12月02日  
-*/
+
 @import "user_goods_evaluate.css";
-/*标题：我的订单*/
+
 @import "user_myorder.css";
-/*	
-标题：我的订单
-作者：xucaihua
-创建日期：2013年12月02日  
-*/
+
 @import "user_order.css";
-/*	
-标题：pop文件
-作者：yuxingyang
-创建日期：2013年11月27日  
-*/
+
 @import "user_pop.css";
-/*	
-标题：退换货
-作者：Hanxianwei
-创建日期：2013年11月27日  
-*/
+
 @import "user_repair.css";
-/*	
-标题：账户安全文件
-作者：yuxingyang
-创建日期：2013年11月27日  
-*/
+
 @import "user_safe.css";
-
-
 
 a {
 	color: #333333;	
 }
-/* begin 左侧分类菜单  */
+
 .sort_menu_wrap {
 	margin-bottom: 15px;
 	border-top: 1px solid #e7e7e7;

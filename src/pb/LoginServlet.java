@@ -10,8 +10,9 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
-public class LoginServlet implements javax.servlet.Servlet {
+import pb.db.TableValues;
 
+public class LoginServlet implements javax.servlet.Servlet {
 	public void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		String username = request.getParameter("username");// 取得用户名response
 		String password = request.getParameter("password");// 取得密码
@@ -19,7 +20,16 @@ public class LoginServlet implements javax.servlet.Servlet {
 		HttpSession session = request.getSession();
 		session.setAttribute("userName", username);
 		if (userd.canlogin(username, password)) {// 根据登陆情况，跳转页面
-			response.sendRedirect("index_l.jsp");
+			TableValues tv =userd.typejudge(username);
+			Object o =tv.getValues()[0][0];
+			String type =o.toString();
+			if(type.equals("10-会员")) {
+				response.sendRedirect("index_l.jsp");
+			}else if(type.equals("20-管理员")){
+				response.sendRedirect("management.jsp");
+			}else {
+				System.err.println("系统错误");
+			}
 		} else {
 			response.sendRedirect("fail.jsp");
 		}

@@ -9,8 +9,8 @@ import pb.db.DB;
 import pb.db.TableValues;
 
 public class Firtypedealer {
+	DB db = new DB();
 	public boolean insert (String firtypeid, String firtypename) {
-			DB db = new DB();
 			TableValues tv = null;
 			boolean ok = true;
 			try {
@@ -39,16 +39,13 @@ public class Firtypedealer {
 		}
 	public boolean update (String firtypeid, String firtypename)
 	{
-		DB db =new DB();
 		String sql ="update firtype set firtypename = '"+ firtypename +"' where firtypeid = '" +firtypeid +"'" ;
 		System.out.println(sql);
 		db.executeUpdate(sql);
 		return true;
 		
 	}
-	public void delete(String firtypeid)
-	{
-		DB db =new DB();
+	public void delete(String firtypeid){
 		List<Map<String,Object>> list = new ArrayList<Map<String,Object>>();
 		Map<String,Object> map =new HashMap<String,Object>();
 		map.put("firtypeid",firtypeid);
@@ -60,7 +57,6 @@ public class Firtypedealer {
 		
 	}
 	public TableValues query(String tablename) {
-		DB db = new DB();
 		TableValues tv = null;
 		String sql ="select * from "+tablename;
 		tv = db.query(sql);
@@ -68,13 +64,11 @@ public class Firtypedealer {
 				
 	}
 	public TableValues query(String tablename,String PKey) {
-		DB db = new DB();
 		TableValues tv = null;
 		String sql ="select * from "+tablename +" where firtypeid = '"+PKey+"'" ;
 		System.out.println(sql);
 		tv = db.query(sql);
 		return tv;
-				
 	}
-	}
+}
 

@@ -9,8 +9,8 @@ import pb.db.DB;
 import pb.db.TableValues;
 
 public class Sectypedealer {
+	DB db =new DB();
 	public boolean insert (String firtypeid ,String sectypeid, String sectypename) {
-			DB db = new DB();
 			TableValues tv = null;
 			boolean ok = true;
 			try {
@@ -38,17 +38,14 @@ public class Sectypedealer {
 			}
 			return ok;
 		}
-	public boolean update (String sectypeid, String sectypename)
-	{
-		DB db =new DB();
+	public boolean update (String sectypeid, String sectypename){
 		String sql ="update sectype set sectypename = '"+ sectypename +"' where sectypeid = '" +sectypeid +"'" ;
 		System.out.println(sql);
 		db.executeUpdate(sql);
 		return true;
 		
 	}
-	public void delete(String sectypeid)
-	{	DB db =new DB();
+	public void delete(String sectypeid){	
 		List<Map<String,Object>> list = new ArrayList<Map<String,Object>>();
 		Map<String,Object> map =new HashMap<String,Object>();
 		map.put("sectypeid",sectypeid);
@@ -58,7 +55,6 @@ public class Sectypedealer {
 		System.out.println(sectypeid +"ÒÑÉ¾³ý");
 	}
 	public TableValues query(String tablename) {
-		DB db = new DB();
 		TableValues tv = null;
 		String sql ="select * from "+tablename;
 		tv = db.query(sql);
@@ -66,7 +62,6 @@ public class Sectypedealer {
 		
 	}
 	public TableValues query(String tablename,String PKey) {
-		DB db = new DB();
 		TableValues tv = null;
 		String sql ="select * from "+tablename +" where sectypeid = '"+PKey+"'" ;
 		System.out.println(sql);
