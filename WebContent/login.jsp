@@ -48,7 +48,7 @@
 				<div class="login_btn">
 					<input type="submit" class="btn_zong big" value="登录">
 					<input type="reset" class="btn_zong big" value="重置">
-					<a href ="register.jsp" class="btn_zong big">注册</a>
+					<a class="btn_zong big" href ="register.jsp">注册</a>
 				</div>
 				</form>
 				

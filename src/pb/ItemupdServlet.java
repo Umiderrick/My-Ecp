@@ -97,6 +97,7 @@ public class ItemupdServlet extends HttpServlet {
 			String imgurl = (String) data.get("imgurl");
 			itd.update(itemid, itemname, qty, price, thitypeid, imgurl);
 			pw.close();
+			response.sendRedirect("item.jsp");
 		} catch (Exception e) {
 			System.out.println("使用 fileupload 包时发生异常 ...");
 			e.printStackTrace();

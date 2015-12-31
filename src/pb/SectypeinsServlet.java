@@ -6,10 +6,6 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-
-import pb.db.DataColumn;
-import pb.db.TableValues;
-
 /**
  * Servlet implementation class SectypeinsServlet
  */

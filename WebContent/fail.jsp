@@ -6,7 +6,6 @@
 <title>登陆失败</title>
 </head>
 <body>
- 
 <p class="error">你输入的账户名和密码不匹配，你是否
 <a href="" target="_blank">忘记会员名</a>
 或

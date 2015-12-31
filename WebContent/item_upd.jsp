@@ -195,3 +195,4 @@ List<Map<String,Object>> listi = new ArrayList<Map<String,Object>>();
 </div>
 </body>
 </html>
+<% session.removeAttribute("itemid");  %>

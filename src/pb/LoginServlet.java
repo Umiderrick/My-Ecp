@@ -24,19 +24,24 @@ public class LoginServlet implements javax.servlet.Servlet {
 			Object o =tv.getValues()[0][0];
 			String type =o.toString();
 			if(type.equals("10-会员")) {
-				response.sendRedirect("index_l.jsp");
+				response.sendRedirect("index.jsp");
 			}else if(type.equals("20-管理员")){
 				response.sendRedirect("management.jsp");
 			}else {
+				response.sendRedirect("fail.jsp");
 				System.err.println("系统错误");
 			}
-		} else {
+		}else{
 			response.sendRedirect("fail.jsp");
+			System.err.println("输入正确的用户名和密码");
 		}
+			
 	}
 
 	public void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-
+		String username = request.getParameter("username");
+		if(!username.isEmpty())
+		request.getSession().removeAttribute("userName");
 	}
 	@Override
 	public void destroy() {

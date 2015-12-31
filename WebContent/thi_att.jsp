@@ -32,7 +32,9 @@
 function deletep(thitypeid,attid)
 {
 	alert("确认删除" +thitypeid);
-	$.post("ThiattServlet",{"thitypeid":thitypeid,"attid":attid},null);
+	$.post("ThiattServlet",{"thitypeid":thitypeid,"attid":attid},function(){
+		 window.location.reload(false);
+	 });
 }
 </script>
 </head>
@@ -43,9 +45,10 @@ function deletep(thitypeid,attid)
 </div>
 	<div class="w1200 clearfix overflow_v"> 
         <div class="my_order_table" >
-        	<a href="thi_att_ins.jsp" id="btn" class="btn_gray btn_fen_2">
-	             <span>新增</span>
-	              <i class="icon_graycircle"></i></a>
+	        	<a href="thi_att_ins.jsp" id="btn" class="btn_gray btn_fen_2">
+					<span>新增</span>
+					<i class="icon_graycircle"></i>
+				</a>
           <table width="800" border="0" cellspacing="0" cellpadding="0" class="table_user">
             <tr class="bor_bnone">
               <th width="15%">排序号</th>

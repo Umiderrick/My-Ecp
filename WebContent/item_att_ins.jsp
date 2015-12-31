@@ -2,7 +2,6 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %> 
 <%@ page import="java.util.*,pb.db.*,pb.Itemdealer,pb.Attributedealer,pb.Attrigdealer,pb.db.DataColumn"%>
 <%
-
 {
 	List<Map<String,Object>> list = new ArrayList<Map<String,Object>>();
 	Itemdealer ttd =new Itemdealer();
@@ -90,7 +89,7 @@
 			</div>
 			<form id='itmattform' action="ItemattinsServlet" method="post">
 			<table>
-			<div class="lofin_reg">
+			<div class="login_reg">
 				<div class="login_pass_span">
 					<span>
 						商品编号

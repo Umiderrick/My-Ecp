@@ -38,7 +38,9 @@ function submitMyForm(){
 function deletep(attgid)
 {
 	alert("确认删除" +attgid);
-	 $.get("AttrigServlet", { "attgid": attgid } );
+	 $.get("AttrigServlet", { "attgid": attgid },function(){
+			window.location.reload(false);
+		} );
 }
 function update(attgid)
 {	

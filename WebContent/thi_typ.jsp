@@ -37,7 +37,9 @@
 <script type="text/javascript">
 function deletep(thitypeid)
 {
-	 $.post("ThitypeServlet",{"thitypeid":thitypeid},null);
+	 $.post("ThitypeServlet",{"thitypeid":thitypeid},function(){
+			window.location.reload(false);
+		});
 }
 function update(thitypeid)
 {	
@@ -47,14 +49,11 @@ function update(thitypeid)
 </script>
 </head>
 <body>
-<!-- begin 头部开始 -->
 <div class="ui_header">
 	<div class="ui_header_logo" >
 	</div>
 </div>
-<!-- end 头部结束 --> 
 <div class="w1200 clearfix overflow_v"> 
-  <!--begin 下方录入大类表  -->
     <div class="content_wrap">
       <div class="my_order">
         <div class="my_order_table" >
@@ -86,7 +85,6 @@ function update(thitypeid)
        
       </div>
     </div>
-  <!--end 内容部分右侧  --> 
 </div>
 </body>
 </html>

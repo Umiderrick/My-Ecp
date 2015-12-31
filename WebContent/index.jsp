@@ -2,11 +2,18 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %> 
 <%@ page import="java.util.*,pb.db.*,pb.Firtypedealer,pb.Sectypedealer,pb.Thitypedealer"%>
 <%
-{
 	List<Map<String,Object>> list1 = new ArrayList<Map<String,Object>>();
+	List<Map<String,Object>> list2 = new ArrayList<Map<String,Object>>();
+	List<Map<String,Object>> list3 = new ArrayList<Map<String,Object>>();
 	Firtypedealer ftd =new Firtypedealer();
+	Sectypedealer std =new Sectypedealer();
+	Thitypedealer ttd =new Thitypedealer();
 	TableValues tv1 = ftd.query("firtype");
+	TableValues tv2 = std.query("sectype");
+	TableValues tv3 = ttd.query("thitype");
 	DataColumn[] dcl1=tv1.getDataColumns();
+	DataColumn[] dcl2=tv2.getDataColumns();
+	DataColumn[] dcl3=tv3.getDataColumns();
 	for(int i=0;i<tv1.getValues().length;i++)
 	{
 		Map<String,Object> map1 = new HashMap<String,Object>();
@@ -18,13 +25,6 @@
 		}
 		list1.add(map1);
 	}
-	
-	request.setAttribute("list1", list1);
-}
-{List<Map<String,Object>> list2 = new ArrayList<Map<String,Object>>();
-	Sectypedealer std =new Sectypedealer();
-	TableValues tv2 = std.query("sectype");
-	DataColumn[] dcl2=tv2.getDataColumns();
 	for(int i=0;i<tv2.getValues().length;i++)
 	{
 		Map<String,Object> map2 = new HashMap<String,Object>();
@@ -36,13 +36,6 @@
 		}
 		list2.add(map2);
 	}
-	
-	request.setAttribute("list2", list2);
-}
-{List<Map<String,Object>> list3 = new ArrayList<Map<String,Object>>();
-	Thitypedealer ttd =new Thitypedealer();
-	TableValues tv3 = ttd.query("thitype");
-	DataColumn[] dcl3=tv3.getDataColumns();
 	for(int i=0;i<tv3.getValues().length;i++)
 	{
 		Map<String,Object> map3 = new HashMap<String,Object>();
@@ -54,9 +47,9 @@
 		}
 		list3.add(map3);
 	}
-	
+	request.setAttribute("list1", list1);
+	request.setAttribute("list2", list2);
 	request.setAttribute("list3", list3);
-}
 %>
 <html>
 <head>
@@ -74,17 +67,39 @@
 <script type="text/javascript" src="js/magni.js"></script>
 <script type="text/javascript">
 $(function(){
-	
 	toggleMenu(null,".second_menu",".third_menu");
-	
-})
-function listsearch()
-{	var pattern = document.getElementById('search').value;
-	$.post("IndexServlet",{ "pattern": pattern },window.location.href='list_search.jsp');
+		if("<%=session.getAttribute("userName")%>" == "null") {
+			$("#welcoml").hide();
+			$("#welcom").show();
+			$("#welcoml_b").hide();
+			$("#welcom_b").show();
+		} else {
+			$("#welcoml").show();
+			$("#welcom").hide();
+			$("#welcoml_b").show();
+			$("#welcom_b").hide();
+		}
+	})
+	function logout() {
+		var uname = document.getElementById("uname").innerHTML;
+		$.get
+		("login",
+				{"username":uname
+				}, function(){
+					window.location.reload(false);
+				});
+				
 	}
-function thitypesearch(thitypeid)
-{	
-	$.post("IndexServlet",{ "thitypeid": thitypeid },window.location.href='list_search.jsp');
+	function listsearch() {
+		var pattern = document.getElementById('search').value;
+		$.post("IndexServlet", {
+			"pattern" : pattern
+		}, window.location.href = 'list_search.jsp');
+	}
+	function thitypesearch(thitypeid) {
+		$.post("IndexServlet", {
+			"thitypeid" : thitypeid
+		}, window.location.href = 'list_search.jsp');
 	}
 </script>
 <style>
@@ -106,7 +121,8 @@ dl {
 <div class="ui_header">
 	<div class="ui_header_top">
 		<div class="w1200">
-		<div class="welcome">欢迎您！<a href="login.jsp"><b>登录</b></a></div>
+		<div id="welcoml" class="welcome" >欢迎<a id ="uname"><%=session.getAttribute("userName")%></a>登录<a>|</a><a onclick="logout()">点此<b>注销</b></a></div>
+		<div id="welcom" class="welcome" >欢迎您！<a href="login.jsp"><b>请登录</b></a></div>
 		</div>
 	</div>
 </div>
@@ -120,18 +136,17 @@ dl {
 						<button onclick="listsearch()">搜索</button>
 					</div>
 				</div>
-				<div class="ui_header_logo_func"> <a href="welcome.jsp" class="btn_zong" ><i class="icon_account"></i><span>我的账户</span></a> <a href="cart_step_1.html" class="btn_zong" ><i class="icon_cart"></i><span>购物车</span></a><span class="gowuche"><i class="icon_point">0</i></span> </div>
+				<div class="ui_header_logo_func"> <a href="welcome.jsp" class="btn_zong" ><i class="icon_account"></i><span>我的账户</span></a> <a href="cart_step_1.jsp" class="btn_zong" ><i class="icon_cart"></i><span>购物车</span></a><span class="gowuche"><i class="icon_point">0</i></span> </div>
 				<div class="ui_header_logo_posi">
 					<div class="ui_header_logo_posi_account">
 						<div class="posi_wrap_content">
-							<div class="wrap_top"> <b>您好，请</b><a href="login.jsp"><b>登录</b></a></div>
+							<div id="welcoml_b" class="wrap_top"><a> <b>您好，</b><%=session.getAttribute("userName")%><b>欢迎登录</b></a></div>
+							<div id="welcom_b" class="wrap_top"> <b>您好，请</b><a href="login.jsp"><b>登录</b></a></div>
 							<div class="wrap_middle">
-								<div class="wrap_middle_r"> <a href="salorder.jsp">我的订单&nbsp;&nbsp;&gt;</a><!-- <a href="#">我的关注&nbsp;&nbsp;&gt;</a> <a href="#">我的积分&nbsp;&nbsp;&gt;</a> --> </div>
+								<div class="wrap_middle_r"> <a href="salorder.jsp">我的订单&nbsp;&nbsp;&gt;</a></div>
 							</div>
 						</div>
 						<div class="wrap_bottom">
-							<h3>最近浏览的商品:</h3>
-							<div class="wrap_bottom_account"><!-- <a href="#"><img src="res/images/temp/account_show.jpg"></a> <a href="#"><img src="res/images/temp/account_show.jpg"></a> <a href="#"><img src="res/images/temp/account_show.jpg"></a> <a href="#"><img src="res/images/temp/account_show.jpg"></a> <a href="#"><img src="res/images/temp/account_show.jpg"></a> -->  </div>
 						</div>
 					</div>
 				</div>

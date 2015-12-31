@@ -53,8 +53,7 @@ function submitMyForm(){
 			</div>
 			<form id='Thitypeform' action="ThitypeinsServlet" method="post">
 			<table>
-			<div class="lofin_reg">
-				
+			<div class="login_reg">
 				<div class="login_pass_span">
 					<span>
 						商品二级类别编号

@@ -35,36 +35,28 @@ List<Map<String,Object>> list = new ArrayList<Map<String,Object>>();
 <script type="text/javascript">
 function deletep(firtypeid)
 {
-	alert("确认删除" +firtypeid);
-	$.post("FirsttypeServlet",{"firtypeid":firtypeid},new function(data){
-		 window.location.reload();
-	 });
+	$.post("FirsttypeServlet",{"firtypeid":firtypeid},function(){
+		window.location.reload(false);
+	});
 }
 function update(firtypeid)
-{	alert(firtypeid);
+{	
 	$.get("FirtypeupdServlet",{"firtypeid":firtypeid});
-
 }
 </script>
-
 </head>
-
 <body >
-<!-- begin 头部开始 -->
 <div class="ui_header">
   <div class="ui_header_logo" >
     <div class="ui_header_logo_bg">
 	</div>
 </div>
 </div>
-<!-- end 头部结束 --> 
-
 <div class="w1200 clearfix overflow_v"> 
-  <!--begin 下方录入大类表  -->
     <div class="content_wrap">
       <div class="my_order">
         <div class="my_order_table" >
-     
+          <div class="clearfix ac">
         <a  href="fir_type_insert.jsp" id="btn" class="btn_gray btn_fen_2">
 	              <span>增加新类别</span>
 	              <i class="icon_graycircle"></i>
@@ -77,7 +69,7 @@ function update(firtypeid)
 	              <span>进入三级类别</span>
 	              <i class="icon_graycircle"></i>
 	              </a>  
-	             
+	              </div>
           <table  class="table_user">
             <tr class="bor_bnone">
               <th width="15%">排序号</th>

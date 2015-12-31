@@ -2,7 +2,7 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %> 
 <%@ page import="java.util.*,pb.db.*,pb.Itemdealer"%>
 <%
-{List<Map<String,Object>> list = new ArrayList<Map<String,Object>>();
+List<Map<String,Object>> list = new ArrayList<Map<String,Object>>();
 Itemdealer idl =new Itemdealer();
 TableValues tv = idl.query("item");
 DataColumn[] dcl=tv.getDataColumns();
@@ -18,9 +18,7 @@ for(int i=0;i<tv.getValues().length;i++)
 	list.add(map);
 }
 request.setAttribute("list", list);
-}
-{
-	}%>
+%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
@@ -39,9 +37,9 @@ request.setAttribute("basePath", basePath);
 function deletep(itemid)
 {
 	alert("确认删除" +itemid	);
-	$.post("ItemServlet",{"itemid":itemid},new function(data){
-		 window.location.reload();
-	 });
+	$.post("ItemServlet",{"itemid":itemid},function(){
+		window.location.reload(false);
+	});
 }
 function update(itemid)
 {	
@@ -90,9 +88,7 @@ function update(itemid)
         </c:forEach>
        </ul>
  </div>
- <!-- end 商品排序 --> 
 </div>
 </div>
-<!-- end   内容部分 结束--> 
 </body>
 </html>

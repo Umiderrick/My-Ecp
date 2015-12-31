@@ -36,40 +36,27 @@
 <script type="text/javascript">
 function deletep(sectypeid)
 {
-	alert("确认删除" +sectypeid);
-	 $.post("SectypeServlet",{"sectypeid":sectypeid},new function(data){
-		 window.location.reload();
-		 
-	 });
+	 $.post("SectypeServlet",{"sectypeid":sectypeid},function(){
+			window.location.reload(false);
+		});
 }
-
 function update(sectypeid)
 {	
-	alert("确认更新" +sectypeid);
 	$.get("SectypeupdServlet",{"sectypeid":sectypeid});
 }
 </script>
-
 </head>
-
 <body >
-<!-- begin 头部开始 -->
 <div class="ui_header">
 	<div class="ui_header_logo" >
 	</div>
 </div>
-<!-- end 头部结束 --> 
-
 <div class="w1200 clearfix overflow_v"> 
-  <!--begin 下方录入大类表  -->
     <div class="content_wrap">
       <div class="my_order">
         <div class="my_order_table" >
         <div class="clearfix ac">
-        		<a  href="sec_type_insert.jsp" id="btn" class="btn_gray btn_fen_2">
-	             <span>新增</span>
-	              <i class="icon_graycircle"></i>
-	              </a>
+        		<a href="sec_type_insert.jsp" id="btn" class="btn_gray btn_fen_2"><span>新增</span><i class="icon_graycircle"></i></a>
 	    </div>
           <table width="918" border="0" cellspacing="0" cellpadding="0" class="table_user">
             <tr class="bor_bnone">
@@ -95,7 +82,6 @@ function update(sectypeid)
         </div>
       </div>
     </div>
-  <!--end 内容部分右侧  --> 
 </div>
 </body>
 </html>

@@ -31,8 +31,8 @@
 function deletep(attid)
 {
 	alert("确认删除" +attid);
-	 $.post("AttributeServlet",{"attid":attid},new function(data){
-		 window.location.reload();
+	 $.post("AttributeServlet",{"attid":attid},function(){
+		 window.location.reload(false);
 	 });
 }
 function update(attid)
@@ -44,13 +44,10 @@ function update(attid)
 </head>
 
 <body >
-<!-- begin 头部开始 -->
 <div class="ui_header">
 	<div class="ui_header_logo" >
 	</div>
 </div>
-<!-- end 头部结束 --> 
-
 <div class="w1200 clearfix overflow_v"> 
     <div class="content_wrap">
       <div class="my_order">
@@ -67,7 +64,6 @@ function update(attid)
 	        <a  href="item_att.jsp" id="btn" class="btn_gray btn_fen_2">
 	             <span>商品属性管理</span>
 	              <i class="icon_graycircle"></i></a>
-	              
           <table width="800" border="0" cellspacing="0" cellpadding="0" class="table_user">
             <tr class="bor_bnone">
               <th width="15%">排序号</th>

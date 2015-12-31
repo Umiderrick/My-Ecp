@@ -9,7 +9,7 @@ import java.util.List;
 public abstract class AbstractSource implements Source {
 	
 	protected List<String> getLineList(InputStream in) throws Exception {
-		List<String> lineList = new ArrayList();
+		List<String> lineList = new ArrayList<String>();
 		BufferedReader br = null;
 		try {
 			br = new BufferedReader(new InputStreamReader(in));
