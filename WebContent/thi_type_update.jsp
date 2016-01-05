@@ -2,7 +2,7 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %> 
 <%@ page import="java.util.*,pb.db.*,pb.Thitypedealer,pb.Sectypedealer,pb.db.DataColumn"%>
 <%
-{
+	{
 List<Map<String,Object>> list = new ArrayList<Map<String,Object>>();
 	String thitypeid = session.getAttribute("thitypeid").toString();
 	Thitypedealer ttd =new Thitypedealer();
@@ -13,35 +13,32 @@ List<Map<String,Object>> list = new ArrayList<Map<String,Object>>();
 		Map<String,Object> map = new HashMap<String,Object>();
 		for(int j=0 ;j<tv.getDataColumns().length;j++)
 		{
-			String key =dcl[j].getName();
-			String value =tv.getValues()[i][j].toString();
-			map.put(key,value);
+	String key =dcl[j].getName();
+	String value =tv.getValues()[i][j].toString();
+	map.put(key,value);
 		}
 		list.add(map);
 	}
 	request.setAttribute("list", list);
 	}
 {
-	List<Map<String,Object>> lists = new ArrayList<Map<String,Object>>();
-	Sectypedealer std =new Sectypedealer();
-	TableValues stv = std.query("sectype");
-	DataColumn[] fdcl=stv.getDataColumns();
-	for(int i=0;i<stv.getValues().length;i++)
-	{
-		Map<String,Object> map2 = new HashMap<String,Object>();
-		for(int j=0 ;j<stv.getDataColumns().length;j++)
-		{
-			String fkey =fdcl[j].getName();
-			String fvalue =stv.getValues()[i][j].toString(); 
-			if(fkey.equals("sectypeid") )
-			{
-			map2.put(fkey,fvalue);
+	List<Map<String,Object>> lists = new ArrayList<Map<String, Object>>();
+		Sectypedealer std = new Sectypedealer();
+		TableValues stv = std.query("sectype");
+		DataColumn[] fdcl = stv.getDataColumns();
+		for (int i = 0; i < stv.getValues().length; i++) {
+			Map<String, Object> map2 = new HashMap<String, Object>();
+			for (int j = 0; j < stv.getDataColumns().length; j++) {
+				String fkey = fdcl[j].getName();
+				String fvalue = stv.getValues()[i][j].toString();
+				if (fkey.equals("sectypeid")) {
+					map2.put(fkey, fvalue);
+				}
 			}
+			lists.add(map2);
 		}
-		lists.add(map2);
+		request.setAttribute("lists", lists);
 	}
-	request.setAttribute("lists", lists);
-}
 %>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>

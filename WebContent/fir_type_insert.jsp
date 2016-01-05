@@ -1,4 +1,4 @@
-<%@ page language="java"  pageEncoding="UTF-8"%>
+<%@ page language="java" pageEncoding="UTF-8"%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
@@ -9,48 +9,45 @@
 <script src="js/jquery-1.7.2.js" type="text/javascript"></script>
 <script src="js/register.js" type="text/javascript"></script>
 <script type="text/javascript">
-function submitMyForm(){
-	var myForm =document.getElementById('Firtypeform');
-	myForm.submit();
-}
+	function submitMyForm() {
+		var myForm = document.getElementById('Firtypeform');
+		myForm.submit();
+	}
 </script>
 <style>
-	.place_mid{margin:0 auto;width :500px;}
+.place_mid {
+	margin: 0 auto;
+	width: 500px;
+}
 </style>
 </head>
 
 <body>
-<div class="w990">
+	<div class="w990">
 		<div class="place_mid">
 			<div class="login_title">
-				<h3>
-					商品录入
-				</h3>
+				<h3>商品录入</h3>
 			</div>
 			<form id='Firtypeform' action="FirtypeinsServlet" method="post">
-			<table>
+				<table>
 					<div class="login_user_span">
-					<span>
-						商品大类编号
-					</span>
+						<span> 商品大类编号 </span>
 					</div>
 					<div class="login_pass_input">
-						<input type="text" name ="firtypeid">
+						<input type="text" name="firtypeid">
 					</div>
 					<div class="login_pass_span">
-						<span>
-							商品大类名称
-						</span>
+						<span> 商品大类名称 </span>
 					</div>
 					<div class="login_pass_input">
-						<input type="text" name ="firtypename">
+						<input type="text" name="firtypename">
 					</div>
-				<div class="login_btn">
-					<a class="btn_zong big" onclick="submitMyForm();">录入</a>
-				</div>
-			</table>
+					<div class="login_btn">
+						<a class="btn_zong big" onclick="submitMyForm();">录入</a>
+					</div>
+				</table>
 			</form>
-		</div>	
-</div>
+		</div>
+	</div>
 </body>
 </html>

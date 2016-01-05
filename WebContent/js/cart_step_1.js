@@ -158,11 +158,37 @@ $(function(){
 		}else{
 			$(this).siblings(".num").val(g_num)
 		}
+		var price = $(this).parent().parent().siblings(".row3").find(".p_price").text();
+		var old_sum = $("#price_sum").text();
+		var new_sum = parseFloat(old_sum) - parseFloat(price);
+		if(new_sum < 0) new_sum = 0;
+		$("#price_sum").text(new_sum);
 	})
 	//加商品个数
 	$(".jia_goods").click(function(){
-		$(this).siblings(".num").val(parseInt($(this).siblings(".num").val())+1)
+		var num = parseInt($(this).siblings(".num").val())+1;
+		$(this).siblings(".num").val(num);
+		var price = $(this).parent().parent().siblings(".row3").find(".p_price").text();
+		var old_sum = $("#price_sum").text();
+		$("#price_sum").text(parseFloat(old_sum) + parseFloat(price));
 	})
+	
+	
+	function caculateSum() {
+		var cl_nums = $(".num");
+		var cl_prices = $(".p_price");
+		var sum = 0;
+		if(cl_nums.length==cl_prices.length) {
+			for(var i = 0; i < cl_nums.length; i++) {
+				var num = parseInt(cl_nums.eq(i).val());
+				var price = parseFloat(cl_prices.eq(i).text());
+				sum += num*price;
+			}
+		}
+		$("#price_sum").text(sum);
+	}
+	
+	caculateSum();
 	
 })
 

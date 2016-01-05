@@ -1,4 +1,4 @@
-<%@ page language="java"  pageEncoding="UTF-8"%>
+<%@ page language="java" pageEncoding="UTF-8"%>
 <html>
 <head>
 <meta content="text/html;charset =UTF-8" http-equiv="Content-Type">
@@ -15,15 +15,17 @@
 <script src="js/magni.js" type="text/javascript"></script>
 <style>
 dl {
-    margin-bottom: 0;
-    margin-top: 0;
+	margin-bottom: 0;
+	margin-top: 0;
 }
+
 .ui_header_logo .ui_header_logo_bg {
-    background: rgba(0, 0, 0, 0) url("../res/images/bg/header_search.png") no-repeat scroll left center;
-    margin: 0 auto;
-    padding-bottom: 0;
-    padding-top: 13px;
-    width: 1200px;
+	background: rgba(0, 0, 0, 0) url("../res/images/bg/header_search.png")
+		no-repeat scroll left center;
+	margin: 0 auto;
+	padding-bottom: 0;
+	padding-top: 13px;
+	width: 1200px;
 }
 </style>
 </head>
@@ -31,30 +33,37 @@ dl {
 	<div class="ui_header_nav">
 		<div class="w1200">
 			<ul class="first_menu">
-				<li class="all_products"> <a class="hove" href="#">管理员界面</a>
+				<li class="all_products"><a class="hove" href="#">管理员界面</a>
 					<ul class="second_menu">
 						<li>
-						<dl >
-								<dt><a href="fir_type.jsp">类别管理界面</a></dt>
-						</dl>
+							<dl>
+								<dt>
+									<a href="fir_type.jsp">类别管理界面</a>
+								</dt>
+							</dl>
 						</li>
 						<li>
-						<dl>
-								<dt><a href="attribute.jsp">属性管理界面</a></dt>
-						</dl>
+							<dl>
+								<dt>
+									<a href="attribute.jsp">属性管理界面</a>
+								</dt>
+							</dl>
 						</li>
 						<li>
-						<dl>
-								<dt><a href="item.jsp">商品管理界面</a></dt>
-						</dl>
+							<dl>
+								<dt>
+									<a href="item.jsp">商品管理界面</a>
+								</dt>
+							</dl>
 						</li>
 						<li>
-						<dl>
-								<dt><a href="Salorderm.jsp">订单管理界面</a></dt>
-						</dl>
+							<dl>
+								<dt>
+									<a href="Salorderm.jsp">订单管理界面</a>
+								</dt>
+							</dl>
 						</li>
-					</ul>
-				</li>
+					</ul></li>
 			</ul>
 		</div>
 	</div>
