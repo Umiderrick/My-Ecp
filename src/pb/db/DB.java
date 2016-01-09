@@ -174,7 +174,7 @@ public class DB implements AutoCloseable {
 	}
 
 	private Set<DataColumn> filterColSet(Set<String> colSet, Set<DataColumn> tableColumnSet) {
-		Set<DataColumn> tmpSet = new LinkedHashSet();
+		Set<DataColumn> tmpSet = new LinkedHashSet<DataColumn>();
 		for (DataColumn col : tableColumnSet) {
 			if (colSet.contains(col.getName())) {
 				tmpSet.add(col);
@@ -279,7 +279,7 @@ public class DB implements AutoCloseable {
 	}
 
 	private Set<DataColumn> npkfilterColSet(Set<String> colSet, Set<DataColumn> tableColumnSet, String[] pKey) {
-		Set<DataColumn> tmpSet = new LinkedHashSet();
+		Set<DataColumn> tmpSet = new LinkedHashSet<DataColumn>();
 		for (DataColumn col : tableColumnSet) {
 			if (colSet.contains(col.getName())) {
 

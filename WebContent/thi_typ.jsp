@@ -68,7 +68,7 @@
 						class="table_user">
 						<tr class="bor_bnone">
 							<th width="20%">排序号</th>
-							<th width="20%">二级分类名称</th>
+							<th width="20%">二级分类编号</th>
 							<th width="25%">三级分类编号</th>
 							<th width="20%">三级分类名称</th>
 							<th width="15%">操作</th>

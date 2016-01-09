@@ -82,7 +82,7 @@
 						<i class="icon_order"></i>订单中心<i class="icon_arrowup"></i>
 					</h3>
 					<ul>
-						<li><a href="mysalorder.html">我的订单</a></li>
+						<li><a href="mysalorder.jsp">我的订单</a></li>
 					</ul>
 				</div>
 			</div>

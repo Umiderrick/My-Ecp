@@ -6,6 +6,7 @@
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>各种成功跳转处</title>
 </head>
-<body>6666666
+<body>
+点击<a href = "management.jsp">此处</a>
 </body>
 </html>

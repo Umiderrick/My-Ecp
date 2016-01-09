@@ -75,6 +75,7 @@ public class ItemupdServlet extends HttpServlet {
 			// 设置允许上传的最大文件大小 4M
 			upload.setSizeMax(4 * 1024 * 1024);
 			// 解析HTTP请求消息头
+			@SuppressWarnings("unchecked")
 			List<FileItem> fileItems = upload.parseRequest(request);
 			Iterator<FileItem> iter = fileItems.iterator();
 			Map<String, Object> data = new HashMap<String, Object>();

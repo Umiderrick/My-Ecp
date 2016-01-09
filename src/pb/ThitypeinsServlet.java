@@ -16,8 +16,6 @@ public class ThitypeinsServlet extends HttpServlet {
 		request.setCharacterEncoding("utf-8");
 		Thitypedealer ttd = new Thitypedealer();
 		TableValues firtypeid = ttd.query("thitype");
-		DataColumn[] col = firtypeid.getDataColumns();
-		String name = col.toString();
 		String sid = request.getParameter("sectypeid");
 		String thitypeid = request.getParameter("thitypeid");// 获取三级类id
 		String thitypename = request.getParameter("thitypename");// 获取三级类名称

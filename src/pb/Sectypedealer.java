@@ -38,8 +38,8 @@ public class Sectypedealer {
 			}
 			return ok;
 		}
-	public boolean update (String sectypeid, String sectypename){
-		String sql ="update sectype set sectypename = '"+ sectypename +"' where sectypeid = '" +sectypeid +"'" ;
+	public boolean update (String  firtypeid ,String sectypeid, String sectypename){
+		String sql ="update sectype set sectypename = '"+ sectypename +"' , firtypeid = '"+firtypeid+"' where sectypeid = '" +sectypeid +"'" ;
 		System.out.println(sql);
 		db.executeUpdate(sql);
 		return true;

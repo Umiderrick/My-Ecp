@@ -19,12 +19,4 @@ public class Searchdealer {
 		db.closeDatabase();
 		return tv;
 	}
-	public TableValues listsearch(int top,String thitypeid){
-		String sql ="select TOP "+ top +" * from item where thitypeid = '"+thitypeid+"'";
-		System.out.println(sql);
-		TableValues tv = db.query(sql);
-		db.closeDatabase();
-		return tv;
-	}
-
 }

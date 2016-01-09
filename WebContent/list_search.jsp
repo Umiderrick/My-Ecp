@@ -134,10 +134,9 @@
 		}, window.location.href = 'list_search.jsp');
 	}
 	function topfilter(num) {
-		alert(num);
-		$.get("ListSearchServlet",{
-			"num":num 
-		})
+		$.get("ListSearchServlet", {
+			"num" : num
+		}, window.location.href = 'list_search.jsp')
 	}
 </script>
 <style>
@@ -174,7 +173,7 @@
 		<div class="ui_header_nav">
 			<div class="w1200">
 				<ul class="first_menu">
-					<li class="all_products"><a class="cur" href="index.jsp">首页</a></li>
+					<li class="all_products"><a class="" href="index.jsp">首页</a></li>
 				</ul>
 			</div>
 		</div>
@@ -261,29 +260,26 @@
 									class="title">余量</span><strong>${list.qty}</strong>
 							</div>
 						</li>
-						<c:if test="${sta.count%4==0}">
+						<c:if test="${ sta.count ne 8 && sta.count% 4 eq 0  }">
 				</ul>
 				<ul class="filter_goods ">
-					</c:if>
-					</c:forEach>
+				</c:if>
+				</c:forEach>
 				</ul>
 			</div>
-			<div class="product_paging fr">
-				<div class="page_wrap">
-					<ul class="page">
-						<li class="pre"><a href="###" class="icon_pre"> </a></li>
-						<li class="pageNum numSelected"><a onclick ="topfilter(1)" class="hove">1</a></li>
-						<li class="pageNum"><a href="###" class="unhove">2</a></li>
-						<li class="pageNum"><a href="###" class="unhove">3</a></li>
-						<li class="pageNum"><a href="###" class="unhove">4</a></li>
-						<li class="pageNum"><a href="###" class="unhove">5</a></li>
-						<li class="point"><a href="###" class="unhove"><strong>...</strong></a>
-						</li>
-						<li class="pageNum"><a onfocus="this.blur();" href="###"
-							class="unhove">200</a></li>
-						<li class="next"><a href="###" class="icon_next"> </a></li>
-					</ul>
-				</div>
+
+			<div class="page_wrap">
+				<ul class="page">
+					<li class="pre"><a href="###" class="icon_pre"> </a></li>
+					<li class="pageNum numSelected"><a onclick="topfilter(1)"
+						class="hove">1</a></li>
+					<li class="pageNum"><a onclick="topfilter(2)" class="unhove">2</a></li>
+					<li class="pageNum"><a onclick="topfilter(3)" class="unhove">3</a></li>
+					<li class="point"><a class="unhove"><strong>...</strong></a></li>
+					<li class="pageNum"><a onfocus="this.blur();"
+						onclick="topfilter(last)" class="unhove">最後</a></li>
+					<li class="next"><a href="###" class="icon_next"> </a></li>
+				</ul>
 			</div>
 		</div>
 	</div>
