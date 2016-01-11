@@ -121,22 +121,30 @@
 		var pattern = document.getElementById('search').value;
 		$.post("IndexServlet", {
 			"pattern" : pattern
-		}, window.location.href = 'list_search.jsp');
+		}, function() {
+			window.location.reload(false);
+		});
 	}
 	function thitypesearch(thitypeid) {
 		$.post("IndexServlet", {
 			"thitypeid" : thitypeid
-		}, window.location.href = 'list_search.jsp');
+		}, function() {
+			window.location.reload(false);
+		});
 	}
 	function attrigsearch(attrigid) {
 		$.post("ListSearchServlet", {
 			"attrigid" : attrigid
-		}, window.location.href = 'list_search.jsp');
+		}, function() {
+			window.location.reload(false);
+		});
 	}
 	function topfilter(num) {
 		$.get("ListSearchServlet", {
 			"num" : num
-		}, window.location.href = 'list_search.jsp')
+		}, function() {
+			window.location.reload(false);
+		})
 	}
 </script>
 <style>
@@ -152,7 +160,8 @@
 			<div class="w1200">
 				<div class="welcome">
 					<span>您好！</span>
-					<%=session.getAttribute("userName")%><span>请尽情的购买</span>
+					<%=session.getAttribute("userName")%>
+					<span>   请尽情的购买</span>
 				</div>
 			</div>
 		</div>

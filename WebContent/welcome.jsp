@@ -1,5 +1,3 @@
-<%@page import="pb.db.DataColumn"%>
-<%@page import="pb.db.TableValues"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <%@ page language="java" import="java.util.*,pb.db.*,pb.*"
 	pageEncoding="UTF-8"%>
@@ -125,6 +123,7 @@
 					<div class="clr"></div>
 					<div class="account_data_title">时间</div>
 					<%
+						{
 						Calendar calendar = Calendar.getInstance();
 						Date date = calendar.getTime();
 						calendar.setTime(date);
@@ -137,8 +136,9 @@
 							t = "上午好";
 						else if (h >= 12)
 							t = "下午好";
-						String day[] = { "一", "二", "三", "四", "五", "六", "日" };
-						out.println(t + "，今天是星期" + day[d] + h + ":" + m + ":" + s);
+						String day[] = {"日", "一", "二", "三", "四", "五", "六"  };
+						out.println(t + "，今天是星期" + day[d-1] +" 时间：" + h + ":" + m + ":" + s);
+						}
 					%>
 				</div>
 			</div>

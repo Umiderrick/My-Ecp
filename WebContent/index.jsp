@@ -155,7 +155,7 @@ dl {
 							</div>
 							<div class="wrap_middle">
 								<div class="wrap_middle_r">
-									<a href="salorder.jsp">我的订单&nbsp;&nbsp;&gt;</a>
+									<a href="mysalorder.jsp">我的订单&nbsp;&nbsp;&gt;</a>
 								</div>
 							</div>
 						</div>

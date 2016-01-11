@@ -52,7 +52,7 @@ public class ListSearchServlet extends HttpServlet {
 			throws ServletException, IOException {
 		String attrigid = request.getParameter("attrigid");
 		List<Map<String, Object>> list = new ArrayList<Map<String, Object>>();
-		String sql = "select top 8 * from item inner join item_att on item_att.itemid = item.itemid  where item_att.attrigid = '"
+		String sql = "select * from item inner join item_att on item_att.itemid = item.itemid  where item_att.attrigid = '"
 				+ attrigid + "'";
 		System.out.println(sql);
 		TableValues tv = db.query(sql);

@@ -51,7 +51,6 @@
 </script>
 </head>
 <body>
-	<!-- begin 头部开始 -->
 	<div class="ui_header">
 		<div class="ui_header_logo">
 			<div class="w1200">
@@ -72,8 +71,6 @@
 			</div>
 		</div>
 	</div>
-	<!-- end 头部结束 -->
-
 	<div class="w1200 clearfix overflow_v">
 		<div class="content_wrap">
 			<div class="my_order">
@@ -91,7 +88,6 @@
 							<th width="25%">属性字典编号</th>
 							<th width="20%">属性字典名称</th>
 							<th width="15%">操作</th>
-
 							<c:forEach items="${listg}" var="listgA" varStatus="sta2">
 								<tr>
 									<td><a class="font_brown">${sta2.count} </a></td>

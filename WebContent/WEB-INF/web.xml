@@ -238,6 +238,10 @@
     <servlet-name>ItemServlet</servlet-name>
     <url-pattern>/ItemServlet</url-pattern>
   </servlet-mapping>
+   <servlet-mapping>
+    <servlet-name>ItemattServlet</servlet-name>
+    <url-pattern>/ItemattServlet</url-pattern>
+  </servlet-mapping>
   <servlet-mapping>
     <servlet-name>ItemattinsServlet</servlet-name>
     <url-pattern>/ItemattinsServlet</url-pattern>

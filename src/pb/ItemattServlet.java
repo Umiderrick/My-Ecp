@@ -18,7 +18,6 @@ public class ItemattServlet extends HttpServlet {
 	}
 	@Override
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-	
 		int iaid = Integer.parseInt(request.getParameter("iaid")) ;
 		Itemattdealer iad =new  Itemattdealer();
 		iad.delete(iaid);

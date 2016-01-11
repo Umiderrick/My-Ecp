@@ -29,8 +29,9 @@
 <script type="text/javascript">
 		function deletep(iaid)
 		{
-			alert(iaid);
-	 		$.post("ItemattServlet", { "iaid": iaid } ,null);
+	 		$.post("ItemattServlet", {"iaid": iaid } ,function() {
+				window.location.reload(false);
+			});
 		}
 </script>
 </head>
