@@ -110,6 +110,13 @@
 	$(function() {
 		toggleMenu(".all_products", ".second_menu", ".third_menu");
 		_scroll(5, ".last_view_con", false, false);
+		if("<%=session.getAttribute("userName")%>" == "null") {
+			$("#welcom").show();
+			$("#welcoml").hide();
+		} else {
+			$("#welcoml").show();
+			$("#welcom").hide();
+		}
 
 	})
 	function show(itemid) {
@@ -121,30 +128,24 @@
 		var pattern = document.getElementById('search').value;
 		$.post("IndexServlet", {
 			"pattern" : pattern
-		}, function() {
-			window.location.reload(false);
-		});
+		}, window.location.href = 'list_search.jsp');
 	}
 	function thitypesearch(thitypeid) {
 		$.post("IndexServlet", {
 			"thitypeid" : thitypeid
-		}, function() {
-			window.location.reload(false);
-		});
+		}, window.location.href = 'list_search.jsp');
 	}
 	function attrigsearch(attrigid) {
 		$.post("ListSearchServlet", {
 			"attrigid" : attrigid
 		}, function() {
-			window.location.reload(false);
+			window.location.reload();
 		});
 	}
 	function topfilter(num) {
 		$.get("ListSearchServlet", {
 			"num" : num
-		}, function() {
-			window.location.reload(false);
-		})
+		}, window.location.href = 'list_search.jsp');
 	}
 </script>
 <style>
@@ -158,10 +159,13 @@
 	<div class="ui_header">
 		<div class="ui_header_top">
 			<div class="w1200">
-				<div class="welcome">
+				<div id="welcoml" class="welcome">
 					<span>您好！</span>
 					<%=session.getAttribute("userName")%>
-					<span>   请尽情的购买</span>
+					<span> 请尽情的购买</span>
+				</div>
+				<div id="welcom" class="welcome">
+					<span>您好！</span> <span><a href="login.jsp"><b>请登录</b></a></span>
 				</div>
 			</div>
 		</div>
@@ -211,9 +215,6 @@
 					<h3>
 						属性筛选<strong>- &nbsp;商品筛选</strong>
 					</h3>
-					<div class="extra">
-						<a href="###">重置筛选条件</a>
-					</div>
 				</div>
 				<c:forEach items="${list4}" var="list4">
 					<dl id="select_brand" class="fore clearfix">
@@ -245,8 +246,7 @@
 						</dl>
 					</div>
 					<div class="turn_page">
-						<span><a class="next_disabled" id="next" href="###"></a></span> <span><a
-							class="pre_able" id="pre" href="###"></a></span> <span class="total">共<strong>${fn:length(list)}</strong>个商品
+						 <span class="total">共<strong>${fn:length(list)}</strong>个商品
 						</span>
 					</div>
 				</div>
@@ -272,8 +272,8 @@
 						<c:if test="${ sta.count ne 8 && sta.count% 4 eq 0  }">
 				</ul>
 				<ul class="filter_goods ">
-				</c:if>
-				</c:forEach>
+					</c:if>
+					</c:forEach>
 				</ul>
 			</div>
 
@@ -285,9 +285,8 @@
 					<li class="pageNum"><a onclick="topfilter(2)" class="unhove">2</a></li>
 					<li class="pageNum"><a onclick="topfilter(3)" class="unhove">3</a></li>
 					<li class="point"><a class="unhove"><strong>...</strong></a></li>
-					<li class="pageNum"><a onfocus="this.blur();"
-						onclick="topfilter(last)" class="unhove">最後</a></li>
-					<li class="next"><a href="###" class="icon_next"> </a></li>
+					<li class="pageNum"><a onfocus="this.blur();" class="unhove">最後</a></li>
+					<li class="next"><a class="icon_next"> </a></li>
 				</ul>
 			</div>
 		</div>

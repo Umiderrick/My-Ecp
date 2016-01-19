@@ -29,7 +29,10 @@ public class RegServlet implements javax.servlet.Servlet {
 			}
 	}
 	public void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-
+		String remarkid = request.getParameter("remarkid");
+		int reid =Integer.parseInt(remarkid);
+		Remarkdealer rmd =new Remarkdealer();
+		rmd.delete(reid);
 	}
 
 	@Override

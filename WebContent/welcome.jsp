@@ -81,6 +81,7 @@
 					</h3>
 					<ul>
 						<li><a href="mysalorder.jsp">我的订单</a></li>
+						<li><a href="myremark.jsp">我的评价</a></li>
 					</ul>
 				</div>
 			</div>

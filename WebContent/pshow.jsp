@@ -6,13 +6,17 @@
 	List<Map<String, Object>> list = new ArrayList<Map<String, Object>>();
 	List<Map<String, Object>> lista = new ArrayList<Map<String, Object>>();
 	List<Map<String, Object>> listag = new ArrayList<Map<String, Object>>();
+	List<Map<String, Object>> listr = new ArrayList<Map<String, Object>>();
 	Itemdealer itd = new Itemdealer();
+	Remarkdealer rmd = new Remarkdealer();
 	TableValues tv = itd.query("item", itemid);
 	DataColumn[] dcl = tv.getDataColumns();
 	TableValues tvag = itd.queryattg(itemid);
 	DataColumn[] dclag = tvag.getDataColumns();
 	TableValues tva = itd.queryatt(itemid);
 	DataColumn[] dcla = tva.getDataColumns();
+	TableValues tvr = rmd.queryI(itemid);
+	DataColumn[] dclr = tvr.getDataColumns();
 	for (int i = 0; i < tv.getValues().length; i++) {
 		Map<String, Object> map = new HashMap<String, Object>();
 		for (int j = 0; j < tv.getDataColumns().length; j++) {
@@ -40,9 +44,19 @@
 		}
 		lista.add(mapa);
 	}
+	for (int i = 0; i < tvr.getValues().length; i++) {
+		Map<String, Object> mapr = new HashMap<String, Object>();
+		for (int j = 0; j < tvr.getDataColumns().length; j++) {
+			String keyr = dclr[j].getName();
+			String valuer = tvr.getValues()[i][j].toString();
+			mapr.put(keyr, valuer);
+		}
+		listr.add(mapr);
+	}
 	request.setAttribute("list", list);
 	request.setAttribute("listag", listag);
 	request.setAttribute("lista", lista);
+	request.setAttribute("listr", listr);
 %>
 <html>
 <%
@@ -135,11 +149,20 @@
 	function subcart() {
 		var itemid = document.getElementById('itemid').innerHTML;
 		var num = document.getElementById('num').value;
+		var $attrigname = $("i.selected_ok").prev().text();
 		$.get("CartServlet", {
 			"itemid" : itemid,
-			"num" : num
+			"num" : num,
+			"attrigname":$attrigname
 		});
 	}
+	function remark() {
+		window.location.href = 'makeremark.jsp';
+	}
+	function selectatt(attrigid) {
+		var gname =attrigid.innerHTML;
+		$("#"+attrigid).after("<i class=selected_ok>  </i>");
+		 }
 </script>
 <style>
 .product_intro_mainName strong {
@@ -214,6 +237,12 @@
 .comments_list .comment_con_r .formation dl.reply dt em {
 	color: #999
 }
+
+.show_wrap_h3.right h3 {
+	padding-left: 0px;
+	border: 0px none;
+	height: 30px;
+}
 </style>
 </head>
 <body>
@@ -273,10 +302,10 @@
 							<dt>${lista.attname}：</dt>
 							<dd>
 								<div class="product_litile_pic">
-									<c:forEach items="${listag}" var="listag">
+									<c:forEach items="${listag}" var="listag" varStatus="sta2">
 										<c:if test="${lista.attid == listag.attid}">
-											<a id="attresInfo" href="javascript:void(0);" class="cur">
-												<span class="product_pic_size">${listag.attrigname}</span> <!--	<i class="selected_ok"></i>  -->
+											<a id="attresInfo" class="cur">
+											 <span	id="${listag.attrigid}" onclick="selectatt('${listag.attrigid}')" class="product_pic_size">${listag.attrigname}</span> 
 											</a>
 										</c:if>
 									</c:forEach>
@@ -305,7 +334,43 @@
 					</dl>
 				</div>
 			</div>
-
+		</div>
+	</div>
+	<div class="w1200">
+		<div class="w960">
+			<div class="show_wrap_h3 right product_detail">
+				<h3>
+					<a class="cur">商品评价</a>
+				</h3>
+				<c:forEach items="${list}" var="list">
+					<div class="hiddenGoodsInfo" id="goodsintruduce">
+						<ul class="detail_list">
+							<li>商品名称 ： ${list.itemname}</li>
+							<li>商品号： ${list.itemid}</li>
+							<li>类别 ： ${list.thitypeid}</li>
+						</ul>
+					</div>
+				</c:forEach>
+			</div>
+			<div id="pinglun" class="show_wrap_h3 right comments_list">
+				<h3>
+					<a id="skucommsum" class="cur">全部评价(0)</a> <a id="Good">好评(0)</a> <a
+						id="Middle">中评(0)</a> <a id="Bad">差评(0)</a> <span
+						class="btn_zong btn_fen_little"> <a onclick="remark()">发表评论</a>
+					</span>
+				</h3>
+				<div id="comments"></div>
+				<c:forEach items="${listr}" var="listr">
+					<div class="clearfix">
+						<div style="padding: 0px 0 0 90px;" class="fl">${listr.neirong}</div>
+						<div class="page_wrap">
+							<ul class="page">
+								<li>${listr.username}</li>
+							</ul>
+						</div>
+					</div>
+				</c:forEach>
+			</div>
 		</div>
 	</div>
 </body>

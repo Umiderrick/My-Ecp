@@ -187,9 +187,7 @@ $(function(){
 		}
 		$("#price_sum").text(sum);
 	}
-	
 	caculateSum();
-	
 })
 
 

@@ -28,7 +28,6 @@
 				<h3>属性录入</h3>
 			</div>
 			<form id='attform' action="AttributeinsServlet" method="post">
-				<table>
 					<div class="login_pass_span">
 						<span> 属性编号 </span>
 					</div>
@@ -44,7 +43,6 @@
 					<div class="login_btn">
 						<a class="btn_zong big" onclick="submitMyForm();">录入</a>
 					</div>
-				</table>
 			</form>
 		</div>
 	</div>

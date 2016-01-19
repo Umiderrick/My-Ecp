@@ -156,6 +156,7 @@ dl {
 							<div class="wrap_middle">
 								<div class="wrap_middle_r">
 									<a href="mysalorder.jsp">我的订单&nbsp;&nbsp;&gt;</a>
+									<a href="myremark.jsp">我的评价&nbsp;&nbsp;&gt;</a>
 								</div>
 							</div>
 						</div>
