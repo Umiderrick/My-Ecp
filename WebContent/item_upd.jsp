@@ -1,6 +1,6 @@
 <%@ page language="java" pageEncoding="UTF-8"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
-<%@ page import="java.util.*,pb.db.*,pb.Itemdealer,pb.Thitypedealer"%>
+<%@ page import="java.util.*,pb.db.*,pb.item.Itemdealer,pb.thirdtype.Thitypedealer"%>
 <%
 	{
 		List<Map<String, Object>> listi = new ArrayList<Map<String, Object>>();

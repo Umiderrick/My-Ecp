@@ -1,4 +1,4 @@
-<%@ page language="java" import="java.util.*,pb.db.*,pb.*"
+<%@ page language="java" import="java.util.*,pb.db.*,pb.firsttype.*,pb.secondtype.*,pb.thirdtype.*,pb.attribute.*,pb.attributeg.*"
 	pageEncoding="UTF-8"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <%@ taglib prefix="fn" uri="http://java.sun.com/jsp/jstl/functions"%>

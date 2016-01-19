@@ -5,162 +5,162 @@
   <servlet>
     <display-name>LoginServlet</display-name>
     <servlet-name>LoginServlet</servlet-name>
-    <servlet-class>pb.LoginServlet</servlet-class>
+    <servlet-class>pb.login.LoginServlet</servlet-class>
   </servlet>
   <servlet>
     <display-name>RegServlet</display-name>
     <servlet-name>RegServlet</servlet-name>
-    <servlet-class>pb.RegServlet</servlet-class>
+    <servlet-class>pb.login.RegServlet</servlet-class>
   </servlet>
   <servlet>
     <display-name>FirsttypeServlet</display-name>
     <servlet-name>FirsttypeServlet</servlet-name>
-    <servlet-class>pb.FirsttypeServlet</servlet-class>
+    <servlet-class>pb.firsttype.FirsttypeServlet</servlet-class>
   </servlet>
   <servlet>
     <display-name>FirtypeinsServlet</display-name>
     <servlet-name>FirtypeinsServlet</servlet-name>
-    <servlet-class>pb.FirtypeinsServlet</servlet-class>
+    <servlet-class>pb.firsttype.FirtypeinsServlet</servlet-class>
   </servlet>
   <servlet>
     <display-name>FirtypeupdServlet</display-name>
     <servlet-name>FirtypeupdServlet</servlet-name>
-    <servlet-class>pb.FirtypeupdServlet</servlet-class>
+    <servlet-class>pb.firsttype.FirtypeupdServlet</servlet-class>
   </servlet>
   <servlet>
     <display-name>SectypeServlet</display-name>
     <servlet-name>SectypeServlet</servlet-name>
-    <servlet-class>pb.SectypeServlet</servlet-class>
+    <servlet-class>pb.secondtype.SectypeServlet</servlet-class>
   </servlet>
   <servlet>
     <display-name>SectypeinsServlet</display-name>
     <servlet-name>SectypeinsServlet</servlet-name>
-    <servlet-class>pb.SectypeinsServlet</servlet-class>
+    <servlet-class>pb.secondtype.SectypeinsServlet</servlet-class>
   </servlet>
   <servlet>
     <display-name>SectypeupdServlet</display-name>
     <servlet-name>SectypeupdServlet</servlet-name>
-    <servlet-class>pb.SectypeupdServlet</servlet-class>
+    <servlet-class>pb.secondtype.SectypeupdServlet</servlet-class>
   </servlet>
   <servlet>
     <display-name>ThitypeServlet</display-name>
     <servlet-name>ThitypeServlet</servlet-name>
-    <servlet-class>pb.ThitypeServlet</servlet-class>
+    <servlet-class>pb.thirdtype.ThitypeServlet</servlet-class>
   </servlet>
   <servlet>
     <display-name>ThitypeinsServlet</display-name>
     <servlet-name>ThitypeinsServlet</servlet-name>
-    <servlet-class>pb.ThitypeinsServlet</servlet-class>
+    <servlet-class>pb.thirdtype.ThitypeinsServlet</servlet-class>
   </servlet>
   <servlet>
     <display-name>ThitypeupdServlet</display-name>
     <servlet-name>ThitypeupdServlet</servlet-name>
-    <servlet-class>pb.ThitypeupdServlet</servlet-class>
+    <servlet-class>pb.thirdtype.ThitypeupdServlet</servlet-class>
   </servlet>
   <servlet>
     <display-name>AttributeServlet</display-name>
     <servlet-name>AttributeServlet</servlet-name>
-    <servlet-class>pb.AttributeServlet</servlet-class>
+    <servlet-class>pb.attribute.AttributeServlet</servlet-class>
   </servlet>
   <servlet>
     <display-name>AttributeinsServlet</display-name>
     <servlet-name>AttributeinsServlet</servlet-name>
-    <servlet-class>pb.AttributeinsServlet</servlet-class>
+    <servlet-class>pb.attribute.AttributeinsServlet</servlet-class>
   </servlet>
   <servlet>
     <display-name>AttributeupdServlet</display-name>
     <servlet-name>AttributeupdServlet</servlet-name>
-    <servlet-class>pb.AttributeupdServlet</servlet-class>
+    <servlet-class>pb.attribute.AttributeupdServlet</servlet-class>
   </servlet>
   <servlet>
     <display-name>AttrigServlet</display-name>
     <servlet-name>AttrigServlet</servlet-name>
-    <servlet-class>pb.AttrigServlet</servlet-class>
+    <servlet-class>pb.attributeg.AttrigServlet</servlet-class>
   </servlet>
   <servlet>
     <display-name>AttriginsServlet</display-name>
     <servlet-name>AttriginsServlet</servlet-name>
-    <servlet-class>pb.AttriginsServlet</servlet-class>
+    <servlet-class>pb.attributeg.AttriginsServlet</servlet-class>
   </servlet>
   <servlet>
     <display-name>AttrigupdServlet</display-name>
     <servlet-name>AttrigupdServlet</servlet-name>
-    <servlet-class>pb.AttrigupdServlet</servlet-class>
+    <servlet-class>pb.attributeg.AttrigupdServlet</servlet-class>
   </servlet>
   <servlet>
     <display-name>ThiattServlet</display-name>
     <servlet-name>ThiattServlet</servlet-name>
-    <servlet-class>pb.ThiattServlet</servlet-class>
+    <servlet-class>pb.thiatt.ThiattServlet</servlet-class>
   </servlet>
   <servlet>
     <display-name>ThiattinsServlet</display-name>
     <servlet-name>ThiattinsServlet</servlet-name>
-    <servlet-class>pb.ThiattinsServlet</servlet-class>
+    <servlet-class>pb.thiatt.ThiattinsServlet</servlet-class>
   </servlet>
   <servlet>
     <display-name>ItemServlet</display-name>
     <servlet-name>ItemServlet</servlet-name>
-    <servlet-class>pb.ItemServlet</servlet-class>
+    <servlet-class>pb.item.ItemServlet</servlet-class>
   </servlet>
   <servlet>
     <display-name>ItemattServlet</display-name>
     <servlet-name>ItemattServlet</servlet-name>
-    <servlet-class>pb.ItemattServlet</servlet-class>
+    <servlet-class>pb.itematt.ItemattServlet</servlet-class>
   </servlet>
   <servlet>
     <display-name>ItemattinsServlet</display-name>
     <servlet-name>ItemattinsServlet</servlet-name>
-    <servlet-class>pb.ItemattinsServlet</servlet-class>
+    <servlet-class>pb.itematt.ItemattinsServlet</servlet-class>
   </servlet>
   <servlet>
     <display-name>CartServlet</display-name>
     <servlet-name>CartServlet</servlet-name>
-    <servlet-class>pb.CartServlet</servlet-class>
+    <servlet-class>pb.cart.CartServlet</servlet-class>
   </servlet>
   <servlet>
     <display-name>SalorderServlet</display-name>
     <servlet-name>SalorderServlet</servlet-name>
-    <servlet-class>pb.SalorderServlet</servlet-class>
+    <servlet-class>pb.salorder.SalorderServlet</servlet-class>
   </servlet>
   <servlet>
     <display-name>IteminsServlet</display-name>
     <servlet-name>IteminsServlet</servlet-name>
-    <servlet-class>pb.IteminsServlet</servlet-class>
+    <servlet-class>pb.item.IteminsServlet</servlet-class>
   </servlet>
   <servlet>
     <display-name>SalorderinsServlet</display-name>
     <servlet-name>SalorderinsServlet</servlet-name>
-    <servlet-class>pb.SalorderinsServlet</servlet-class>
+    <servlet-class>pb.salorder.SalorderinsServlet</servlet-class>
   </servlet>
   <servlet>
     <display-name>SalorderupdServlet</display-name>
     <servlet-name>SalorderupdServlet</servlet-name>
-    <servlet-class>pb.SalorderupdServlet</servlet-class>
+    <servlet-class>pb.salorder.SalorderupdServlet</servlet-class>
   </servlet>
   <servlet>
     <display-name>ItemshowServlet</display-name>
     <servlet-name>ItemshowServlet</servlet-name>
-    <servlet-class>pb.ItemshowServlet</servlet-class>
+    <servlet-class>pb.item.ItemshowServlet</servlet-class>
   </servlet>
   <servlet>
     <display-name>ItemupdServlet</display-name>
     <servlet-name>ItemupdServlet</servlet-name>
-    <servlet-class>pb.ItemupdServlet</servlet-class>
+    <servlet-class>pb.item.ItemupdServlet</servlet-class>
   </servlet>
   <servlet>
     <display-name>ListSearchServlet</display-name>
     <servlet-name>ListSearchServlet</servlet-name>
-    <servlet-class>pb.ListSearchServlet</servlet-class>
+    <servlet-class>pb.search.ListSearchServlet</servlet-class>
   </servlet>
   <servlet>
     <display-name>IndexServlet</display-name>
     <servlet-name>IndexServlet</servlet-name>
-    <servlet-class>pb.IndexServlet</servlet-class>
+    <servlet-class>pb.index.IndexServlet</servlet-class>
   </servlet>
   <servlet>
     <display-name>RemarkServlet</display-name>
     <servlet-name>RemarkServlet</servlet-name>
-    <servlet-class>pb.RemarkServlet</servlet-class>
+    <servlet-class>pb.remark.RemarkServlet</servlet-class>
   </servlet>
   <servlet-mapping>
     <servlet-name>LoginServlet</servlet-name>

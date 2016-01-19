@@ -1,6 +1,6 @@
 <%@ page language="java" pageEncoding="UTF-8"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
-<%@ page import="java.util.*,pb.db.*,pb.Itemdealer,pb.Thitypedealer"%>
+<%@ page import="java.util.*,pb.db.*,pb.item.Itemdealer,pb.thirdtype.Thitypedealer"%>
 <%
 	List<Map<String, Object>> list = new ArrayList<Map<String, Object>>();
 	Thitypedealer ttd = new Thitypedealer();
@@ -122,7 +122,7 @@
 			<form id='itemform' action="IteminsServlet" method="post"
 				enctype="multipart/form-data">
 				<table>
-					<div class="lofin_reg">
+					<div class="login_reg">
 						<div class="login_pass_span">
 							<span> 商品编号 </span>
 						</div>

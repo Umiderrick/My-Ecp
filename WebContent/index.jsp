@@ -1,7 +1,7 @@
 <%@ page language="java" pageEncoding="UTF-8"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <%@ page
-	import="java.util.*,pb.db.*,pb.Firtypedealer,pb.Sectypedealer,pb.Thitypedealer"%>
+	import="java.util.*,pb.db.*,pb.firsttype.Firtypedealer,pb.secondtype.Sectypedealer,pb.thirdtype.Thitypedealer"%>
 <%
 	List<Map<String, Object>> list1 = new ArrayList<Map<String, Object>>();
 	List<Map<String, Object>> list2 = new ArrayList<Map<String, Object>>();

@@ -1,7 +1,7 @@
 <%@ page language="java" pageEncoding="UTF-8"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <%@ page
-	import="java.util.*,pb.db.*,pb.Attributedealer,pb.db.DataColumn"%>
+	import="java.util.*,pb.db.*,pb.attribute.Attributedealer,pb.db.DataColumn"%>
 <%
 	List<Map<String, Object>> listA = new ArrayList<Map<String, Object>>();
 	Attributedealer atd = new Attributedealer();

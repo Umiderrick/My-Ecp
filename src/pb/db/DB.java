@@ -17,7 +17,7 @@ import java.util.Map;
 import java.util.Set;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
-import pb.DbConfig;
+import pb.db.DbConfig;
 
 public class DB implements AutoCloseable {
 	boolean bInited = false;

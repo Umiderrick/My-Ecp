@@ -1,5 +1,5 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
-<%@ page language="java" import="java.util.*,pb.db.*,pb.*"
+<%@ page language="java" import="java.util.*,pb.db.*,pb.login.*"
 	pageEncoding="UTF-8"%>
 <%
 	{

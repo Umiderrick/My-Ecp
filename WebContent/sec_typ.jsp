@@ -1,6 +1,6 @@
 <%@ page language="java" pageEncoding="UTF-8"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
-<%@ page import="java.util.*,pb.db.*,pb.Sectypedealer"%>
+<%@ page import="java.util.*,pb.db.*,pb.secondtype.Sectypedealer"%>
 <%
 	List<Map<String, Object>> list = new ArrayList<Map<String, Object>>();
 	Sectypedealer std = new Sectypedealer();
