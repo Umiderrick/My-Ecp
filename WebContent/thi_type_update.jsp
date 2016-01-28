@@ -89,7 +89,7 @@ function submitMyForm(){
 					</span>
 				</div>
 				<div class="login_pass_input">
-					<input type="text"  name ="thitypeid" value =${list.thitypeid} readonly= "true ">
+					<input type="text"  name ="thitypeid" value =${list.thitypeid} readonly= "readonly">
 				</div>
 				<div class="login_pass_input">
 					<span>

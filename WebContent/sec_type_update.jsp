@@ -74,8 +74,6 @@
 						<div class="login_pass_span">
 							<span> 商品大类编号 </span>
 						</div>
-
-
 						<select name="firtypeid">
 							<c:forEach items="${listf}" var="listf" varStatus="sta2">
 								<option>${listf.firtypeid}</option>
@@ -86,8 +84,7 @@
 							<span> 二级类别编号 </span>
 						</div>
 						<div class="login_pass_input">
-							<input type="text" name="sectypeid" value=${list.sectypeid
-								} readonly="true ">
+							<input type="text" name="sectypeid" value=${list.sectypeid} readonly="readonly">
 						</div>
 						<div class="login_pass_input">
 							<span> 二级类别名称 </span>

@@ -82,8 +82,7 @@
 							<span> 属性字典编号 </span>
 						</div>
 						<div class="login_pass_input">
-							<input type="text" name="attrigid" value=${list.attrigid
-								} readonly="true ">
+							<input type="text" name="attrigid" value=${list.attrigid } readonly="readonly">
 						</div>
 						<div class="login_pass_input">
 							<span> 属性字典名称 </span>

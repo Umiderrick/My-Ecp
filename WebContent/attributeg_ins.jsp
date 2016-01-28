@@ -52,7 +52,7 @@
 			</div>
 			<form id='attgform' action="AttriginsServlet" method="post">
 				<table>
-					<div class="lofin_reg">
+					<div class="login_reg">
 						<div class="login_pass_span">
 							<span> 主属性编码 </span>
 						</div>

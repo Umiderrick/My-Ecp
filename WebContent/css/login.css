@@ -32,7 +32,7 @@
 	background: url(../res/images/bg/info.png) no-repeat 0 6px;
 	color: #999;
 }
-.login_btn input{ overflow:hidden; margin:20px 0px; margin-top:10px; margin-left:60px;}
+.login_btn div{ overflow:hidden; margin:20px 0px; margin-top:10px; margin-left:60px;}
 .login_reg div{ margin-bottom:7px;}
 .login_speed{ color:#999;}
 .login_speed a{ color:#999}

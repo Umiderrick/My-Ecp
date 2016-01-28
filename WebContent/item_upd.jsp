@@ -151,8 +151,7 @@
 								<span> 商品编号 </span>
 							</div>
 							<div class="login_pass_input">
-								<input type="text" name="itemid" value=${listi.itemid
-									}  readonly="true">
+								<input type="text" name="itemid" value=${listi.itemid}  readonly="readonly">
 							</div>
 							<div class="login_pass_span">
 								<span> 商品名称 </span>

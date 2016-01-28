@@ -53,8 +53,7 @@
 							<span> 属性编号 </span>
 						</div>
 						<div class="login_pass_input">
-							<input type="text" name="attid" value=${list.attid
-								}   readonly="true ">
+							<input type="text" name="attid" value=${list.attid}   readonly="readonly">
 						</div>
 						<div class="login_pass_input">
 							<span> 属性名称 </span>
