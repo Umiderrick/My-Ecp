@@ -95,6 +95,9 @@ $(function(){
 			"thitypeid" : thitypeid
 		}, window.location.href = 'list_search.jsp');
 	}
+	function gg() {
+		alert();
+	}
 </script>
 <style>
 dl {
@@ -222,24 +225,28 @@ dl {
 							<li data-target="#myCarousel" data-slide-to="0" class="active"></li>
 							<li data-target="#myCarousel" data-slide-to="1"></li>
 							<li data-target="#myCarousel" data-slide-to="2"></li>
+							<li data-target="#myCarousel" data-slide-to="3"></li>
 						</ol>
 						<div class="carousel-inner">
-							<div class="item">
-								<img src="res/images/temp/banner_01.jpg">
+							<div  class="item">
+								<img src="res/images/bg/lunbo2.png">
 							</div>
-							<div class="item active">
-								<img src="res/images/temp/banner_01.jpg">
+							<div  class="item active">
+								<img src="res/images/bg/lunbo1.png">
 							</div>
-							<div class="item">
-								<img src="res/images/temp/banner_01.jpg">
+							<div  class="item">
+								<img src="res/images/bg/lunbo3.png">
+							</div>
+							<div  class="item">
+								<img src="res/images/bg/lunbo4.png">
 							</div>
 						</div>
-						<a class="carousel-control left" href="#myCarousel"
-							data-slide="prev"><span
-							class="glyphicon glyphicon-chevron-left"></span></a> <a
-							class="carousel-control right" href="#myCarousel"
-							data-slide="next"><span
-							class="glyphicon glyphicon-chevron-right"></span></a>
+						<a class="carousel-control left" href="#myCarousel" data-slide="prev">
+						<span class="glyphicon glyphicon-chevron-left"></span>
+						</a> 
+						<a class="carousel-control right" href="#myCarousel" data-slide="next">
+						<span class="glyphicon glyphicon-chevron-right"></span>
+						</a>
 					</div>
 				</div>
 			</div>
@@ -251,15 +258,15 @@ dl {
 						<div class="prev_go" style="visibility: hidden;"></div>
 						<div class="scroll_wrap" style="width: 920px;">
 							<ul class="scroll_body" style="left: 0px;">
-								<li><a href="#"><img
+								<li><a onclick ='gg()'><img
 										src="res/images/temp/index_sc05.jpg"></a></li>
-								<li><a href="#"><img
+								<li><a  onclick ='gg()'><img
 										src="res/images/temp/index_sc04.jpg"></a></li>
-								<li><a href="#"><img
+								<li><a onclick ='gg()'><img
 										src="res/images/temp/index_sc03.jpg"></a></li>
-								<li><a href="#"><img
+								<li><a onclick ='gg()' ><img
 										src="res/images/temp/index_sc02.jpg"></a></li>
-								<li class="end"><a href="#"><img
+								<li class="end"><a onclick ='gg()'><img
 										src="res/images/temp/index_sc01.jpg"></a></li>
 							</ul>
 						</div>

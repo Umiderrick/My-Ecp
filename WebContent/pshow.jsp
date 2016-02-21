@@ -340,7 +340,7 @@
 		<div class="w960">
 			<div class="show_wrap_h3 right product_detail">
 				<h3>
-					<a class="cur">商品评价</a>
+					<a class="cur">商品详情</a>
 				</h3>
 				<c:forEach items="${list}" var="list">
 					<div class="hiddenGoodsInfo" id="goodsintruduce">

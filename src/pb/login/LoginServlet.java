@@ -14,12 +14,23 @@ import pb.db.TableValues;
 
 public class LoginServlet implements javax.servlet.Servlet {
 	public void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		String username = request.getParameter("username");// 取得用户名response
+		request.setCharacterEncoding("utf-8");
+		String username = request.getParameter("username");// 取得用户名
 		String password = request.getParameter("password");// 取得密码
+		String checkcode=request.getParameter("checkCode");
 		Userdealer userd = new Userdealer();
 		HttpSession session = request.getSession();
 		session.setAttribute("userName", username);
 		if (userd.canlogin(username, password)) {// 根据登陆情况，跳转页面
+	    	if(checkcode.equals("")||checkcode==null){
+	    		System.out.println("请输入验证码");
+	    	}else{
+	    		if(!checkcode.equalsIgnoreCase((String)session.getAttribute("randCheckCode"))){
+	    			System.out.println("验证码不正确,请重新输入");
+	    		}else{
+	    			System.out.println("登录成功");
+	    		}
+	    	}
 			TableValues tv =userd.typejudge(username);
 			Object o =tv.getValues()[0][0];
 			String type =o.toString();
