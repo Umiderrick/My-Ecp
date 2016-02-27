@@ -137,7 +137,7 @@ public class PictureCheckCode extends HttpServlet {
 			AffineTransform trans=new AffineTransform();
 			trans.rotate((45)*3.14/180,15*i+8,7);
 			/*Ëõ·ÅÎÄ×Ö*/
-			float scaleSize=random.nextFloat()+0.8f;
+			float scaleSize=random.nextFloat()+0.9f;
 			if(scaleSize>1f) scaleSize=1f;
 			trans.scale(scaleSize, scaleSize);
 			g2d_word.setTransform(trans);
