@@ -71,8 +71,6 @@
 				<h3>三级属性录入</h3>
 			</div>
 			<form id='thiattform' action="ThiattinsServlet" method="post">
-				<table>
-					<div class="lofin_reg">
 						<div class="login_pass_span">
 							<span> 三级类别编号 </span>
 						</div>
@@ -95,8 +93,6 @@
 						<div class="login_btn">
 							<a class="btn_zong big" onclick="submitMyForm();">录入</a>
 						</div>
-					</div>
-				</table>
 			</form>
 		</div>
 	</div>

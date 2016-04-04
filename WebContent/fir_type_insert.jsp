@@ -30,7 +30,7 @@
 			</div>
 			<form id='Firtypeform' action="FirtypeinsServlet" method="post">
 				<table>
-					<div class="login_user_span">
+					<div>
 						<span> 商品大类编号 </span>
 					</div>
 					<div class="login_pass_input">
@@ -42,10 +42,10 @@
 					<div class="login_pass_input">
 						<input type="text" name="firtypename">
 					</div>
-					<div class="login_btn">
+				</table>
+				<div class="login_btn">
 						<a class="btn_zong big" onclick="submitMyForm();">录入</a>
 					</div>
-				</table>
 			</form>
 		</div>
 	</div>

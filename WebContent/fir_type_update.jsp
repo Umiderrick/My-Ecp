@@ -57,8 +57,7 @@
 							<span> 一级类别编号 </span>
 						</div>
 						<div class="login_pass_input">
-							<input type="text" name="firtypeid" value=${list.firtypeid
-								} readonly="true">
+							<input type="text"  name="firtypeid"  value=${list.firtypeid} readonly="true">
 						</div>
 						<div class="login_pass_input">
 							<span> 一级类别名称 </span>
