@@ -141,7 +141,7 @@ public class PictureCheckCode extends HttpServlet {
 			if(scaleSize>1f) scaleSize=1f;
 			trans.scale(scaleSize, scaleSize);
 			g2d_word.setTransform(trans);
-			g.drawString(ctmp, 15*i+18, 14);
+			g.drawString(ctmp, 15*i+12, 18);
 		}
 		HttpSession session=request.getSession(true);
 		session.setAttribute("randCheckCode", sRand);

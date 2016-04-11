@@ -213,7 +213,40 @@ body,html{ line-height:normal}
 .regist_yhzcxy p{margin-bottom:10px;}
 /*12月19日增加*/
 .regist_box{ border:1px solid #ebebeb; background:#fbfbfb url(../res/images/bg/regist_bg.png) no-repeat right 20px; width:988px; margin:5px auto 25px auto;}
+.member_register_button .btn_zong.big span {
+	letter-spacing: 5px;
+}
 
+.meber_register_list_m input {
+	line-height: 20px;
+	*line-height: 16px;
+}
+
+.btn_tybzc, .btn_tybzc:hover {
+	width: 322px;
+	display: block;
+	margin: 0 auto;
+	height: 34px;
+	line-height: 34px;
+	text-align: center;
+	background: #a48169;
+	color: #fff;
+	-moz-border-radius: 3px;
+	-webkit-border-radius: 3px;
+	border-radius: 3px;
+	font-family: "微软雅黑";
+	font-size: 16px;
+	font-weight: 400;
+	text-decoration: none;
+	margin-top: 20px;
+}
+
+.login_btn input {
+	overflow: hidden;
+	margin: 20px 0px;
+	margin-top: 10px;
+	margin-left: 60px;
+}
 
 
 

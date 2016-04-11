@@ -23,7 +23,7 @@ public class FirtypeinsServlet extends HttpServlet {
 		if (insertSuccess) {
 				response.sendRedirect("Firtypeinssuc.jsp");
 			} else {
-				response.sendRedirect("fail.jsp");
+				response.sendRedirect("../fail/fail.jsp");
 			}
 	}
 	@Override

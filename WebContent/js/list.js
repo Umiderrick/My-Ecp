@@ -191,7 +191,15 @@ $(function(){
 	   //点击价格出现上下箭头 并切换
 	   if($(this).children('a').children('i').attr("class")=="icon_orderdown")
 		{   //点击价格出现下箭头 切换成上箭头
-			 $(this).children('a').css("padding-right","20px").children('i').removeClass("icon_orderdown").addClass("icon_orderup");	 
+			 $(this).children('a').css("padding-right","20px").children('i').removeClass("icon_orderdown").addClass("icon_orderup");
+			    $.ajax({
+			        type: "GET",
+			        url: "ListSearchServlet",
+			        data: { "sorttype": "desc"  }
+			      })
+			        .done(function( msg ) {
+			          alert( "Data Saved: " + msg );
+			        });
 		} else {
 				if($(this).children('a').children('i').attr("class")=="icon_orderup")
 				{    //点击价格出现上箭头 切换成下箭头

@@ -77,7 +77,7 @@ $(function(){
 	})
 	function logout() {
 		var uname = document.getElementById("uname").innerHTML;
-		$.get("login", {
+		$.get("login/login", {
 			"username" : uname
 		}, function() {
 			window.location.reload(false);
@@ -88,12 +88,12 @@ $(function(){
 		var pattern = document.getElementById('search').value;
 		$.post("IndexServlet", {
 			"pattern" : pattern
-		}, window.location.href = 'list_search.jsp');
+		}, window.location.href = "search/list_search.jsp");
 	}
 	function thitypesearch(thitypeid) {
 		$.post("IndexServlet", {
 			"thitypeid" : thitypeid
-		}, window.location.href = 'list_search.jsp');
+		}, window.location.href = "search/list_search.jsp");
 	}
 	function gg() {
 		alert();
@@ -125,7 +125,7 @@ dl {
 						onclick="logout()">点此<b>注销</b></a>
 				</div>
 				<div id="welcom" class="welcome">
-					欢迎您！<a href="login.jsp"><b>请登录</b></a>
+					欢迎您！<a href="login/login.jsp"><b>请登录</b></a>
 				</div>
 			</div>
 		</div>
@@ -134,7 +134,7 @@ dl {
 		<div class="ui_header_logo_bg">
 			<div class="w1200">
 				<div class="ui_header_logo_pic">
-					<a href="index.jsp"><img src="res/images/wuhang.png" /></a>
+					<a href="index.jsp"><img src="res/images/123312.png" /></a>
 				</div>
 				<div class="ui_header_logo_search">
 					<div class="serch_box">
@@ -154,12 +154,12 @@ dl {
 								<a> <b>您好，</b><%=session.getAttribute("userName")%><b>欢迎登录</b></a>
 							</div>
 							<div id="welcom_b" class="wrap_top">
-								<b>您好，请</b><a href="login.jsp"><b>登录</b></a>
+								<b>您好，请</b><a href="login/login.jsp"><b>登录</b></a>
 							</div>
 							<div class="wrap_middle">
 								<div class="wrap_middle_r">
-									<a href="mysalorder.jsp">我的订单&nbsp;&nbsp;&gt;</a>
-									<a href="myremark.jsp">我的评价&nbsp;&nbsp;&gt;</a>
+									<a href="salorder/mysalorder.jsp">我的订单&nbsp;&nbsp;&gt;</a>
+									<a href="remark/myremark.jsp">我的评价&nbsp;&nbsp;&gt;</a>
 								</div>
 							</div>
 						</div>

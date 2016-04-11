@@ -28,10 +28,10 @@ public class FirtypeupdServlet extends HttpServlet {
 		Firtypedealer ftd = new Firtypedealer();
 		boolean ok =ftd.update(firtypeid,firtypename);
 		if (ok) {
-			response.sendRedirect("success.jsp");
+			response.sendRedirect("../success.jsp");
 		} 
 		else {
-			response.sendRedirect("fail.jsp");
+			response.sendRedirect("../fail/fail.jsp");
 			System.out.println("¸üĞÂÊ§°Ü");
 	}
 	}

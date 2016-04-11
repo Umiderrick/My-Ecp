@@ -545,7 +545,6 @@ img {
 .order i {
 	position: absolute;
 	top: 8px;
-	left: 135px;
 }
 .icon_orderup, .icon_orderdown {
 	float: none;

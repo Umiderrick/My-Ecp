@@ -25,13 +25,25 @@ public class ListSearchServlet extends HttpServlet {
 
 	protected void doGet(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
+		String sort =request.getParameter("sorttype");
+		TableValues tv =null;
+		List<Map<String, Object>> list = new ArrayList<Map<String, Object>>();
+		if(sort ==null|| sort.equals("")){
 		String num = request.getParameter("num");
 		int n = Integer.parseInt(num);
 		n = 8 * (n - 1);
-		List<Map<String, Object>> list = new ArrayList<Map<String, Object>>();
 		String sql = "select top 8 * from item where itemid not in (select top " + n + " itemid from item )";
 		System.out.println(sql);
-		TableValues tv = db.query(sql);
+		tv = db.query(sql);
+		}else if (sort.equals("desc")){
+			String sql ="select top 8 * from item order by price desc";
+			System.out.println(sql);
+			tv =db.query(sql);
+		}else{
+			String sql ="select top 8 * from item order by price asc";
+			System.out.println(sql);
+			tv =db.query(sql);
+		}
 		DataColumn[] dcl = tv.getDataColumns();
 		for (int i = 0; i < tv.getValues().length; i++) {
 			Map<String, Object> map = new HashMap<String, Object>();
@@ -44,7 +56,6 @@ public class ListSearchServlet extends HttpServlet {
 		}
 		db.closeDatabase();
 		request.setAttribute("list", list);
-		request.getSession().setAttribute("list", list);
 		request.getRequestDispatcher("list_search.jsp").forward(request, response);
 	}
 

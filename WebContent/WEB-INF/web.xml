@@ -170,123 +170,123 @@
   </servlet>
   <servlet-mapping>
     <servlet-name>LoginServlet</servlet-name>
-    <url-pattern>/login</url-pattern>
+    <url-pattern>/login/login</url-pattern>
   </servlet-mapping>
   <servlet-mapping>
     <servlet-name>RegServlet</servlet-name>
-    <url-pattern>/register</url-pattern>
+    <url-pattern>/login/register</url-pattern>
   </servlet-mapping>
   <servlet-mapping>
     <servlet-name>FirsttypeServlet</servlet-name>
-    <url-pattern>/FirsttypeServlet</url-pattern>
+    <url-pattern>/firtype/FirsttypeServlet</url-pattern>
   </servlet-mapping>
   <servlet-mapping>
     <servlet-name>FirtypeinsServlet</servlet-name>
-    <url-pattern>/FirtypeinsServlet</url-pattern>
+    <url-pattern>/firtype/FirtypeinsServlet</url-pattern>
   </servlet-mapping>
   <servlet-mapping>
     <servlet-name>FirtypeupdServlet</servlet-name>
-    <url-pattern>/FirtypeupdServlet</url-pattern>
+    <url-pattern>/firtype/FirtypeupdServlet</url-pattern>
   </servlet-mapping>
   <servlet-mapping>
     <servlet-name>SectypeServlet</servlet-name>
-    <url-pattern>/SectypeServlet</url-pattern>
+    <url-pattern>/sectype/SectypeServlet</url-pattern>
   </servlet-mapping>
   <servlet-mapping>
     <servlet-name>SectypeinsServlet</servlet-name>
-    <url-pattern>/SectypeinsServlet</url-pattern>
+    <url-pattern>/sectype/SectypeinsServlet</url-pattern>
   </servlet-mapping>
   <servlet-mapping>
     <servlet-name>SectypeupdServlet</servlet-name>
-    <url-pattern>/SectypeupdServlet</url-pattern>
+    <url-pattern>/sectype/SectypeupdServlet</url-pattern>
   </servlet-mapping>
   <servlet-mapping>
     <servlet-name>ThitypeServlet</servlet-name>
-    <url-pattern>/ThitypeServlet</url-pattern>
+    <url-pattern>/thitype/ThitypeServlet</url-pattern>
   </servlet-mapping>
   <servlet-mapping>
     <servlet-name>ThitypeinsServlet</servlet-name>
-    <url-pattern>/ThitypeinsServlet</url-pattern>
+    <url-pattern>/thitype/ThitypeinsServlet</url-pattern>
   </servlet-mapping>
   <servlet-mapping>
     <servlet-name>ThitypeupdServlet</servlet-name>
-    <url-pattern>/ThitypeupdServlet</url-pattern>
+    <url-pattern>/thitype/ThitypeupdServlet</url-pattern>
   </servlet-mapping>
   <servlet-mapping>
     <servlet-name>AttributeServlet</servlet-name>
-    <url-pattern>/AttributeServlet</url-pattern>
+    <url-pattern>/attribute/AttributeServlet</url-pattern>
   </servlet-mapping>
   <servlet-mapping>
     <servlet-name>AttributeinsServlet</servlet-name>
-    <url-pattern>/AttributeinsServlet</url-pattern>
+    <url-pattern>/attribute/AttributeinsServlet</url-pattern>
   </servlet-mapping>
   <servlet-mapping>
     <servlet-name>AttributeupdServlet</servlet-name>
-    <url-pattern>/AttributeupdServlet</url-pattern>
+    <url-pattern>/attribute/AttributeupdServlet</url-pattern>
   </servlet-mapping>
   <servlet-mapping>
     <servlet-name>AttrigServlet</servlet-name>
-    <url-pattern>/AttrigServlet</url-pattern>
+    <url-pattern>/attrig/AttrigServlet</url-pattern>
   </servlet-mapping>
   <servlet-mapping>
     <servlet-name>AttriginsServlet</servlet-name>
-    <url-pattern>/AttriginsServlet</url-pattern>
+    <url-pattern>/attrig/AttriginsServlet</url-pattern>
   </servlet-mapping>
   <servlet-mapping>
     <servlet-name>AttrigupdServlet</servlet-name>
-    <url-pattern>/AttrigupdServlet</url-pattern>
+    <url-pattern>/attrig/AttrigupdServlet</url-pattern>
   </servlet-mapping>
   <servlet-mapping>
     <servlet-name>ThiattServlet</servlet-name>
-    <url-pattern>/ThiattServlet</url-pattern>
+    <url-pattern>/thi_att/ThiattServlet</url-pattern>
   </servlet-mapping>
   <servlet-mapping>
     <servlet-name>ThiattinsServlet</servlet-name>
-    <url-pattern>/ThiattinsServlet</url-pattern>
+    <url-pattern>/thi_att/ThiattinsServlet</url-pattern>
   </servlet-mapping>
   <servlet-mapping>
     <servlet-name>ItemServlet</servlet-name>
-    <url-pattern>/ItemServlet</url-pattern>
+    <url-pattern>/item/ItemServlet</url-pattern>
   </servlet-mapping>
   <servlet-mapping>
     <servlet-name>ItemattServlet</servlet-name>
-    <url-pattern>/ItemattServlet</url-pattern>
+    <url-pattern>/item_att/ItemattServlet</url-pattern>
   </servlet-mapping>
   <servlet-mapping>
     <servlet-name>ItemattinsServlet</servlet-name>
-    <url-pattern>/ItemattinsServlet</url-pattern>
+    <url-pattern>/item_att/ItemattinsServlet</url-pattern>
   </servlet-mapping>
   <servlet-mapping>
     <servlet-name>CartServlet</servlet-name>
-    <url-pattern>/CartServlet</url-pattern>
+    <url-pattern>/cart/CartServlet</url-pattern>
   </servlet-mapping>
   <servlet-mapping>
     <servlet-name>SalorderServlet</servlet-name>
-    <url-pattern>/SalorderServlet</url-pattern>
+    <url-pattern>/salorder/SalorderServlet</url-pattern>
   </servlet-mapping>
   <servlet-mapping>
     <servlet-name>IteminsServlet</servlet-name>
-    <url-pattern>/IteminsServlet</url-pattern>
+    <url-pattern>/item/IteminsServlet</url-pattern>
   </servlet-mapping>
   <servlet-mapping>
     <servlet-name>ItemupdServlet</servlet-name>
-    <url-pattern>/ItemupdServlet</url-pattern>
+    <url-pattern>/item/ItemupdServlet</url-pattern>
   </servlet-mapping>
   <servlet-mapping>
     <servlet-name>ItemshowServlet</servlet-name>
-    <url-pattern>/ItemshowServlet</url-pattern>
+    <url-pattern>/item/ItemshowServlet</url-pattern>
   </servlet-mapping>
   <servlet-mapping>
     <servlet-name>SalorderupdServlet</servlet-name>
-    <url-pattern>/SalorderupdServlet</url-pattern>
+    <url-pattern>/salorder/SalorderupdServlet</url-pattern>
   </servlet-mapping>
   <servlet-mapping>
     <servlet-name>SalorderinsServlet</servlet-name>
-    <url-pattern>/SalorderinsServlet</url-pattern>
+    <url-pattern>/salorder/SalorderinsServlet</url-pattern>
   </servlet-mapping>
   <servlet-mapping>
     <servlet-name>ListSearchServlet</servlet-name>
-    <url-pattern>/ListSearchServlet</url-pattern>
+    <url-pattern>/search/ListSearchServlet</url-pattern>
   </servlet-mapping>
   <servlet-mapping>
     <servlet-name>IndexServlet</servlet-name>
@@ -294,11 +294,11 @@
   </servlet-mapping>
     <servlet-mapping>
     <servlet-name>RemarkServlet</servlet-name>
-    <url-pattern>/RemarkServlet</url-pattern>
+    <url-pattern>/remark/RemarkServlet</url-pattern>
   </servlet-mapping>
   <servlet-mapping>
     <servlet-name>PictureCheckCode</servlet-name>
-    <url-pattern>/PictureCheckCode</url-pattern>
+    <url-pattern>/login/PictureCheckCode</url-pattern>
   </servlet-mapping>
   <welcome-file-list>
     <welcome-file>index.jsp</welcome-file>
