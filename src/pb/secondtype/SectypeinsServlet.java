@@ -22,9 +22,9 @@ public class SectypeinsServlet extends HttpServlet {
 		String sectypename = request.getParameter("sectypename");// 获取二级类名称
 		boolean insertSuccess = std.insert(fid,sectypeid, sectypename);
 		if (insertSuccess) {
-				response.sendRedirect("success.jsp");
+				response.sendRedirect("../success.jsp");
 			} else {
-				response.sendRedirect("#");
+				response.sendRedirect("../fail/fail.jsp");
 			}
 	}
 

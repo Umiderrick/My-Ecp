@@ -29,6 +29,7 @@
 <title>商品管理界面</title>
 <link href="../css/global.css" rel="stylesheet" type="text/css" />
 <link type="text/css" rel="stylesheet" href="../css/brand.css">
+<script src="../js/jquery-1.11.3.min.js" type="text/javascript"></script>
 <script type="text/javascript">
 	function deletep(itemid) {
 		alert("确认删除" + itemid);

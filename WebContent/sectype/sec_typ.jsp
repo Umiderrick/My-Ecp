@@ -25,7 +25,7 @@
 <title>商品第二类别</title>
 <link href="../css/global.css" rel="stylesheet" type="text/css" />
 <link href="../css/user.css" rel="stylesheet" type="text/css" />
-<script src="../js/jquery-1.7.2.js" type="text/javascript"></script>
+<script src="../js/jquery-1.11.3.min.js" type="text/javascript"></script>
 <script src="../js/register.js" type="text/javascript"></script>
 <style>
 .place_mid {

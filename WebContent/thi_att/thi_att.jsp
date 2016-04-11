@@ -25,6 +25,7 @@
 <title>三级类别属性管理</title>
 <link href="../css/global.css" rel="stylesheet" type="text/css" />
 <link href="../css/user.css" rel="stylesheet" type="text/css" />
+<script src="../js/jquery-1.11.3.min.js" type="text/javascript"></script>
 <script type="text/javascript">
 	function deletep(thitypeid, attid) {
 		alert("确认删除" + thitypeid);

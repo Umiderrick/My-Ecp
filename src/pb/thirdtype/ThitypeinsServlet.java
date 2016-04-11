@@ -17,9 +17,9 @@ public class ThitypeinsServlet extends HttpServlet {
 		String thitypename = request.getParameter("thitypename");// 获取三级类名称
 		boolean insertSuccess = ttd.insert(sid,thitypeid, thitypename);
 		if (insertSuccess) {
-				response.sendRedirect("success.jsp");
+				response.sendRedirect("../success.jsp");
 			} else {
-				response.sendRedirect("#");
+				response.sendRedirect("../fail/fail.jsp");
 			}
 	}
 

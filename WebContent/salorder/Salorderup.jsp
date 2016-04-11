@@ -25,10 +25,10 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>订单修改页面</title>
-<link type="text/css" rel="stylesheet" href="css/global.css">
-<link type="text/css" rel="stylesheet" href="css/login.css">
-<script src="js/jquery-1.7.2.js" type="text/javascript"></script>
-<script src="js/register.js" type="text/javascript"></script>
+<link type="text/css" rel="stylesheet" href="../css/global.css">
+<link type="text/css" rel="stylesheet" href="../css/login.css">
+<script src="../js/jquery-1.11.3.min.js" type="text/javascript"></script>
+<script src="../js/register.js" type="text/javascript"></script>
 <script type="text/javascript">
 	function submitMyForm() {
 		var myForm = document.getElementById('Salorderform');

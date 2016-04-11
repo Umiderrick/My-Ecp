@@ -27,10 +27,10 @@ public class SectypeupdServlet extends HttpServlet {
 		Sectypedealer std = new Sectypedealer();
 		boolean ok =std.update(firtypeid,sectypeid,sectypename);
 		if (ok) {
-			response.sendRedirect("success.jsp");
+			response.sendRedirect("../success.jsp");
 		} 
 		else {
-			response.sendRedirect("fail.jsp");
+			response.sendRedirect("../fail/fail.jsp");
 			System.out.println("¸üĞÂÊ§°Ü");
 		}
 		

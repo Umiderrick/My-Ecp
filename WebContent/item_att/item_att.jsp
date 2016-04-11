@@ -24,6 +24,7 @@
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>商品属性管理</title>
 <link href="../css/global.css" rel="stylesheet" type="text/css" />
+<script src="../js/jquery-1.11.3.min.js" type="text/javascript"></script>
 <link href="../css/user.css" rel="stylesheet" type="text/css" />
 <script type="text/javascript">
 		function deletep(iaid)

@@ -1,6 +1,7 @@
 <%@ page language="java" pageEncoding="UTF-8"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
-<%@ page import="java.util.*,pb.db.*,pb.item.Itemdealer,pb.thirdtype.Thitypedealer"%>
+<%@ page
+	import="java.util.*,pb.db.*,pb.item.Itemdealer,pb.thirdtype.Thitypedealer"%>
 <%
 	{
 		List<Map<String, Object>> listi = new ArrayList<Map<String, Object>>();
@@ -50,10 +51,10 @@
 <head>
 <meta content="text/html;charset =UTF-8">
 <title>修改商品</title>
-<link type="text/css" rel="stylesheet" href="css/global.css">
-<link type="text/css" rel="stylesheet" href="css/login.css">
-<script src="js/jquery-1.7.2.js" type="text/javascript"></script>
-<script src="js/register.js" type="text/javascript"></script>
+<link type="text/css" rel="stylesheet" href="../css/global.css">
+<link type="text/css" rel="stylesheet" href="../css/login.css">
+<script src="../js/jquery-1.11.3.min.js" type="text/javascript"></script>
+<script src="../js/register.js" type="text/javascript"></script>
 <script type="text/javascript">
 	function submitMyForm() {
 		var myForm = document.getElementById('itemform');
@@ -144,53 +145,52 @@
 			</div>
 			<form id='itemform' action="ItemupdServlet" method="post"
 				enctype="multipart/form-data">
-				<table>
-					<c:forEach items="${listi}" var="listi" varStatus="sta">
-						<div class="lofin_reg">
-							<div class="login_pass_span">
-								<span> 商品编号 </span>
-							</div>
-							<div class="login_pass_input">
-								<input type="text" name="itemid" value=${listi.itemid}  readonly="readonly">
-							</div>
-							<div class="login_pass_span">
-								<span> 商品名称 </span>
-							</div>
-							<div class="login_pass_input">
-								<input type="text" name="itemname" value=${listi.itemname}>
-							</div>
-							<div class="login_pass_input">
-								<span> 商品余量 </span>
-							</div>
-							<div class="login_pass_input">
-								<input type="text" name="qty" value=${listi.qty}>
-							</div>
-							<div class="login_pass_input">
-								<span> 商品价格 </span>
-							</div>
-							<div class="login_pass_input">
-								<input type="text" name="price" value=${listi.price}>
-							</div>
-							<div class="login_pass_input">
-								<span> 商品三级类别 </span>
-							</div>
-							<select name="thitypeid">
-								<c:forEach items="${list}" var="list2">
-									<option>${list2.thitypeid}</option>
-								</c:forEach>
-							</select>
-							<div id="preview">
-								<img width="220" height="220"
-									src=" <%=request.getAttribute("basePath")%>${listi.imgurl}">
-							</div>
+				<c:forEach items="${listi}" var="listi" varStatus="sta">
+					<div class="lofin_reg">
+						<div class="login_pass_span">
+							<span> 商品编号 </span>
 						</div>
-						<input type="file" onchange="previewImage(this)" name="imgurl" />
-					</c:forEach>
-					<div class="login_btn">
-						<a class="btn_zong big" onclick="submitMyForm();">录入</a>
+						<div class="login_pass_input">
+							<input type="text" name="itemid" value="${listi.itemid}"
+								readonly="readonly">
+						</div>
+						<div class="login_pass_span">
+							<span> 商品名称 </span>
+						</div>
+						<div class="login_pass_input">
+							<input type="text" name="itemname" value="${listi.itemname}">
+						</div>
+						<div class="login_pass_input">
+							<span> 商品余量 </span>
+						</div>
+						<div class="login_pass_input">
+							<input type="text" name="qty" value="${listi.qty}">
+						</div>
+						<div class="login_pass_input">
+							<span> 商品价格 </span>
+						</div>
+						<div class="login_pass_input">
+							<input type="text" name="price" value="${listi.price}">
+						</div>
+						<div class="login_pass_input">
+							<span> 商品三级类别 </span>
+						</div>
+						<select name="thitypeid">
+							<c:forEach items="${list}" var="list2">
+								<option>${list2.thitypeid}</option>
+							</c:forEach>
+						</select>
+						<div id="preview">
+							<img width="220" height="220"
+								src=" <%=request.getAttribute("basePath")%>${listi.imgurl}">
+						</div>
 					</div>
-				</table>
+					<input type="file" onchange="previewImage(this)" name="imgurl" />
+				</c:forEach>
 			</form>
+			<div class="login_btn">
+				<a class="btn_zong big" onclick="submitMyForm();">录入</a>
+			</div>
 		</div>
 	</div>
 </body>

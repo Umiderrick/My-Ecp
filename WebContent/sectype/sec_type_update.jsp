@@ -44,10 +44,9 @@
 <head>
 <title>商品第二类别修改</title>
 <meta content="text/html;charset =UTF-8">
-<link type="text/css" rel="stylesheet" href="css/global.css">
-<link type="text/css" rel="stylesheet" href="css/login.css">
-<script src="js/jquery-1.7.2.js" type="text/javascript"></script>
-<script src="js/register.js" type="text/javascript"></script>
+<link type="text/css" rel="stylesheet" href="../css/global.css">
+<link type="text/css" rel="stylesheet" href="../css/login.css">
+<script src="../js/register.js" type="text/javascript"></script>
 <script type="text/javascript">
 	function submitMyForm() {
 		var myForm = document.getElementById('Sectypeform');
@@ -67,10 +66,9 @@
 			<div class="login_title">
 				<h3>二级类别修改</h3>
 			</div>
-			<form id='Sectypeform' action="SectypeupdServlet" method=post>
-				<table>
+			<div class="login_reg">
+				<form id='Sectypeform' action="SectypeupdServlet" method=post>
 					<c:forEach items="${list}" var="list" varStatus="sta">
-
 						<div class="login_pass_span">
 							<span> 商品大类编号 </span>
 						</div>
@@ -84,20 +82,21 @@
 							<span> 二级类别编号 </span>
 						</div>
 						<div class="login_pass_input">
-							<input type="text" name="sectypeid" value=${list.sectypeid} readonly="readonly">
+							<input type="text" name="sectypeid" value="${list.sectypeid}"
+								readonly="readonly">
 						</div>
 						<div class="login_pass_input">
 							<span> 二级类别名称 </span>
 						</div>
 						<div class="login_pass_input">
-							<input type="text" name="sectypename" value=${list.sectypename} >
+							<input type="text" name="sectypename" value="${list.sectypename}">
 						</div>
 					</c:forEach>
-					<div class="login_btn">
-						<a class="btn_zong big" onclick="submitMyForm();">修改</a>
-					</div>
-				</table>
-			</form>
+				</form>
+				<div class="login_btn">
+					<a class="btn_zong big" onclick="submitMyForm();">修改</a>
+				</div>
+			</div>
 		</div>
 	</div>
 </body>

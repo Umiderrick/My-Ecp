@@ -22,10 +22,10 @@ public class AttributeupdServlet extends HttpServlet {
 		Attributedealer atd = new Attributedealer();
 		boolean ok =atd.update(attid,attname);
 		if (ok) {
-			response.sendRedirect("success.jsp");
+			response.sendRedirect("../success.jsp");
 		} 
 		else {
-			response.sendRedirect("fail.jsp");
+			response.sendRedirect("../fail/fail.jsp");
 		}
 	}
 

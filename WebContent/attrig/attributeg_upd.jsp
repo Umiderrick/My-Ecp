@@ -1,6 +1,7 @@
 <%@ page language="java" pageEncoding="UTF-8"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
-<%@ page import="java.util.*,pb.db.*,pb.attributeg.Attrigdealer,pb.attribute.Attributedealer"%>
+<%@ page
+	import="java.util.*,pb.db.*,pb.attributeg.Attrigdealer,pb.attribute.Attributedealer"%>
 <%
 	{
 		List<Map<String, Object>> list = new ArrayList<Map<String, Object>>();
@@ -43,9 +44,9 @@
 <html>
 <head>
 <title>属性字典修改界面</title>
-<link type="text/css" rel="stylesheet" href="css/global.css">
-<link type="text/css" rel="stylesheet" href="css/login.css">
-<script src="js/jquery-1.7.2.js" type="text/javascript"></script>
+<link type="text/css" rel="stylesheet" href="../css/global.css">
+<link type="text/css" rel="stylesheet" href="../css/login.css">
+<script src="../js/jquery-1.11.3.min.js" type="text/javascript"></script>
 <script type="text/javascript">
 	function submitMyForm() {
 		var myForm = document.getElementById('attrigform');
@@ -65,10 +66,9 @@
 			<div class="login_title">
 				<h3>属性字典修改</h3>
 			</div>
-			<form id='attrigform' action="AttrigupdServlet" method=post>
-				<table>
+			<div class="login_reg">
+				<form id='attrigform' action="AttrigupdServlet" method=post>
 					<c:forEach items="${list}" var="list" varStatus="sta">
-
 						<div class="login_pass_span">
 							<span> 属性编号 </span>
 						</div>
@@ -82,20 +82,21 @@
 							<span> 属性字典编号 </span>
 						</div>
 						<div class="login_pass_input">
-							<input type="text" name="attrigid" value=${list.attrigid } readonly="readonly">
+							<input type="text" name="attrigid" value="${list.attrigid}"
+								readonly="readonly">
 						</div>
 						<div class="login_pass_input">
 							<span> 属性字典名称 </span>
 						</div>
 						<div class="login_pass_input">
-							<input type="text" name="attrigname" value=${list.attrigname} >
+							<input type="text" name="attrigname" value="${list.attrigname}">
 						</div>
 					</c:forEach>
-					<div class="login_btn">
-						<a class="btn_zong big" onclick="submitMyForm();">修改</a>
-					</div>
-				</table>
-			</form>
+				</form>
+			</div>
+			<div class="login_btn">
+				<a class="btn_zong big" onclick="submitMyForm();">修改</a>
+			</div>
 		</div>
 	</div>
 </body>

@@ -22,9 +22,9 @@ public class AttributeinsServlet extends HttpServlet {
 		HttpSession session = request.getSession();
 		session.setAttribute("attname", attname);
 		if (insertSuccess) {
-				response.sendRedirect("success.jsp");
+				response.sendRedirect("../success.jsp");
 			} else {
-				response.sendRedirect("failure.jsp");
+				response.sendRedirect("../fail/failure.jsp");
 			}
 	}
 

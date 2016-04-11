@@ -69,32 +69,32 @@
 			<div class="login_title">
 				<h3>三级属性录入</h3>
 			</div>
-			<form id='thiattform' action="ThiattinsServlet" method="post">
-						<div class="login_pass_span">
-							<span> 三级类别编号 </span>
-						</div>
+			<div class="login_reg">
+				<form id='thiattform' action="ThiattinsServlet" method="post">
+					<div class="login_pass_span">
+						<span> 三级类别编号 </span>
+					</div>
 
-						<select name="thitypeid">
-							<c:forEach items="${list}" var="list" varStatus="sta">
-								<option>${list.thitypeid}</option>
-							</c:forEach>
-						</select>
+					<select name="thitypeid">
+						<c:forEach items="${list}" var="list" varStatus="sta">
+							<option>${list.thitypeid}</option>
+						</c:forEach>
+					</select>
 
-						<div class="login_pass_span">
-							<span> 属性编号 </span>
-						</div>
-						<select name="attid">
-							<c:forEach items="${list2}" var="list2" varStatus="sta">
-								<option>${list2.attid}</option>
-							</c:forEach>
-						</select>
-
-						<div class="login_btn">
-							<a class="btn_zong big" onclick="submitMyForm();">录入</a>
-						</div>
-			</form>
+					<div class="login_pass_span">
+						<span> 属性编号 </span>
+					</div>
+					<select name="attid">
+						<c:forEach items="${list2}" var="list2" varStatus="sta">
+							<option>${list2.attid}</option>
+						</c:forEach>
+					</select>
+				</form>
+			</div>
+			<div class="login_btn">
+				<a class="btn_zong big" onclick="submitMyForm();">录入</a>
+			</div>
 		</div>
 	</div>
-
 </body>
 </html>

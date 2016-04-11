@@ -62,11 +62,11 @@
 							<input type="text" name="attname" value="${list.attname}" >
 						</div>
 					</c:forEach>
-					<div class="login_btn">
-						<a class="btn_zong big" onclick="submitMyForm();">修改</a>
-					</div>
 				</table>
 			</form>
+			<div class="login_btn">
+						<a class="btn_zong big" onclick="submitMyForm();">修改</a>
+					</div>
 		</div>
 	</div>
 </body>

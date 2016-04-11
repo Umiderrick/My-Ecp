@@ -54,9 +54,9 @@ public class ItemattinsServlet extends HttpServlet {
 	String attrigid = request.getParameter("attrigid");
 	boolean insertSuccess =tad.insert(attid, itemid,attrigid);
 	if (insertSuccess) {
-			response.sendRedirect("success.jsp");
+			response.sendRedirect("../success.jsp");
 		} else {
-			response.sendRedirect("#");
+			response.sendRedirect("../fail/fail.jsp");
 		}
 	}
 

@@ -19,9 +19,9 @@ public class AttriginsServlet extends HttpServlet {
 		String attrigname = request.getParameter("attrigname");
 		boolean insertSuccess = atd.insert(attid,attrigid, attrigname);
 		if (insertSuccess) {
-				response.sendRedirect("success.jsp");
+				response.sendRedirect("../success.jsp");
 			} else {
-				response.sendRedirect("fail.jsp");
+				response.sendRedirect("../fail/fail.jsp");
 			}
 	}
 

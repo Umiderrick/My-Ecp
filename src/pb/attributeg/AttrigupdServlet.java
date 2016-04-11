@@ -27,10 +27,10 @@ public class AttrigupdServlet extends HttpServlet {
 		Attrigdealer agd = new Attrigdealer();
 		boolean ok =agd.update(attrigid,attid,attname);
 		if (ok) {
-			response.sendRedirect("success.jsp");
+			response.sendRedirect("../success.jsp");
 		} 
 		else {
-			response.sendRedirect("fail.jsp");
+			response.sendRedirect("../fail.jsp");
 		}	
 	}
 

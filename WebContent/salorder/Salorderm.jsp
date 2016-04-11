@@ -25,6 +25,7 @@
 <title>订单管理页面</title>
 <link href="../css/global.css" rel="stylesheet" type="text/css">
 <link href="../css/user.css" rel="stylesheet" type="text/css">
+<script src="../js/jquery-1.11.3.min.js" type="text/javascript"></script>
 <script type="text/javascript">
 	function deletep(salorderid,num) {
 		$.get("SalorderServlet", {

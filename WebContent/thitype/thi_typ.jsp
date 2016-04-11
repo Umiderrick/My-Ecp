@@ -24,9 +24,10 @@
 <title>三级类别管理</title>
 <link href="../css/global.css" rel="stylesheet" type="text/css" />
 <link href="../css/user.css" rel="stylesheet" type="text/css" />
+<script src="../js/jquery-1.11.3.min.js" type="text/javascript"></script>
 <script src="../js/user_menu_list.js" language="javascript"></script>
 <script src="../js/page.js" language="javascript"></script>
-<script type="text/javascript" src="js/toggleMenu.js"></script>
+<script type="text/javascript" src="../js/toggleMenu.js"></script>
 <style>
 .place_mid {
 	margin: 0 auto;

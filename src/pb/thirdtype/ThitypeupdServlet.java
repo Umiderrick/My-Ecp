@@ -20,9 +20,6 @@ public class ThitypeupdServlet extends HttpServlet {
 		session.setAttribute("thitypeid", tid);
 	}
 
-	/**
-	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
-	 */
 	@Override
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		request.setCharacterEncoding("utf-8");
@@ -32,10 +29,10 @@ public class ThitypeupdServlet extends HttpServlet {
 		Thitypedealer ttd = new Thitypedealer();
 		boolean ok =ttd.update(sectypeid,thitypeid,thitypename);
 		if (ok) {
-			response.sendRedirect("success.jsp");
+			response.sendRedirect("../success.jsp");
 		} 
 		else {
-			response.sendRedirect("fail.jsp");
+			response.sendRedirect("../fail/fail.jsp");
 			System.out.println("¸üÐÂÊ§°Ü");
 		}
 	}
