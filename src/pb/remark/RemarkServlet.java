@@ -23,7 +23,10 @@ public class RemarkServlet extends HttpServlet {
 	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		response.getWriter().append("Served at: ").append(request.getContextPath());
+		request.setCharacterEncoding("utf-8");
+		String remarkid =request.getParameter("remarkid");
+		Remarkdealer rmd =new Remarkdealer();
+		rmd.delete(remarkid);
 	}
 
 	/**
@@ -33,10 +36,14 @@ public class RemarkServlet extends HttpServlet {
 		request.setCharacterEncoding("utf-8");
 		String itemid =request.getSession().getAttribute("itemid").toString();
 		String username =request.getSession().getAttribute("userName").toString();
+		if(username ==null){
+			response.sendRedirect("../fail/fail.jsp");
+		}else{
 		String levels =request.getParameter("levels");
 		String neirong =request.getParameter("neirong");
 		Remarkdealer rmd =new Remarkdealer();
 		rmd.insert(username,itemid,levels,neirong);
+		}
 	}
 
 }

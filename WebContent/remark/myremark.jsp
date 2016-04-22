@@ -23,19 +23,18 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>用户中心-评价中心</title>
-<link href="css/global.css" rel="stylesheet" type="text/css">
-<link href="css/user.css" rel="stylesheet" type="text/css">
-<script src="js/jquery-1.11.3.min.js" language="javascript"></script>
+<link href="../css/global.css" rel="stylesheet" type="text/css">
+<link href="../css/user.css" rel="stylesheet" type="text/css">
+<script src="../js/jquery-1.11.3.min.js" language="javascript"></script>
 <script type="text/javascript">
 	function deletep(remarkid) {
-		$.get("register", {"remarkid" : remarkid},function() {
+		$.get("RemarkServlet", {"remarkid" : 
+	remarkid
+		}, function() {
 			window.location.reload(false);
 		})
 	}
-	function update(attid) {
-		$.get("AttributeupdServlet", {
-			"attid" : attid
-		});
+	function update(remarkid) {
 
 	}
 </script>

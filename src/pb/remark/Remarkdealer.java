@@ -46,10 +46,11 @@ public class Remarkdealer {
 		}
 		return ok;
 	}
-	public void delete(int remarkid){	
+	public void delete(String remarkid){	
 		List<Map<String,Object>> list = new ArrayList<Map<String,Object>>();
 		Map<String,Object> map =new HashMap<String,Object>();
-		map.put("remarkid",remarkid);
+		int rid = Integer.parseInt(remarkid);
+		map.put("remarkid",rid);
 		list.add(map);
 		db.tableDelete("remark",list );
 		db.closeDatabase();

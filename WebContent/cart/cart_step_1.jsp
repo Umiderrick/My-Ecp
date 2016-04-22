@@ -2,6 +2,11 @@
 	contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <%
+		if(session.getAttribute("userName") == null){
+		String site = new String("../fail/fail.jsp");
+	   response.setStatus(response.SC_MOVED_TEMPORARILY);
+	   response.setHeader("Location", site); 
+	}else{
 	String username = session.getAttribute("userName").toString();
 	Cartdealer ctd = new Cartdealer();
 	List<Map<String, Object>> list = new ArrayList<Map<String, Object>>();
@@ -18,6 +23,7 @@
 		list.add(map);
 	}
 	request.setAttribute("list", list);
+	}
 
 	String path = request.getContextPath();
 	String basePath = request.getScheme() + "://" + request.getServerName() + ":" + request.getServerPort()
@@ -29,10 +35,10 @@
 <head>
 <meta content="text/html;charset =UTF-8">
 <title>购物车</title>
-<link type="text/css" rel="stylesheet" href="css/global.css">
-<link type="text/css" rel="stylesheet" href="css/cart.css">
-<script src="js/jquery-1.7.2.js" type="text/javascript"></script>
-<script src="js/cart_step_1.js" type="text/javascript"></script>
+<link type="text/css" rel="stylesheet" href="../css/global.css">
+<link type="text/css" rel="stylesheet" href="../css/cart.css">
+<script src="../js/jquery-1.11.3.min.js" type="text/javascript"></script>
+<script src="../js/cart_step_1.js" type="text/javascript"></script>
 <script>
 	function deletecart(itemid) {
 		$.post("CartServlet", {
@@ -62,6 +68,7 @@ img {
 	max-width: 100%;
 	height: auto;
 }
+.cart_list div.row5{width:110px; float:left; padding-top:15px;}
 </style>
 </head>
 <body>
@@ -127,7 +134,7 @@ img {
 					<br>
 					<div class="row6 ac">
 						<span class="p_del"><a
-							onclick="deletecart('${list.itemid}')" class="alert_del_goods">删除</a></span>
+							onclick="deletecart('${list.itemid}')" >删除</a></span>
 					</div>
 				</div>
 			</c:forEach>
@@ -138,7 +145,7 @@ img {
 					id="price_sum" class="r"></span>
 			</div>
 			<div class="p_total_btn clearfix">
-				<a class="fl btn_jxgw" href="list_search.jsp">继续购物</a> <a
+				<a class="fl btn_jxgw" href="../search/list_search.jsp">继续购物</a> <a
 					class="fr btn_qjs" onclick="updatenum()">去结算<em>&gt;</em></a>
 			</div>
 		</div>

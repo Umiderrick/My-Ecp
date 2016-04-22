@@ -12,17 +12,20 @@ import javax.servlet.http.HttpSession;
  */
 public class ItemServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
+
 	@Override
-	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-	String itemid = request.getParameter("itemid");
-	HttpSession session = request.getSession();
-	session.setAttribute("itemid", itemid);
-	}
-	@Override
-	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-	String itemid =request.getParameter("itemid");
-	Itemdealer itd =new Itemdealer();
-	 itd.delete(itemid);
+	protected void doGet(HttpServletRequest request, HttpServletResponse response)
+			throws ServletException, IOException {
+		String itemid = request.getParameter("itemid");
+		HttpSession session = request.getSession();
+		session.setAttribute("itemid", itemid);
 	}
 
+	@Override
+	protected void doPost(HttpServletRequest request, HttpServletResponse response)
+			throws ServletException, IOException {
+		String itemid = request.getParameter("itemid");
+		Itemdealer itd = new Itemdealer();
+		itd.delete(itemid);
+	}
 }

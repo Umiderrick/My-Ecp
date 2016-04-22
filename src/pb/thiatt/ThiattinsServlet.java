@@ -23,7 +23,7 @@ public class ThiattinsServlet extends HttpServlet {
 		String thitypeid = request.getParameter("thitypeid");
 		boolean insertSuccess =tad.insert(attid, thitypeid);
 		if (insertSuccess) {
-				response.sendRedirect("success.jsp");
+				response.sendRedirect("../success.jsp");
 			} else {
 				response.sendRedirect("#");
 			}

@@ -28,22 +28,22 @@ public class ListSearchServlet extends HttpServlet {
 		String sort =request.getParameter("sorttype");
 		TableValues tv =null;
 		List<Map<String, Object>> list = new ArrayList<Map<String, Object>>();
-		if(sort ==null|| sort.equals("")){
+		StringBuilder sql = new StringBuilder();
 		String num = request.getParameter("num");
 		int n = Integer.parseInt(num);
 		n = 8 * (n - 1);
-		String sql = "select top 8 * from item where itemid not in (select top " + n + " itemid from item )";
-		System.out.println(sql);
-		tv = db.query(sql);
+		sql.append("select top 8 * from item where itemid not in (select top " + n + " itemid from item )");
+		if(sort ==null|| sort.equals("")){
+		System.out.println(sql.toString());
 		}else if (sort.equals("desc")){
-			String sql ="select top 8 * from item order by price desc";
-			System.out.println(sql);
-			tv =db.query(sql);
+			sql.append("order by price desc");
+			System.out.println(sql.toString());
 		}else{
-			String sql ="select top 8 * from item order by price asc";
-			System.out.println(sql);
-			tv =db.query(sql);
+			sql.append("order by price asc");
+			System.out.println(sql.toString());
+			
 		}
+		tv =db.query(sql.toString());
 		DataColumn[] dcl = tv.getDataColumns();
 		for (int i = 0; i < tv.getValues().length; i++) {
 			Map<String, Object> map = new HashMap<String, Object>();

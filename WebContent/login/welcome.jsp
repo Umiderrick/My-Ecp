@@ -2,9 +2,15 @@
 <%@ page language="java" import="java.util.*,pb.db.*,pb.login.*"
 	pageEncoding="UTF-8"%>
 <%
-	{
-		List<Map<String, Object>> list = new ArrayList<Map<String, Object>>();
-		String username = session.getAttribute("userName").toString();
+	List<Map<String, Object>> list = new ArrayList<Map<String, Object>>();
+	String username = null;
+
+	if (session.getAttribute("userName") == null) {
+		String site = new String("../fail/fail.jsp");
+		response.setStatus(response.SC_MOVED_TEMPORARILY);
+		response.setHeader("Location", site);
+	} else {
+		username = session.getAttribute("userName").toString();
 		Userdealer usd = new Userdealer();
 		TableValues tv = usd.query(username);
 		DataColumn dcl[] = tv.getDataColumns();
@@ -27,8 +33,6 @@
 <title>用户中心-账户中心</title>
 <link href="../css/global.css" rel="stylesheet" type="text/css">
 <link href="../css/user.css" rel="stylesheet" type="text/css">
-<script src="../js/user_menu_list.js" language="javascript"></script>
-<script type="text/ecmascript" src="../js/tabs.js"></script>
 <script type="text/javascript" src="../js/openPop.js"></script>
 </head>
 <body>
@@ -79,8 +83,8 @@
 						<i class="icon_order"></i>订单中心<i class="icon_arrowup"></i>
 					</h3>
 					<ul>
-						<li><a href="mysalorder.jsp">我的订单</a></li>
-						<li><a href="myremark.jsp">我的评价</a></li>
+						<li><a href="../salorder/mysalorder.jsp">我的订单</a></li>
+						<li><a href="../remark/myremark.jsp">我的评价</a></li>
 					</ul>
 				</div>
 			</div>
@@ -104,40 +108,33 @@
 								</dd>
 							</dl>
 							<dl class="account_list">
-								<dt>
-									<b>*</b> 手机号：
-								</dt>
-								<dd>
-									<input class="input_account_215 fl" type="text"
-										value="${list.phone}">
+								<dt>手机号：</dt>
+								<dd>${list.phone}</dd>
 							</dl>
 							<dl class="account_list">
 								<dt>地址：</dt>
-								<dd>
-									<input class="input_account_215 fl" type="text"
-										value="${list.address}">
-								</dd>
+								<dd>${list.address}</dd>
 							</dl>
 						</div>
 					</c:forEach>
 					<div class="clr"></div>
-					<div class="account_data_title">时间</div>
+					<div class="account_data_title">系統報時</div>
 					<%
 						{
-						Calendar calendar = Calendar.getInstance();
-						Date date = calendar.getTime();
-						calendar.setTime(date);
-						int d = calendar.get(Calendar.DAY_OF_WEEK);
-						int h = calendar.get(Calendar.HOUR_OF_DAY);
-						int m = calendar.get(Calendar.MINUTE);
-						int s = calendar.get(Calendar.SECOND);
-						String t = "";
-						if (h > 0 && h < 12)
-							t = "上午好";
-						else if (h >= 12)
-							t = "下午好";
-						String day[] = {"日", "一", "二", "三", "四", "五", "六"  };
-						out.println(t + "，今天是星期" + day[d-1] +" 时间：" + h + ":" + m + ":" + s);
+							Calendar calendar = Calendar.getInstance();
+							Date date = calendar.getTime();
+							calendar.setTime(date);
+							int d = calendar.get(Calendar.DAY_OF_WEEK);
+							int h = calendar.get(Calendar.HOUR_OF_DAY);
+							int m = calendar.get(Calendar.MINUTE);
+							int s = calendar.get(Calendar.SECOND);
+							String t = "";
+							if (h > 0 && h < 12)
+								t = "上午好";
+							else if (h >= 12)
+								t = "下午好";
+							String day[] = { "日", "一", "二", "三", "四", "五", "六" };
+							out.println(t + "，今天是星期" + day[d - 1] + " 时间：" + h + ":" + m + ":" + s);
 						}
 					%>
 				</div>

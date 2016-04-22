@@ -51,7 +51,7 @@
 						<div class="meber_register_list">
 							<div class="meber_register_list_l">收货地址</div>
 							<div class="meber_register_list_m">
-								<input class="input_register01 txtPassword" type="password"
+								<input class="input_register01 txtPassword" type="text"
 									name="address">
 								<div class="divPassword">&nbsp;</div>
 							</div>
@@ -59,7 +59,7 @@
 						<div class="meber_register_list">
 							<div class="meber_register_list_l">联系电话</div>
 							<div class="meber_register_list_m">
-								<input class="input_register01 txtPassword" type="password"
+								<input class="input_register01 txtPassword" type="text"
 									name="phone">
 								<div class="divPassword">&nbsp;</div>
 							</div>

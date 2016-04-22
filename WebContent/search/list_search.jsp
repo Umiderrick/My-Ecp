@@ -1,4 +1,5 @@
-<%@ page language="java" import="java.util.*,pb.db.*,pb.firsttype.*,pb.secondtype.*,pb.thirdtype.*,pb.attribute.*,pb.attributeg.*"
+<%@ page language="java"
+	import="java.util.*,pb.db.*,pb.firsttype.*,pb.secondtype.*,pb.thirdtype.*,pb.attribute.*,pb.attributeg.*"
 	pageEncoding="UTF-8"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <%@ taglib prefix="fn" uri="http://java.sun.com/jsp/jstl/functions"%>
@@ -107,46 +108,87 @@
 <script src="../js/page.js" type="text/javascript"></script>
 <script src="../js/list.js" type="text/javascript"></script>
 <script type="text/javascript">
-	$(function() {
-		toggleMenu(".all_products", ".second_menu", ".third_menu");
-		_scroll(5, ".last_view_con", false, false);
-		if("<%=session.getAttribute("userName")%>" == "null") {
-			$("#welcom").show();
-			$("#welcoml").hide();
-		} else {
-			$("#welcoml").show();
-			$("#welcom").hide();
-		}
+$(function() {
+	toggleMenu(".all_products", ".second_menu", ".third_menu");
+	_scroll(5, ".last_view_con", false, false);
+	if("<%=session.getAttribute("userName")%>" == "null") {
+		$("#welcom").show();
+		$("#welcoml").hide();
+	} else {
+		$("#welcoml").show();
+		$("#welcom").hide();
+	}
 
+	
+
+})
+
+/* 三级类别查询*/
+		function thitypesearch(thitypeid) {
+	$.get("../IndexServlet", {
+		"thitypeid" : thitypeid
+	},window.location.href= "list_search_thitype.jsp?thitypeid="+thitypeid);		}
+
+/* begin 点击切换页签效果 并给价格页签增加上下箭头切换效果*/	
+   $(function(){ 
+	$(".order>dl>dd").click(function(){
+	   //点击切换背景颜色  
+	   $(this).children('a').addClass('cur');
+	   $(this).siblings().children('a').css("padding-right","12px").removeClass('cur').children('i').removeClass();
+	   //点击价格出现上下箭头 并切换
+	   if($(this).children('a').children('i').attr("class")=="icon_orderdown")
+		{   //点击价格出现下箭头 切换成上箭头
+			 $(this).children('a').css("padding-right","20px").children('i').removeClass("icon_orderdown").addClass("icon_orderup");
+			    $.ajax({
+			        type: "GET",
+			        url: "ListSearchServlet",
+			        data: { "sorttype": "desc" ,"num" :"1" }
+			      })
+			        .done(function( data ) {
+			        	$("#itemlist").empty();
+			        	var html = ""
+			        			 html+="<ul class='filter_goods'>"
+									+	"</ul>"
+			        			$("#itemlist").html(html);
+			        			});
+		} else {
+				if($(this).children('a').children('i').attr("class")=="icon_orderup")
+				{    //点击价格出现上箭头 切换成下箭头
+					  $(this).children('a').css("padding-right","20px").children('i').removeClass("icon_orderup").addClass("icon_orderdown");	
+					  $.ajax({
+					        type: "GET",
+					        url: "ListSearchServlet",
+					        data: { "sorttype": "asc" ,"num" :"1" }
+					      })
+					        .done(function( data ) {
+					        	$("#itemlist").empty();
+					        	var html = ""
+					        			 html+="<ul class='filter_goods'>"
+											+	"</ul>"
+					        			$("#itemlist").html(html);
+					        			});
+				}else{ 
+					   //点击价格增加上箭头 
+					   if($(this).attr("class")=="price")
+					   {
+							$(this).children('a').css("padding-right","20px").addClass('cur').children('i').addClass("icon_orderup");
+							$.ajax({
+						        type: "GET",
+						        url: "ListSearchServlet",
+						        data: { "sorttype": "desc" ,"num" :"1" }
+						      })
+						        .done(function( data ) {
+						        	$("#itemlist").empty();
+						        	var html = ""
+						        			 html+="<ul class='filter_goods'>"
+												+	"</ul>"
+						        			$("#itemlist").html(html);
+						        			});
+					   } 
+					}
+	   }//end if else
 	})
-	function show(itemid) {
-		$.post("ItemshowServlet", {
-			"itemid" : itemid
-		}, window.location.href = '../item/pshow.jsp');
-	}
-	function listsearch() {
-		var pattern = document.getElementById('search').value;
-		$.post("IndexServlet", {
-			"pattern" : pattern
-		}, window.location.href = 'list_search.jsp');
-	}
-	function thitypesearch(thitypeid) {
-		$.post("IndexServlet", {
-			"thitypeid" : thitypeid
-		}, window.location.href = 'list_search.jsp');
-	}
-	function attrigsearch(attrigid) {
-		$.post("ListSearchServlet", {
-			"attrigid" : attrigid
-		}, function() {
-			window.location.reload();
-		});
-	}
-	function topfilter(num) {
-		$.get("ListSearchServlet", {
-			"num" : num
-		}, window.location.href = 'list_search.jsp');
-	}
+  })
 </script>
 <style>
 .place_mid {
@@ -186,7 +228,7 @@
 		<div class="ui_header_nav">
 			<div class="w1200">
 				<ul class="first_menu">
-					<li class="all_products"><a class="" href="index.jsp">首页</a></li>
+					<li class="all_products"><a class="" href="../index.jsp">首页</a></li>
 				</ul>
 			</div>
 		</div>
@@ -246,13 +288,13 @@
 						</dl>
 					</div>
 					<div class="turn_page">
-						 <span class="total">共<strong>${fn:length(list)}</strong>个商品
+						<span class="total">共<strong>${fn:length(list)}</strong>个商品
 						</span>
 					</div>
 				</div>
 			</div>
 
-			<div class="product_filter_goods" id ="itemlist">
+			<div class="product_filter_goods" id="itemlist">
 				<ul class="filter_goods ">
 					<c:forEach items="${list}" var="list" varStatus="sta">
 						<li class="fore">
@@ -291,8 +333,11 @@
 			</div>
 		</div>
 	</div>
+	
+	<div[^>]*>[^<>]*(((?'Open'<div[^>]*>)[^<>]*)+((?'-Open'</div>)[^<>]*)+)*(?(Open)(?!))</div> 
 </body>
 </html>
 <%
 	session.removeAttribute("attrigid");
+	session.removeAttribute("list");
 %>

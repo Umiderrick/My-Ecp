@@ -1,6 +1,7 @@
 <%@ page language="java" pageEncoding="UTF-8"
 	import="java.util.*,pb.db.*,pb.item.*,pb.remark.*"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
+<%@ taglib prefix="fn" uri="http://java.sun.com/jsp/jstl/functions"%>
 <%
 	String itemid = session.getAttribute("itemid").toString();
 	List<Map<String, Object>> list = new ArrayList<Map<String, Object>>();
@@ -68,18 +69,18 @@
 <head>
 <meta content="text/html;charset =UTF-8">
 <title>详情</title>
-<link href="css/global.css" rel="stylesheet" type="text/css">
-<link href="css/pshow.css" rel="stylesheet" type="text/css">
-<link href="css/login.css" rel="stylesheet" type="text/css">
-<link href="css/cart.css" rel="stylesheet" type="text/css">
-<script type="text/javascript" src="js/jquery-1.7.2.js"></script>
-<script type="text/javascript" src="js/toggleMenu.js"></script>
-<script type="text/javascript" src="js/banner_slide.js"></script>
-<script type="text/javascript" src="js/magni.js"></script>
-<script src="js/list.js" type="text/javascript"></script>
-<script type="text/javascript" src="js/img_scroll.js"></script>
-<script type="text/javascript" src="js/header.js"></script>
-<script type="text/javascript" src="js/openPop.js"></script>
+<link href="../css/global.css" rel="stylesheet" type="text/css">
+<link href="../css/pshow.css" rel="stylesheet" type="text/css">
+<link href="../css/login.css" rel="stylesheet" type="text/css">
+<link href="../css/cart.css" rel="stylesheet" type="text/css">
+<script type="text/javascript" src="../js/jquery-1.11.3.min.js"></script>
+<script type="text/javascript" src="../js/toggleMenu.js"></script>
+<script type="text/javascript" src="../js/banner_slide.js"></script>
+<script type="text/javascript" src="../js/magni.js"></script>
+<script src="../js/list.js" type="text/javascript"></script>
+<script type="text/javascript" src="../js/img_scroll.js"></script>
+<script type="text/javascript" src="../js/header.js"></script>
+<script type="text/javascript" src="../js/openPop.js"></script>
 <script type="text/javascript">
 	$(function() {
 		//	laze_load()
@@ -150,14 +151,14 @@
 		var itemid = document.getElementById('itemid').innerHTML;
 		var num = document.getElementById('num').value;
 		var $attrigname = $("i.selected_ok").prev().text();
-		$.get("CartServlet", {
+		$.get("../cart/CartServlet", {
 			"itemid" : itemid,
 			"num" : num,
 			"attrigname":$attrigname
 		});
 	}
 	function remark() {
-		window.location.href = 'makeremark.jsp';
+		window.location.href = '../remark/makeremark.jsp';
 	}
 	function selectatt(attrigid) {
 		var gname =attrigid.innerHTML;
@@ -328,8 +329,8 @@
 						<dt class="kong"></dt>
 						<dd>
 							<a onclick="subcart()" class="btn_zong big"
-								href="cart_step_1.jsp"><i class="icon_addcart"></i><span
-								class="shadow_txt"><img src="res/images/bg/txt/txt1.png"></span></a>
+								href="../cart/cart_step_1.jsp"><i class="icon_addcart"></i><span
+								class="shadow_txt"><img src="../res/images/bg/txt/txt1.png"></span></a>
 						</dd>
 					</dl>
 				</div>
@@ -353,19 +354,22 @@
 				</c:forEach>
 			</div>
 			<div id="pinglun" class="show_wrap_h3 right comments_list">
+			
 				<h3>
-					<a id="skucommsum" class="cur">全部评价(0)</a> <a id="Good">好评(0)</a> <a
-						id="Middle">中评(0)</a> <a id="Bad">差评(0)</a> <span
-						class="btn_zong btn_fen_little"> <a onclick="remark()">发表评论</a>
+					<a id="skucommsum" class="cur">全部评价(${fn:length(listr)})</a> 
+				<!-- 	<a id="Good">好评(0)</a> <a id="Middle">中评(0)</a> <a id="Bad">差评(0)</a>  -->
+					<span class="btn_zong btn_fen_little"> <a onclick="remark()">发表评论</a>
 					</span>
 				</h3>
 				<div id="comments"></div>
-				<c:forEach items="${listr}" var="listr">
+			<c:forEach items="${listr}" var="listr" varStatus ="star">	
 					<div class="clearfix">
-						<div style="padding: 0px 0 0 90px;" class="fl">${listr.neirong}</div>
+					<div>${sta.count}</div>
+						<div style="padding: 0px 0 0 30px;" class="fl">評價內容：${listr.neirong}</div>
+						<div style="padding: 0px 0 0 170px;" class="fl">評價等级：${listr.levels}</div>
 						<div class="page_wrap">
 							<ul class="page">
-								<li>${listr.username}</li>
+								<li>評價人：${listr.username}</li>
 							</ul>
 						</div>
 					</div>
@@ -375,4 +379,3 @@
 	</div>
 </body>
 </html>
-<%session.removeAttribute("itemid"); %>

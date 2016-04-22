@@ -65,30 +65,30 @@
 				</div>
 			</div>
 			<div class="product_filter_goods">
-				<ul class="filter_goods ">
-					<c:forEach items="${list}" var="list" varStatus="sta">
-						<li class="fore">
-							<div class="p_img">
-								<a href="#"> <img width="220" height="220"
-									src=" <%=request.getAttribute("basePath")%>${list.imgurl}"></a>
-							</div>
-							<div class="rate">${list.itemid}
-								<a title="" href="#"> <span class="title">${list.itemname}</span></a>
-								<a class="reduce" onclick="deletep('${list.itemid}')">删除</a> <a
-									class="reduce" onclick="update('${list.itemid}')"
-									href="item_upd.jsp">修改</a>
-							</div>
-							<div class="p_price">
-								<span class="title">价格</span><strong>${list.price}</strong> <span
-									class="title">余量</span><strong>${list.qty}</strong>
-							</div>
-						</li>
-						<c:if test="${sta.count%5==0}">
-				</ul>
-				<ul class="filter_goods ">
-					</c:if>
-					</c:forEach>
-				</ul>
+						<c:forEach items="${list}" var="list" varStatus="sta">
+						<c:if test="${sta.count eq 1 || (sta.count-1) % 5 eq 0}">   
+     					 <ul class="filter_goods ">
+    					 </c:if>  
+							<li class="fore">
+								<div class="p_img">
+									<a href="#"> <img width="220" height="220"
+										src=" <%=request.getAttribute("basePath")%>${list.imgurl}"></a>
+								</div>
+								<div class="rate">${list.itemid}
+									<a title="" href="#"> <span class="title">${list.itemname}</span></a>
+									<a class="reduce" onclick="deletep('${list.itemid}')">删除</a> <a
+										class="reduce" onclick="update('${list.itemid}')"
+										href="item_upd.jsp">修改</a>
+								</div>
+								<div class="p_price">
+									<span class="title">价格</span><strong>${list.price}</strong> <span
+										class="title">余量</span><strong>${list.qty}</strong>
+								</div>
+							</li>
+							<c:if test="${sta.count % 5 eq 0 || sta.count eq 5}">   
+    						  </ul> 
+      						</c:if>    
+						</c:forEach>
 			</div>
 		</div>
 	</div>

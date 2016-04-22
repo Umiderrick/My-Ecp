@@ -73,9 +73,9 @@
 .cart_list div.row2{width:375px; float:left; padding-top:15px;}
 .cart_list div.row2.padt0{padding-top:0;}
 .cart_list div.row3{width:100px; float:left; padding-top:15px;}
-.cart_list div.row4{width:110px; float:left; padding-top:15px;}
-.cart_list div.row5{width:90px; float:left; padding-top:15px;}
-.cart_list div.row6{width:160px; float:left; padding-top:15px;}
+.cart_list div.row4{width:110px; float:left; padding-top:30px;}
+.cart_list div.row5{width:90px; float:left; padding-top:30px;}
+.cart_list div.row6{width:130px; float:left; padding-top:15px;}
 .cart_list div.row7{width:95px; float:left; padding-top:15px;}
 
 /*赠品*/
@@ -152,7 +152,7 @@
 .cart_list .cart_tbody_tz .cart_tbody .p_quantity input.num.disabled{border:0; background:#fff;}
 .cart_list .cart_tbody .p_quantity div.js/*仅剩*/{color:#e4393c; padding-top:4px;}
 .cart_list .cart_tbody .p_del{}
-.cart_list .cart_tbody .p_del a{color:#a58169;}
+.cart_list .cart_tbody .p_del a{color:#a58169; padding-left:45px;}
 /*end购物车列表*/
 
 /*删除商品*/

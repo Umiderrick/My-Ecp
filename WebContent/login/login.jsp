@@ -33,8 +33,9 @@ function myReload() {
 			<div class="login_content">
 				<div class="login_title">
 					<h3>用户登录</h3>
+					<h3>|</h3>
+					<h3><a href="register.jsp">用户注册</a></h3>
 				</div>
-
 				<div class="login_reg">
 					<form id='MyForm' action="login" method="post">
 						<div class="login_user_span">
@@ -56,12 +57,12 @@ function myReload() {
 						<input name="checkCode" type="text" id="checkCode" title="验证码区分大小写"  size="8"  maxlength="4" />  
 						</div>
             			<img src="PictureCheckCode" id="CreateCheckCode" align="middle">  
-           				 <a href="" onclick="myReload()"> 看不清,换一个</a>
+           				 <a onclick="myReload()"> 看不清,换一个</a>
 						<div class="login_btn">
 							<input type="submit" class="btn_zong big" value="登录"> <input
 								type="reset" class="btn_zong big" value="重置">
 						</div>
-						<a class="btn_zong big" href="register.jsp">注册</a>
+						
 					</form>
 				</div>
 			</div>

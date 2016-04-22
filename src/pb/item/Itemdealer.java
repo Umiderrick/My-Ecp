@@ -65,6 +65,12 @@ public class Itemdealer {
 		db.executeUpdate(sql);
 		return true;
 	}
+	public boolean update (String itemid ,String qty){
+		String sql = "update item set qty = qty +'"+qty +"' where itemid = '"+itemid+"'";
+		System.out.println(sql);
+		db.executeUpdate(sql);
+		return true;
+	}
 	public TableValues queryattg(String itemid){
 		String sql ="select T1.attid,T1.attrigid,T2.attrigname from (select attid,attrigid,item.itemid from item inner join item_att on item_att.itemid =item.itemid where item.itemid ='"+itemid+"' ) T1 inner join  attg  T2 on T1.attrigid =T2.attrigid ";
 		System.out.println(sql);

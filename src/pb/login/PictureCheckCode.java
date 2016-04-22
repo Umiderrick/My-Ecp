@@ -81,7 +81,7 @@ public class PictureCheckCode extends HttpServlet {
 				case 1:		//生成A-Z的字母
 				     itmp=random.nextInt(26)+65;
 				     ctmp=String.valueOf((char)itmp);
-				     System.out.println(ctmp);
+				     System.out.print(ctmp);
 				     break;
 				case 2:		//生成汉字
 					 String[] rBase={"0","1","2","3","4","5","6","7","8","9","a","b","c","d","e","f"}; 
@@ -120,12 +120,12 @@ public class PictureCheckCode extends HttpServlet {
 					 int tempHigh=Integer.parseInt(str_34, 16);
 					 bytes[1]=(byte)tempHigh;
 					 ctmp=new String(bytes);
-					 System.out.println(ctmp);
+					 System.out.print(ctmp);
 					 break;
 				default:
 					 itmp=random.nextInt(10)+48;
 					 ctmp=String.valueOf((char)itmp);
-					 System.out.println(ctmp);
+					 System.out.print(ctmp);
 					 break;
 			}
 			sRand+=ctmp;

@@ -1,8 +1,7 @@
 // JavaScript Document
 /*	
 标题：商品列表页js文件
-作者：xucaihua
-创建日期：2013年11月19日  
+作者：umiderrick
 */
  
 /* begin 左侧菜单点击特效*/
@@ -13,38 +12,6 @@ $(document).ready(function() {
 });
 /* end 左侧菜单点击特效*/
 	   
-/* begin 一周销量排行榜片鼠标划过特效  */
-$(function (){
-    var firstNode = $("#weekRank li").eq(0);
-    function  bindEvent(linode,i){
-	linode.bind('mouseover',function(){	
-	$(this).find(".p_name>a").removeClass("ie_bug").end().siblings("li").find(".p_name>a").addClass("ie_bug");
-			firstNode.removeClass('fore1').find('.p_img').hide();
-			firstNode.find('.p_price').hide();
-			linode.addClass('fore1').find('.p_img').show();
-			linode.find('.p_price').show();
-	}).bind('mouseout',function(){
-					$(this).find(".p_name>a").addClass("ie_bug");
-					linode.removeClass('fore1').find('.p_img').hide();
-					linode.find('.p_price').hide();
-					firstNode.addClass('fore1').find('.p_img').show();
-					firstNode.find('.p_price').show();
-					
-			});
-		$(".week_rank").mouseleave(function(){
-			firstNode.find(".p_name>a").removeClass("ie_bug")
-		})
-	}
-	$("#weekRank li").each(function(i){
-		if(i!==0){
-			$(this).find(".p_name>a").addClass("ie_bug");
-		}
-		var linode = $(this);
-		bindEvent(linode,i);
-	});
-});
-
-/* end 一周销量排行榜片鼠标划过特效  */
 
 /* begin 右侧商品筛选  */
 $(function() {	
@@ -54,7 +21,6 @@ $(function() {
 		k=$(".extra"),
 		len=f.find(".all_txt>a").length;
 	    f.css("height", g); 
-		if($.browser.msie&&(($.browser.version == "6.0")||($.browser.version == "7.0"))){ f.css("height", "72px"); }
 		if(len<=18){//少于3行隐藏展开与收起
 				h.hide();
 				if(len<=6){ f.css("height","30px"); }
@@ -97,53 +63,7 @@ $(function() {
 		    }
 			$(this).removeClass("hove");
 		});
-		
-		
 
-		
-/*	 $(".content>.all_txt a span").mouseleave(function(){  
-	  $(this).addClass("curr");
-	 }) 
-	 */
-	 
-/*	 $(".content>.all a").click(function(){
-	  $(this).addClass("curr"); 
-	  $(this).parent().next().children("a").children("span").removeClass("curr"); 
-	  })
-	*/
-	 
-	/* $(".content>.all_txt a span").mouseout((function(){  
-	  $(this).addClass("curr");
-	  })*/
-	  
-	 /* $(".content>.all_txt a span").click(function(){  
-	  $(this).addClass("curr").parent().css("background-color","#fff");
-	  $(this).parent().siblings().children("span").removeClass("curr"); 
-	  $(this).parent("a").parent("div").prev().children("a").removeClass("curr"); 
-	  }) 
-	  $(".content>.all_txt a span").mouseover(function(){  
-	  $(this).addClass("curr").parent().css("background-color","#fff");
-	  $(this).parent().siblings().children("span").removeClass("curr"); 
-	  $(this).parent("a").parent("div").prev().children("a").removeClass("curr"); 
-	  }) 
-	  $(".all_txt:not(:first) a").click(function(){
-	  $(this).addClass("curr");
-	  $(this).siblings().removeClass("curr"); 
-	  $(this).parent().prev().children("a").removeClass("curr"); 
-	  })  
-	  $(".all:not(:first)> a").click(function(){
-	  $(this).addClass("curr"); 
-	  $(this).parent().next().children("a").removeClass("curr"); 
-	  }) 
-	  $(".content>.all a").click(function(){
-	  $(this).addClass("curr"); 
-	  $(this).parent().next().children("a").children("span").removeClass("curr"); 
-	  })
-	  $(".content>.all a").mouseover(function(){
-	  $(this).addClass("curr"); 
-	  $(this).parent().next().children("a").children("span").removeClass("curr"); 
-	  })*/
-	 /*end 选中品牌 添加背景颜色 字体变色*/
 	 $(".tab>li a").click(function(){$(this).addClass("hove").parent("li").siblings().children("a").removeClass("hove");})
     });	
 /* end 右侧商品筛选 */
@@ -182,38 +102,44 @@ $(function(){
 	})	
 /* end 商品排序上一页下一页鼠标放上切换*/		
 
-/* begin 点击切换页签效果 并给价格页签增加上下箭头切换效果*/	
-   $(function(){ 
-	$(".order>dl>dd").click(function(){
-	   //点击切换背景颜色  
-	   $(this).children('a').addClass('cur');
-	   $(this).siblings().children('a').css("padding-right","12px").removeClass('cur').children('i').removeClass();
-	   //点击价格出现上下箭头 并切换
-	   if($(this).children('a').children('i').attr("class")=="icon_orderdown")
-		{   //点击价格出现下箭头 切换成上箭头
-			 $(this).children('a').css("padding-right","20px").children('i').removeClass("icon_orderdown").addClass("icon_orderup");
-			    $.ajax({
-			        type: "GET",
-			        url: "ListSearchServlet",
-			        data: { "sorttype": "desc"  }
-			      })
-			        .done(function( msg ) {
-			          alert( "Data Saved: " + msg );
-			        });
-		} else {
-				if($(this).children('a').children('i').attr("class")=="icon_orderup")
-				{    //点击价格出现上箭头 切换成下箭头
-					  $(this).children('a').css("padding-right","20px").children('i').removeClass("icon_orderup").addClass("icon_orderdown");	
-				}else{ 
-					   //点击价格增加上箭头 
-					   if($(this).attr("class")=="price")
-					   {
-							$(this).children('a').css("padding-right","20px").addClass('cur').children('i').addClass("icon_orderup");
-					   } 
-					}
-	   }//end if else
-	})
-  })
- /* begin 点击切换页签效果 并给价格页签增加上下箭头切换效果*/	 
+
+  
+  
+  
+/* 商品展示*/	  
+	function show(itemid) {
+		$.post("../item/ItemshowServlet", {
+			"itemid" : itemid
+		}, window.location.href = '../item/pshow.jsp');
+	}
+
+/* 关键字查询*/
+	function listsearch() {
+		var pattern = document.getElementById('search').value;
+			if(pattern==""){
+				window.location.href = "list_search_noresult.jsp"
+			}else{
+				$.post("../IndexServlet", {
+					"pattern" : pattern
+				},window.location.href = "list_search.jsp");
+			}
+		}
+
+	
+/* 子类别查询*/
+	function attrigsearch(attrigid) {
+		$.post("ListSearchServlet", {
+			"attrigid" : attrigid
+		}, function() {
+			window.location.href = 'list_search.jsp';
+		});
+	}
+	
+/* 分页查询*/	
+	function topfilter(num) {
+		$.get("ListSearchServlet", {
+			"num" : num
+		}, window.location.href = 'list_search.jsp');
+	}
 
 

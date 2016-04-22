@@ -48,13 +48,13 @@
 <head>
 <meta charset="utf-8">
 <title>订单提交</title>
-<link type="text/css" rel="stylesheet" href="css/global.css">
-<link type="text/css" rel="stylesheet" href="css/cart.css">
-<link type="text/css" rel="stylesheet" href="css/user.css">
-<link type="text/css" rel="stylesheet" href="css/register.css">
-<script src="js/jquery-1.7.2.js" type="text/javascript"></script>
-<script src="js/tabs.js" type="text/ecmascript"></script>
-<script src="js/openPop.js" type="text/javascript"></script>
+<link type="text/css" rel="stylesheet" href="../css/global.css">
+<link type="text/css" rel="stylesheet" href="../css/cart.css">
+<link type="text/css" rel="stylesheet" href="../css/user.css">
+<link type="text/css" rel="stylesheet" href="../css/register.css">
+<script src="../js/jquery-1.11.3.min.js" type="text/javascript"></script>
+<script src="../js/tabs.js" type="text/ecmascript"></script>
+<script src="../js/openPop.js" type="text/javascript"></script>
 <script>
 	function subsal() {
 		var username = document.getElementById('username').innerHTML;
@@ -70,7 +70,7 @@
 			num.push(n.innerHTML);
 		});
 		var total = document.getElementById('total').innerHTML;
-		$.post("SalorderServlet", {
+		$.post("../salorder/SalorderServlet", {
 			"username" : username,
 			"phone" : phone,
 			"address" : address,
@@ -78,7 +78,7 @@
 			"itemid" : JSON.stringify(itemid),
 			"num" : JSON.stringify(num),
 			"total" : total
-		}, window.location.href = 'cart_step_3.jsp');
+		}, window.location.href = "cart_step_3.jsp");
 	}
 </script>
 
@@ -159,7 +159,7 @@ img {
 							<span id ='attrigid' >${listc.attrigid}</span>
 						</div>
 						
-						<div class="row5">
+						<div class="row5 ac">
 								<a id='num' class ="cl_num">${listc.num}</a>
 						</div>
 					</div>

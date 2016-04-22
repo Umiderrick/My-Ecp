@@ -65,6 +65,14 @@ public TableValues query(String tablename) {
 	return tv;
 			
 }
+
+public TableValues querysame(String tablename,String thitypeid) {
+	TableValues tv = null;
+	String sql ="select * from "+tablename +" where sectypeid = (select sectypeid from "+tablename+" where thitypeid = '"+thitypeid+ "')";
+	tv = db.query(sql);
+	return tv;
+			
+}
 public TableValues query(String tablename,String PKey) {
 	TableValues tv = null;
 	String sql ="select * from "+tablename +" where thitypeid = '"+PKey+"'" ;

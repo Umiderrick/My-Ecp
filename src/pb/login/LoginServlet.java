@@ -17,43 +17,52 @@ public class LoginServlet implements javax.servlet.Servlet {
 		request.setCharacterEncoding("utf-8");
 		String username = request.getParameter("username");// 取得用户名
 		String password = request.getParameter("password");// 取得密码
-		String checkcode=request.getParameter("checkCode");
+		String checkcode = request.getParameter("checkCode");
 		Userdealer userd = new Userdealer();
 		HttpSession session = request.getSession();
 		session.setAttribute("userName", username);
 		if (userd.canlogin(username, password)) {// 根据登陆情况，跳转页面
-	    	if(checkcode.equals("")||checkcode==null){
-	    		System.out.println("请输入验证码");
-	    	}else{
-	    		if(!checkcode.equalsIgnoreCase((String)session.getAttribute("randCheckCode"))){
-	    			System.out.println("验证码不正确,请重新输入");
-	    		}else{
-	    			System.out.println("登录成功");
-	    		}
-	    	}
-			TableValues tv =userd.typejudge(username);
-			Object o =tv.getValues()[0][0];
-			String type =o.toString();
-			if(type.equals("10-会员")) {
-				response.sendRedirect("../index.jsp");
-			}else if(type.equals("20-管理员")){
-				response.sendRedirect("../management.jsp");
-			}else {
-				response.sendRedirect("../fail/fail.jsp");
-				System.err.println("系统错误");
+			if (checkcode.equals("") || checkcode == null) {
+				System.out.println("请输入验证码");
+			} else {
+				TableValues tv = userd.typejudge(username);
+				Object o = tv.getValues()[0][0];
+				String type = o.toString();
+				if (type.equals("10-会员")) {
+					if (!checkcode.equalsIgnoreCase((String) session.getAttribute("randCheckCode"))) {
+						response.sendRedirect("../fail/fail.jsp");
+						System.out.println("验证码不正确,请重新输入");
+					} else {
+						response.sendRedirect("../index.jsp");
+						System.out.println("登录成功");
+					}
+				} else if (type.equals("20-管理员")) {
+					if (!checkcode.equalsIgnoreCase((String) session.getAttribute("randCheckCode"))) {
+						response.sendRedirect("../fail/fail.jsp");
+						System.out.println("验证码不正确,请重新输入");
+					} else {
+						response.sendRedirect("../management.jsp");
+						System.out.println("管理员登录成功");
+					}
+				} else {
+					response.sendRedirect("../fail/fail.jsp");
+					System.err.println("系统错误");
+				}
+				
 			}
-		}else{
+		} else {
 			response.sendRedirect("../fail/fail.jsp");
 			System.err.println("输入正确的用户名和密码");
 		}
-			
+
 	}
 
 	public void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		String username = request.getParameter("username");
-		if(!username.isEmpty())
-		request.getSession().removeAttribute("userName");
+		if (!username.isEmpty())
+			request.getSession().removeAttribute("userName");
 	}
+
 	@Override
 	public void destroy() {
 

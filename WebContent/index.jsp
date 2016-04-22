@@ -86,17 +86,18 @@ $(function(){
 	}
 	function listsearch() {
 		var pattern = document.getElementById('search').value;
-		$.post("IndexServlet", {
-			"pattern" : pattern
-		}, window.location.href = "search/list_search.jsp");
+		if (pattern == "") {
+			window.location.href = "search/list_search_noresult.jsp"
+		} else {
+			$.post("IndexServlet", {
+				"pattern" : pattern
+			}, window.location.href = "search/list_search.jsp");
+		}
 	}
 	function thitypesearch(thitypeid) {
-		$.post("IndexServlet", {
+		$.get("IndexServlet", {
 			"thitypeid" : thitypeid
-		}, window.location.href = "search/list_search.jsp");
-	}
-	function gg() {
-		alert();
+		},window.location.href= "search/list_search_thitype.jsp?thitypeid="+thitypeid);
 	}
 </script>
 <style>
@@ -106,7 +107,7 @@ dl {
 }
 
 .ui_header_logo .ui_header_logo_bg {
-	background: rgba(0, 0, 0, 0) url("../res/images/bg/header_search.png")
+	background: rgba(0, 0, 0, 0) url("res/images/bg/header_search.png")
 		no-repeat scroll left center;
 	margin: 0 auto;
 	padding-bottom: 0;
@@ -143,9 +144,10 @@ dl {
 					</div>
 				</div>
 				<div class="ui_header_logo_func">
-					<a href="welcome.jsp" class="btn_zong"><i class="icon_account"></i><span>我的账户</span></a>
-					<a href="cart_step_1.jsp" class="btn_zong"><i class="icon_cart"></i><span>购物车</span></a><span
-						class="gowuche"><i class="icon_point">0</i></span>
+					<a href="login/welcome.jsp" class="btn_zong"><i
+						class="icon_account"></i><span>我的账户</span></a> <a
+						href="cart/cart_step_1.jsp" class="btn_zong"><i
+						class="icon_cart"></i><span>购物车</span></a>
 				</div>
 				<div class="ui_header_logo_posi">
 					<div class="ui_header_logo_posi_account">
@@ -158,8 +160,8 @@ dl {
 							</div>
 							<div class="wrap_middle">
 								<div class="wrap_middle_r">
-									<a href="salorder/mysalorder.jsp">我的订单&nbsp;&nbsp;&gt;</a>
-									<a href="remark/myremark.jsp">我的评价&nbsp;&nbsp;&gt;</a>
+									<a href="salorder/mysalorder.jsp">我的订单&nbsp;&nbsp;&gt;</a> <a
+										href="remark/myremark.jsp">我的评价&nbsp;&nbsp;&gt;</a>
 								</div>
 							</div>
 						</div>
@@ -199,7 +201,7 @@ dl {
 															<c:forEach items="${list3}" var="list3">
 																<c:if test="${list3.sectypeid==list2.sectypeid}">
 																	<a onclick="thitypesearch('${list3.thitypeid}')">${list3.thitypename}</a>
-																	<span>|</span>
+																	<span> </span>
 																</c:if>
 															</c:forEach>
 														</dd>
@@ -213,6 +215,7 @@ dl {
 						</ul></li>
 					<li><a href="index.jsp">首页</a></li>
 					<li><a href="#">品牌专区</a></li>
+					<li><a href="#">促销区</a></li>
 				</ul>
 			</div>
 		</div>
@@ -228,24 +231,25 @@ dl {
 							<li data-target="#myCarousel" data-slide-to="3"></li>
 						</ol>
 						<div class="carousel-inner">
-							<div  class="item">
+							<div class="item" onclick = "thitypesearch('0080101')">
 								<img src="res/images/bg/lunbo2.png">
 							</div>
-							<div  class="item active">
+							<div class="item active">
 								<img src="res/images/bg/lunbo1.png">
 							</div>
-							<div  class="item">
+							<div class="item">
 								<img src="res/images/bg/lunbo3.png">
 							</div>
-							<div  class="item">
+							<div class="item">
 								<img src="res/images/bg/lunbo4.png">
 							</div>
 						</div>
-						<a class="carousel-control left" href="#myCarousel" data-slide="prev">
-						<span class="glyphicon glyphicon-chevron-left"></span>
-						</a> 
-						<a class="carousel-control right" href="#myCarousel" data-slide="next">
-						<span class="glyphicon glyphicon-chevron-right"></span>
+						<a class="carousel-control left" href="#myCarousel"
+							data-slide="prev"> <span
+							class="glyphicon glyphicon-chevron-left"></span>
+						</a> <a class="carousel-control right" href="#myCarousel"
+							data-slide="next"> <span
+							class="glyphicon glyphicon-chevron-right"></span>
 						</a>
 					</div>
 				</div>
@@ -258,20 +262,124 @@ dl {
 						<div class="prev_go" style="visibility: hidden;"></div>
 						<div class="scroll_wrap" style="width: 920px;">
 							<ul class="scroll_body" style="left: 0px;">
-								<li><a onclick ='gg()'><img
+								<li><a onclick='gg(1001)'><img
 										src="res/images/temp/index_sc05.jpg"></a></li>
-								<li><a  onclick ='gg()'><img
+								<li><a onclick='gg(1001)'><img
 										src="res/images/temp/index_sc04.jpg"></a></li>
-								<li><a onclick ='gg()'><img
+								<li><a onclick='gg(1001)'><img
 										src="res/images/temp/index_sc03.jpg"></a></li>
-								<li><a onclick ='gg()' ><img
+								<li><a onclick='gg(1001)'><img
 										src="res/images/temp/index_sc02.jpg"></a></li>
-								<li class="end"><a onclick ='gg()'><img
+								<li class="end"><a onclick='gg()'><img
 										src="res/images/temp/index_sc01.jpg"></a></li>
 							</ul>
 						</div>
 						<div class="next_go scroll_end" style="visibility: hidden;"></div>
 					</div>
+				</div>
+			</div>
+			<div class="w1200">
+				<div class="hot_show">
+					<div class="sc_content" style="width: 964px;">
+						<div class="prev_go" style="visibility: hidden;"></div>
+						<div class="scroll_wrap" style="width: 920px;">
+							<ul class="scroll_body" style="left: 0px;">
+								<li><a onclick='gg(1001)'><img
+										src="res/images/temp/index_sc05.jpg"></a></li>
+								<li><a onclick='gg(1001)'><img
+										src="res/images/temp/index_sc04.jpg"></a></li>
+								<li><a onclick='gg(1001)'><img
+										src="res/images/temp/index_sc03.jpg"></a></li>
+								<li><a onclick='gg(1001)'><img
+										src="res/images/temp/index_sc02.jpg"></a></li>
+								<li class="end"><a onclick='gg()'><img
+										src="res/images/temp/index_sc01.jpg"></a></li>
+							</ul>
+						</div>
+						<div class="next_go scroll_end" style="visibility: hidden;"></div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="ui_footer_top">
+			<div class="w1200">
+				<div class="ui_footer_top_l">
+					<p class="ui_footer_top_l_name">服务热线 ：400-00000000</p>
+					<p class="ui_footer_top_l_time">客服时间： 09:00-18:00（周一至周五）</p>
+				</div>
+				<div class="ui_footer_top_r">
+					<dl>
+						<dt>新手上路</dt>
+						<dd>
+							<a href="#">联系客服</a>
+						</dd>
+						<dd>
+							<a href="#">会员制度</a>
+						</dd>
+						<dd>
+							<a href="#">购物流程</a>
+						</dd>
+						<dd>
+							<a href="#">服务条款</a>
+						</dd>
+					</dl>
+					<dl>
+						<dt>支付方式</dt>
+						<dd>
+							<a href="#">支付方式</a>
+						</dd>
+						<dd>
+							<a href="#">支付等待时间</a>
+						</dd>
+						<dd>
+							<a href="#">发票制度</a>
+						</dd>
+					</dl>
+					<dl>
+						<dt>配送说明</dt>
+						<dd>
+							<a href="#">国内配送</a>
+						</dd>
+						<dd>
+							<a href="#">配送常见问题</a>
+						</dd>
+						<dd>
+							<a href="#">商品的验货与签收</a>
+						</dd>
+						<dd>
+							<a href="#">配送时间</a>
+						</dd>
+					</dl>
+					<dl>
+						<dt>账户管理</dt>
+						<dd>
+							<a href="#">账户注册</a>
+						</dd>
+						<dd>
+							<a href="#">找回密码</a>
+						</dd>
+					</dl>
+					<dl>
+						<dt>售后服务</dt>
+						<dd>
+							<a href="#">退换货流程</a>
+						</dd>
+						<dd>
+							<a href="#">退款说明</a>
+						</dd>
+					</dl>
+					<dl>
+						<dt>关于我们</dt>
+						<dd>
+							<a href="#">集团简介</a>
+						</dd>
+						<dd>
+							<a href="#">友情链接</a>
+						</dd>
+						<dd>
+							<a href="#">商家入驻</a>
+						</dd>
+					</dl>
 				</div>
 			</div>
 		</div>

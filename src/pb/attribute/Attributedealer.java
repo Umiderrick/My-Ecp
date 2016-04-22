@@ -73,6 +73,15 @@ public class Attributedealer {
 		return tv;
 
 	}
+	
+	public TableValues thiattquery(String thitypeid) {
+		TableValues tv = null;
+		String sql = "select * from thi_att inner join attribute on thi_att.attid =attribute.attid where thitypeid ='" +thitypeid +"'";
+		tv = db.query(sql);
+		db.closeDatabase();
+		return tv;
+	}
+	
 
 	public TableValues innerquery(String tablename, String PKey) {
 		TableValues tv = null;

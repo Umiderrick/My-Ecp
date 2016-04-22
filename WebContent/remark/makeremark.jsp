@@ -4,8 +4,8 @@
 <head>
 <meta content="text/html;charset =UTF-8">
 <title>录入评论</title>
-<link type="text/css" rel="stylesheet" href="css/global.css">
-<link type="text/css" rel="stylesheet" href="css/login.css">
+<link type="text/css" rel="stylesheet" href="../css/global.css">
+<link type="text/css" rel="stylesheet" href="../css/login.css">
 <script type="text/javascript">
 	function submitremarkForm() {
 		var myForm = document.getElementById('remarkform');
@@ -25,6 +25,7 @@
 			<div class="login_title">
 				<h3>评价录入</h3>
 			</div>
+			<div class ="login_reg">
 			<form id='remarkform' action="RemarkServlet" method="post">
 					<div class="login_pass_span">
 						<span> 评价内容 </span>
@@ -46,6 +47,7 @@
 						<a class="btn_zong big" onclick="submitremarkForm();">录入</a>
 					</div>
 			</form>
+			</div>
 		</div>
 	</div>
 </body>
