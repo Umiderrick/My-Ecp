@@ -9,13 +9,13 @@ public class DbConfig {
 	private static Properties config = null;
 	static {
 		config = new Properties();
-		try (InputStream in = new FileInputStream("C:/Users/umiderrick/git/My-Ecp/src/DBconfig.properties")){
+		try (InputStream in = new FileInputStream("/DBconfig.properties")){
 			config.load(in);
 		} catch (IOException e) {
 			throw new RuntimeException(e);
 		}
 	}
-	// ¸ù¾Ýkey¶ÁÈ¡value
+	// ï¿½ï¿½ï¿½ï¿½keyï¿½ï¿½È¡value
 	public static String readValue(String key) {
 		return config.getProperty(key);
 	}
