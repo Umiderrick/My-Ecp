@@ -21,20 +21,17 @@ import pb.db.DbConfig;
 
 public class DB implements AutoCloseable {
 	boolean bInited = false;
-	// ¼ÓÔØÇý¶¯
 	void initJDBC() throws ClassNotFoundException {
 		String driverClass = DbConfig.readValue("DRIVER_CLASS"); 
 	    try{    
 		Class.forName(driverClass);
 	    	}catch(ClassNotFoundException e){   
-	    		 System.out.println("ÕÒ²»µ½Çý¶¯³ÌÐòÀà £¬¼ÓÔØÇý¶¯Ê§°Ü£¡"); 
 	    		 e.printStackTrace() ;  
 	    	}
 		bInited = true;
 	}
 
 	private Connection conn;
-
 	Connection getConnection() throws IOException, ClassNotFoundException, SQLException {
 		if (!bInited) {
 			initJDBC();
@@ -108,7 +105,7 @@ public class DB implements AutoCloseable {
 			}
 			int rs = (stmt instanceof PreparedStatement ? ((PreparedStatement) stmt).executeUpdate() : stmt.executeUpdate(sql));
 
-			System.out.println("±í¸üÐÂ³É¹¦");
+			System.out.println("ï¿½ï¿½ï¿½ï¿½Â³É¹ï¿½");
 			return rs;
 		} catch (Exception e) {
 			throw new RuntimeException(e);
@@ -207,7 +204,7 @@ public class DB implements AutoCloseable {
 	}
 
 	/**
-	 * °´Ö÷¼üÉ¾³ý
+	 * ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½É¾ï¿½ï¿½
 	 * 
 	 * @param table
 	 * @param dataList
@@ -225,7 +222,7 @@ public class DB implements AutoCloseable {
 				int[] sums = ps.executeBatch();
 				return getSum(sums);
 			} else
-				throw new RuntimeException("ÕÒ²»µ½Ö÷¼ü£º" + table);
+				throw new RuntimeException("ï¿½Ò²ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½" + table);
 		} catch (Exception e) {
 			throw new RuntimeException(e);
 		}
@@ -241,7 +238,7 @@ public class DB implements AutoCloseable {
 	}
 
 	/**
-	 * °´Ö÷¼ü¸üÐÂ
+	 * ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 	 * 
 	 * @param table
 	 * @param dataList
@@ -260,7 +257,7 @@ public class DB implements AutoCloseable {
 				int[] sums = ps.executeBatch();
 				return getSum(sums);
 			} else
-				throw new RuntimeException("ÕÒ²»µ½Ö÷¼ü£º" + table);
+				throw new RuntimeException("ï¿½Ò²ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½" + table);
 		} catch (Exception e) {
 			throw new RuntimeException(e);
 		}
@@ -295,7 +292,7 @@ public class DB implements AutoCloseable {
 	}
 
 	/**
-	 * Ö÷¼ü¶à¸ö£¬ÒÔÊý×éµÄÐÎÊ½·µ»Ø
+	 * ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ê½ï¿½ï¿½ï¿½ï¿½
 	 * 
 	 * @param table
 	 * @return
@@ -336,14 +333,14 @@ public class DB implements AutoCloseable {
 	}
 
 	/**
-	 * ¸ù¾ÝÖ¸¶¨µÄSQLÓï¾ä¼°¶ÔÓ¦µÄ²ÎÊý·µ»Ø¹ØÏµ±íÖÐµÄÊý¾ÝÖµ¡£
+	 * ï¿½ï¿½ï¿½ï¿½Ö¸ï¿½ï¿½ï¿½ï¿½SQLï¿½ï¿½ä¼°ï¿½ï¿½Ó¦ï¿½Ä²ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ø¹ï¿½Ïµï¿½ï¿½ï¿½Ðµï¿½ï¿½ï¿½ï¿½ï¿½Öµï¿½ï¿½
 	 * 
 	 * @param sql
-	 *            ²éÑ¯Óï¾ä
+	 *            ï¿½ï¿½Ñ¯ï¿½ï¿½ï¿½
 	 * @param sqlTypes
-	 *            ²ÎÊýÀàÐÍ£¬²Î¼û{@link java.sql.Types}
+	 *            ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Í£ï¿½ï¿½Î¼ï¿½{@link java.sql.Types}
 	 * @param paramValues
-	 *            ²ÎÊýÖµ
+	 *            ï¿½ï¿½ï¿½ï¿½Öµ
 	 * @return
 	 */
 	public TableValues query(String sql, int[] sqlTypes, Object[] paramValues) {
@@ -396,7 +393,7 @@ public class DB implements AutoCloseable {
 				break;
 			}
 			default:
-				throw new RuntimeException("´«Èë²ÎÊý¸ñÊ½²»Ö§³Ö£¡");
+				throw new RuntimeException("ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ê½ï¿½ï¿½Ö§ï¿½Ö£ï¿½");
 			}
 		}
 	}
